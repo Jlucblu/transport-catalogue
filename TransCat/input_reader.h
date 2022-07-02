@@ -1,133 +1,25 @@
 #pragma once
-#include <string>
-#include <iostream>
-#include <vector>
-#include <deque>
-#include <utility>
-#include <tuple>
-
-#include "geo.h"
 #include "transport_catalogue.h"
+#include <sstream>
 
-using namespace std::literals;
 
-// –≤–≤–æ–¥ –∑–∞–ø—Ä–æ—Å–æ–≤
-std::string ReadLine() {
-	std::string s;
-	std::getline(std::cin, s);
-	return s;
-}
- 
-// –≤–≤–æ–¥ –∫–æ–ª-–≤–∞ –∑–∞–ø—Ä–æ—Å–æ–≤
-int ReadNumber() {
-	int x;
-	std::cin >> x;
-	ReadLine();
-	return x;
-}
+struct InputRoute {
+    std::string name;
+    std::vector<std::string> stops;
+};
 
-// –ø–∞—Ä—Å–∏–Ω–≥ –∫–ª—é—á–∞
-std::string ParseKey(std::string& request) {
-	std::string key(request.begin(), std::find(request.begin(), request.end(), ' '));
-	request.erase(0, key.size());
-	request.erase(0, request.find_first_not_of(' '));
-	return key;
-}
+struct InputStops {
+    std::string name;
+    Coordinates coordinates{ 0, 0 };
+};
 
-// –º–∞—Ä—à—Ä—É—Ç –∞–≤—Ç–æ–±—É—Å–∞
-std::vector<std::string> ParseRoute(std::string& str, bool type) {
-	std::vector<std::string> single_stops = {};
-	auto it = str.begin();
-	while (it != str.end()) {
-		if (!type) {
-			if (std::count(str.begin(), str.end(), '-') == 0) {
-				std::string word(it, str.end());
-				single_stops.push_back(word);
-				str.erase(0, word.size());
-			}
-			else {
-				std::string word(it, std::find(str.begin(), str.end(), '-') - 1);
-				single_stops.push_back(word);
-				str.erase(0, word.size() + 3);
-			}
-			it = str.begin();
-
-		}
-		else {
-			if (std::count(str.begin(), str.end(), '>') == 0) {
-				std::string word(it, str.end());
-				single_stops.push_back(word);
-				str.erase(0, word.size());
-			}
-			else {
-				std::string word(it, std::find(str.begin(), str.end(), '>') - 1);
-				single_stops.push_back(word);
-				str.erase(0, word.size() + 3);
-			}
-			it = str.begin();
-		}
-	}
-
-	return single_stops;
-}
-
-// –ø–∞—Ä—Å–∏–Ω–≥ –Ω–æ–º–µ—Ä–∞ –∞–≤—Ç–æ–±—É—Å–∞
-BusRoute ParseBus(std::string& request) {
-	std::string number(request.begin(), std::find(request.begin(), request.end(), ':'));
-	request.erase(0, number.size() + 2);
-	bool circle = (std::count(request.begin(), request.end(), '>') ? true : false);
-	std::vector<std::string> stops = ParseRoute(request, circle);
-
-	return { number, stops, circle };
-}
-
-// —Å–æ–ø–æ—Å—Ç–∞–≤–ª–µ–Ω–∏–µ –æ—Å—Ç–∞–Ω–æ–≤–∫–∏ –∏ –∫–æ–æ—Ä–¥–∏–Ω–∞—Ç
-BusStop UpdateStop(std::string& request) {
-	double latitude = 0.0;
-	double longitude = 0.0;
-	std::string name(request.begin(), std::find(request.begin(), request.end(), ':'));
-	request.erase(0, name.size() + 2);
-	auto pos = request.find(',');
-	if (pos < request.size()) {
-		latitude = std::stod(request.substr(0, pos));
-	}
-	if ((pos + 2) < request.size()) {
-		longitude = std::stod(request.substr(pos + 2, request.size() - 1));
-	}
-	request.clear();
-
-	return { name, latitude, longitude };
-}
-
-// –æ–±–Ω–æ–≤–ª–µ–Ω–∏–µ –∫–∞—Ç–∞–ª–æ–≥–∞ (–æ—Å—Ç–∞–Ω–æ–≤–∫–∏ / –º–∞—Ä—à—Ä—É—Ç –∞–≤—Ç–æ–±—É—Å–∞)
-void UpdateCat() {
-	int count = ReadNumber();
-	std::string key;
-	std::deque<BusRoute> bus_cat;
-	std::deque<BusStop> stop_cat;
-
-	while (count != 0) {
-		std::string request = ReadLine();
-
-		if (request.size() == 0) {
-			continue;
-		}
-
-		key = ParseKey(request);
-
-		if (key == "Bus") {
-			BusRoute route = ParseBus(request);
-			bus_cat.push_back(route);
-			std::cout << route.number_ << std::endl;
-			for (auto& b : route.stops_) {
-				std::cout << b << std::endl;
-			}
-		} 
-		else if (key == "Stop") {
-			BusStop stop = UpdateStop(request);
-			stop_cat.push_back(stop);
-			std::cout << stop.name_ << ' ' << stop.latitude_ << ' ' << stop.longitude_ << std::endl;
-		}
-		--count;
-	}
-}
+// ¬‚Ó‰ Á‡ÔÓÒÓ‚
+std::string ReadLine(std::istream& in);
+// œ‡ÒËÌ„ ÍÎ˛˜‡
+std::string_view ParseKey(std::string_view request);
+// œ‡ÒËÌ„ ÓÒÚ‡ÌÓ‚ÍË Ë ÍÓÓ‰ËÌ‡Ú
+InputStops ParseStop(std::string& str);
+// œ‡ÒËÌ„ Ï‡¯ÛÚ‡ ‡‚ÚÓ·ÛÒ‡
+InputRoute ParseRoute(std::string& str);
+// Œ·ÌÓ‚ÎÂÌËÂ Í‡Ú‡ÎÓ„‡
+std::istream& UpdateCat(std::istream& in, TransportCatalogue& cat);
