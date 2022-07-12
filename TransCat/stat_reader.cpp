@@ -19,7 +19,7 @@ void PrintInfo(std::istream& in, std::ostream& out, TransportCatalogue& cat) {
         const std::string& request = ReadLine(in);
         std::string_view key = ParseKey(request);
         if (key == "Bus"sv) {
-            const std::string& number(request.substr(request.find_first_not_of(' ', key.size()), request.npos));
+            const std::string& number = request.substr(request.find_first_not_of(' ', key.size()), request.npos);
             const BusRoute* bus = cat.FindRoute(number);
             if (!bus) {
                 out << "Bus "s << number << ": not found\n"s;
@@ -30,6 +30,17 @@ void PrintInfo(std::istream& in, std::ostream& out, TransportCatalogue& cat) {
                     << " unique stops, "s << info.distance_ << " route length\n"s;
             }
         }
+        else if (key == "Stop"sv) {
+            const std::string& name = request.substr(request.find_first_not_of(' ', key.size()), request.npos);
+            const BusStop* stop = cat.FindStop(name);
+            if (!stop) {
+                out << "Stop "s << name << ": not found\n"s;
+            }
+            else {
+                out << "Stop "s << name << ": "s << stop->coordinates_.lat << " "s << stop->coordinates_.lng << "\n"s;
+            }
+        }
+
         --count;
     }
 }

@@ -2,24 +2,19 @@
 #include "transport_catalogue.h"
 #include <sstream>
 
-
 struct InputRoute {
     std::string name;
-    std::vector<std::string> stops;
-};
-
-struct InputStops {
-    std::string name;
-    Coordinates coordinates{ 0, 0 };
+    std::vector<BusStop> stops;
+    bool circle;
 };
 
 // Ввод запросов
 std::string ReadLine(std::istream& in);
 // Парсинг ключа
 std::string_view ParseKey(std::string_view request);
-// Парсинг остановки и координат
-InputStops ParseStop(std::string& str);
 // Парсинг маршрута автобуса
-InputRoute ParseRoute(std::string& str);
+std::vector<std::string> ParseRoute(std::string& str, bool);
+// Парсинг остановки и координат
+BusStop ParseStop(std::string& str);
 // Обновление каталога
 std::istream& UpdateCat(std::istream& in, TransportCatalogue& cat);
