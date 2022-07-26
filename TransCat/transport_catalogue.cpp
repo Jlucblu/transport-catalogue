@@ -1,7 +1,5 @@
 #include "transport_catalogue.h"
-#include "iostream"
 
-using namespace std::string_literals;
 
 // Обновление остановки и координат
 void TransportCatalogue::UpdateStop(const BusStop& stop) {
@@ -19,13 +17,13 @@ void TransportCatalogue::UpdateStop(const BusStop& stop) {
 
 // Обновление маршрута автобуса
 void TransportCatalogue::UpdateRoute(const BusRoute& bus) {
-	BusRoute* fb = FindRoute(bus.name_);
+	BusRoute* fb = FindRoute(bus.number_);
 	if (fb == nullptr) {
 		bus_cat_.emplace_back(bus);
 		BusRoute* ptr_bus = &bus_cat_.back();
-		route_name_[ptr_bus->name_] = ptr_bus;
+		route_name_[ptr_bus->number_] = ptr_bus;
 		for (BusStop* ptr_stop : bus.stops_) {
-			route_stop_[ptr_stop].push_back(ptr_bus);
+			route_stop_[ptr_stop].emplace(ptr_bus);
 		}
 	}
 	else {
@@ -50,20 +48,52 @@ BusStop* TransportCatalogue::FindStop(std::string_view name) {
 }
 
 // Получение информации о маршруте
-RouteInfo TransportCatalogue::GetInfo(BusRoute* route) {
+RouteInfo TransportCatalogue::GetStopInfo(BusRoute* route) {
+	RouteInfo info;
 	std::unordered_set<std::string_view> unique;
 	double length = 0.0;
-	const BusStop* previous = nullptr;
-	for (const BusStop* current : route->stops_) {
-		unique.insert(current->name_);
-		if (previous) {
-			length += ComputeDistance(previous->coordinates_, current->coordinates_);
+	const BusStop* ptr_start = nullptr;
+	for (const BusStop* prt_end : route->stops_) {
+		unique.insert(prt_end->name_);
+		if (ptr_start) {
+			length += ComputeDistance(ptr_start->coordinates_, prt_end->coordinates_);
+			info.distance_ += GetDistance(ptr_start->name_, prt_end->name_);
 		}
-		previous = current;
+		ptr_start = prt_end;
 	}
-	return { static_cast<int>(route->stops_.size()), static_cast<int>(unique.size()), length };
+	info.stops_ = route->stops_.size();
+	info.unique_stops_ = unique.size();
+	info.curvature_ = info.distance_ / length;
+	return info;
 }
 
-RouteInfo TransportCatalogue::GetInfo(const std::string_view name) {
-	return GetInfo(FindRoute(name));
+RouteInfo TransportCatalogue::GetStopInfo(const std::string_view name) {
+	return GetStopInfo(FindRoute(name));
+}
+
+std::unordered_set<BusRoute*> TransportCatalogue::GetBusInfo(const std::string& stop_name) {
+	BusStop* stop = FindStop(stop_name);
+	return std::unordered_set<BusRoute*>(route_stop_.at(stop));
+}
+
+void TransportCatalogue::UpdateStopDictance(const std::string& from, const DistancePair& to) {
+	for (auto& [stop, distance] : to) {
+		BusStop* tostop = FindStop(stop);
+		if (tostop == nullptr) {
+			UpdateStop({ stop, {0.0, 0.0} });;
+		}
+
+		std::pair<BusStop*, BusStop*> forward = { stop_name_.at(from), stop_name_.at(stop) };
+		std::pair<BusStop*, BusStop*> backward = { stop_name_.at(stop), stop_name_.at(from) };
+
+		stop_distance_[forward] = distance;
+		if (!stop_distance_.count(backward)) {
+			stop_distance_.emplace(backward, distance);
+		}
+	}
+}
+
+int TransportCatalogue::GetDistance(const std::string& from, const std::string& to) {
+	const std::pair<BusStop*, BusStop*> stops = { stop_name_.at(from), stop_name_.at(to) };
+	return stop_distance_.at(stops);
 }

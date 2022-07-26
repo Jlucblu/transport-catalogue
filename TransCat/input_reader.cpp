@@ -1,12 +1,4 @@
-#include <string>
-#include <string_view>
-#include <stdexcept>
-#include <vector>
-#include <iostream>
-#include <algorithm>
-
 #include "input_reader.h"
-#include "transport_catalogue.h"
 
 using namespace std::string_literals;
 using namespace std::string_view_literals;
@@ -19,21 +11,34 @@ std::string ReadLine(std::istream& in) {
 }
 
 // Парсинг ключа
-std::string_view ParseKey(std::string_view request) {
-    auto pos = request.find(' ');
-    std::string_view key = request.substr(0, pos);
-    return key;
+std::string_view ParseKey(std::string_view str) {
+    return std::string_view (str.substr(0, str.find(' ')));;
 }
 
 // Парсинг остановки и координат
-BusStop ParseStop(const std::string& str) {
+// Stop Tolstopaltsevo: 55.611087, 37.20829, 3900m to Marushkino
+// Stop Marushkino: 55.595884, 37.209755, 9900m to Rasskazovka, 100m to Marushkino
+std::pair <BusStop, DistancePair> ParseStop(const std::string& str) {
+    BusStop stop = {};
+    DistancePair distance_to_stop = {};
     auto pos_name = str.find(' ');
-    auto pos_lat = str.find(':');
-    auto pos_lng = str.find(',');
-    std::string stop_name = str.substr(str.find_first_not_of(' ', pos_name), pos_lat - (pos_name + 1));
-    double latitude = std::stod(std::string(str.substr(str.find_first_not_of(": "s, pos_lat), pos_lng - (pos_lat + 2))));
-    double longitude = std::stod(std::string(str.substr(str.find_first_not_of(", "s, pos_lng))));
-    return { std::move(stop_name), { std::move(latitude), std::move(longitude) } };
+    auto pos_start = str.find(':');
+    auto pos_lat_end = str.find(',');
+    auto pos_lng_end = str.find(',', pos_lat_end + 1);
+    stop.name_ = str.substr(str.find_first_not_of(' ', pos_name), pos_start - (pos_name + 1));
+    stop.coordinates_.lat = std::stod(str.substr(str.find_first_not_of(": "s, pos_start), pos_lat_end - (pos_start + 2)));
+    stop.coordinates_.lng = std::stod(str.substr(str.find_first_not_of(", "s, pos_lat_end), pos_lng_end - (pos_lat_end + 2)));
+    while (pos_lng_end != str.npos) {
+        std::pair<std::string, int> dts = {};
+        auto pos_distance = str.find("m to "s, pos_lng_end + 1);
+        auto last = str.find(',', pos_lng_end + 1);
+        dts.second = std::stoi(str.substr(str.find_first_not_of(", "s, pos_lng_end), pos_distance - (pos_lng_end + 2)));
+        dts.first = str.substr(str.find_first_not_of("m to "s, pos_distance), last - (pos_distance+ 5));
+        distance_to_stop.push_back(dts);
+        pos_lng_end = last;
+    }
+    
+    return { stop, distance_to_stop };
 }
 
 // Парсинг маршрута автобуса
@@ -82,19 +87,22 @@ std::istream& UpdateCat(std::istream& in, TransportCatalogue& cat) {
         const std::string& request = ReadLine(in);
         std::string_view key = ParseKey(request);
 
-        if (key == "Stop"sv) {
-            BusStop query = ParseStop(request);
-            cat.UpdateStop(query);
+        if (key == "Stop"s) {
+            std::pair<BusStop, DistancePair> query = ParseStop(request);
+            cat.UpdateStop(query.first);
+            if (!query.second.empty()) {
+                cat.UpdateStopDictance(query.first.name_, query.second);
+            }
         }
-        else if (key == "Bus"sv) {
+        else if (key == "Bus"s) {
             BusRoute route = {};
             route.circle = (std::count(request.begin(), request.end(), '>') ? true : false);
-            route.name_ = std::string(std::next(std::find(request.begin(), request.end(), ' ')), std::find(request.begin(), request.end(), ':'));
+            route.number_ = std::string(std::next(std::find(request.begin(), request.end(), ' ')), std::find(request.begin(), request.end(), ':'));
             std::vector<std::string> stops = ParseRoute(request, route.circle);
 
             for (const std::string& stop : stops) {
                 BusStop* found = cat.FindStop(stop);
-                if (!found) {
+                if (found == nullptr) {
                     cat.UpdateStop({ stop, { 0.0, 0.0 } });
                 }
                 route.stops_.push_back(cat.FindStop(stop));
