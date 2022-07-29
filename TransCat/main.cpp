@@ -8,6 +8,9 @@
 
 
 using namespace std;
+using namespace transport_catalogue;
+using namespace input_handler;
+using namespace statistics;
 
 int main() {
 	TransportCatalogue tc;

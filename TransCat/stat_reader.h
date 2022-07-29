@@ -12,5 +12,8 @@
 #include <set>
 #include <algorithm>
 
-
-void PrintInfo(std::istream& in, std::ostream& out, TransportCatalogue& cat);
+namespace transport_catalogue {
+    namespace statistics {
+        void PrintInfo(std::istream& in, std::ostream& out, TransportCatalogue& cat);
+    }
+}
