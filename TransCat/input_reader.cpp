@@ -32,7 +32,7 @@ std::pair <BusStop, DistancePair> ParseStop(std::string_view str) {
         auto pos_distance = str.find("m to "s, pos_lng_end + 1);
         auto last = str.find(',', pos_lng_end + 1);
         double dist = std::stoi(std::string(str.substr(str.find_first_not_of(", "s, pos_lng_end), pos_distance - (pos_lng_end + 2))));
-        std::string_view name = str.substr(str.find_first_not_of("m to "s, pos_distance), last - (pos_distance + 5));
+        std::string_view name = str.substr(pos_distance + 5, last - (pos_distance + 5));
         distance_to_stop.emplace(name, dist);
         pos_lng_end = last;
     } 

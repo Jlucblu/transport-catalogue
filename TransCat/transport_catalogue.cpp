@@ -94,6 +94,6 @@ double TransportCatalogue::GetDistance(std::string_view from, std::string_view t
 
 	if (stop_distance_.count({ stopFrom, stopTo })) {
 		return stop_distance_.at({ stopFrom, stopTo });
-	}
+	} 
 	return stop_distance_.at({ stopTo, stopFrom });
 }
