@@ -73,7 +73,7 @@ namespace transport_catalogue {
         }
 
         // Обновление каталога
-        std::istream& UpdateCat(std::istream& in, TransportCatalogue& cat) {
+        std::istream& UpdateCatalogue(std::istream& in, TransportCatalogue& cat) {
             int count = std::stoi(ReadLine(in));
 
             while (count != 0) {
@@ -84,7 +84,7 @@ namespace transport_catalogue {
                     std::pair<BusStop, DistancePair> query = ParseStop(request);
                     cat.UpdateStop(std::move(query.first));
                     if (!query.second.empty()) {
-                        cat.UpdateStopDictance(std::move(query.first.name_), std::move(query.second));
+                        cat.UpdateStopDistance(std::move(query.first.name_), std::move(query.second));
                     }
                 }
                 else if (key == "Bus"s) {

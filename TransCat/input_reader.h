@@ -22,6 +22,6 @@ namespace transport_catalogue {
         // Парсинг остановки и координат
         std::pair <BusStop, DistancePair> ParseStop(std::string_view str);
         // Обновление каталога
-        std::istream& UpdateCat(std::istream& in, TransportCatalogue& cat);
+        std::istream& UpdateCatalogue(std::istream& in, TransportCatalogue& cat);
     }
 }

@@ -15,9 +15,8 @@
 
 using namespace std::string_literals;
 using DistancePair = std::unordered_map<std::string_view, int>;
+
 namespace transport_catalogue {
-
-
 	struct BusStop {
 		std::string name_;
 		Coordinates coordinates_{ 0, 0 };
@@ -28,7 +27,7 @@ namespace transport_catalogue {
 		std::vector<BusStop*> stops_;
 		bool circle;
 	};
-
+	
 	struct RouteInfo {
 		int stops_{ 0 };
 		int unique_stops_{ 0 };
@@ -57,7 +56,7 @@ namespace transport_catalogue {
 		RouteInfo GetStopInfo(BusRoute* route) const;
 		RouteInfo GetStopInfo(std::string_view stop_on_route) const;
 		std::unordered_set<BusRoute*> GetBusInfo(const std::string& stop_name) const;
-		void UpdateStopDictance(std::string_view from, const DistancePair& to);
+		void UpdateStopDistance(std::string_view from, const DistancePair& to);
 		double GetDistance(std::string_view from, std::string_view to) const;
 
 	private:

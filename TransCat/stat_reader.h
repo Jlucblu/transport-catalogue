@@ -15,5 +15,7 @@
 namespace transport_catalogue {
     namespace statistics {
         void PrintInfo(std::istream& in, std::ostream& out, TransportCatalogue& cat);
+        void PrintBusInfo(const std::string& str, std::ostream& out, TransportCatalogue& cat);
+        void PrintStopInfo(const std::string& str, std::ostream& out, TransportCatalogue& cat);
     }
 }

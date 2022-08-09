@@ -77,7 +77,7 @@ namespace transport_catalogue {
 		return std::unordered_set<BusRoute*>(route_stop_.at(stop));
 	}
 
-	void TransportCatalogue::UpdateStopDictance(std::string_view from, const DistancePair& to) {
+	void TransportCatalogue::UpdateStopDistance(std::string_view from, const DistancePair& to) {
 		for (auto& [stop, distance] : to) {
 			BusStop* tostop = FindStop(stop);
 			if (tostop == nullptr) {
