@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <utility>
 
-
+using namespace geo;
 using namespace std::string_literals;
 using DistancePair = std::unordered_map<std::string_view, int>;
 

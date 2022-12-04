@@ -14,18 +14,20 @@ using namespace statistics;
 
 int main() {
 	TransportCatalogue tc;
-	/*
-	std::string line = "tests\\tsC_case1_input.txt";
+	
+	std::string line = "TransCat\\tests\\tsC_case1_input.txt";
 	std::ifstream in;
 	in.open(line);
 	if (in.is_open()) {
 		UpdateCatalogue(in, tc);
 		PrintInfo(in, cout, tc);
 		}
+	system("pause");
 	in.close();
-	*/
 	
+	
+	/*
 	UpdateCatalogue(cin, tc);
 	PrintInfo(cin, cout, tc);
-	
+	*/
 }
