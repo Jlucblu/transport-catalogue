@@ -1,0 +1,36 @@
+{
+  "base_requests": [
+    {
+      "is_roundtrip": false,
+      "name": "114",
+      "stops": [ "Морской вокзал", "Ривьерский мост" ],
+      "type": "Bus"
+    },
+    {
+      "latitude": 43.5878,
+      "longitude": 39.7169,
+      "name": "Ривьерский мост",
+      "road_distances": { "Морской вокзал": 850 },
+      "type": "Stop"
+    },
+    {
+      "latitude": 43.582,
+      "longitude": 39.7198,
+      "name": "Морской вокзал",
+      "road_distances": { "Ривьерский мост": 850 },
+      "type": "Stop"
+    }
+  ],
+  "stat_requests": [
+    {
+      "id": 1,
+      "name": "Ривьерский мост",
+      "type": "Stop"
+    },
+    {
+      "id": 2,
+      "name": "114",
+      "type": "Bus"
+    }
+  ]
+}

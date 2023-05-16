@@ -12,7 +12,6 @@
 
 namespace transport_catalogue {
     namespace input_handler {
-
         // Ввод запросов
         std::string ReadLine(std::istream& in);
         // Парсинг ключа
@@ -22,6 +21,6 @@ namespace transport_catalogue {
         // Парсинг остановки и координат
         std::pair <BusStop, DistancePair> ParseStop(std::string_view str);
         // Обновление каталога
-        std::istream& UpdateCatalogue(std::istream& in, TransportCatalogue& cat);
+        void UpdateCatalogue(std::istream& in, TransportCatalogue& cat);
     }
 }

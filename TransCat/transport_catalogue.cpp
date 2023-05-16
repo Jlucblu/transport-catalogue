@@ -68,6 +68,7 @@ namespace transport_catalogue {
 		return info;
 	}
 
+	// Получение информации об остановке
 	RouteInfo TransportCatalogue::GetStopInfo(const std::string_view name) const {
 		return GetStopInfo(FindRoute(name));
 	}
@@ -77,10 +78,11 @@ namespace transport_catalogue {
 		return std::unordered_set<BusRoute*>(route_stop_.at(stop));
 	}
 
+	// Обновление расстояния между двумя точками (остановками)
 	void TransportCatalogue::UpdateStopDistance(std::string_view from, const DistancePair& to) {
 		for (auto& [stop, distance] : to) {
-			BusStop* tostop = FindStop(stop);
-			if (tostop == nullptr) {
+			BusStop* toStop = FindStop(stop);
+			if (toStop == nullptr) {
 				UpdateStop({ std::string(stop), {0.0, 0.0} });
 			}
 
@@ -89,6 +91,7 @@ namespace transport_catalogue {
 		}
 	}
 
+	// Получение информации о расстоянии между двумя точками (остановками)
 	double TransportCatalogue::GetDistance(std::string_view from, std::string_view to) const {
 		BusStop* stopFrom = FindStop(from);
 		BusStop* stopTo = FindStop(to);

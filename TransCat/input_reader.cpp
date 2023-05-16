@@ -73,7 +73,7 @@ namespace transport_catalogue {
         }
 
         // Обновление каталога
-        std::istream& UpdateCatalogue(std::istream& in, TransportCatalogue& cat) {
+        void UpdateCatalogue(std::istream& in, TransportCatalogue& cat) {
             int count = std::stoi(ReadLine(in));
 
             while (count != 0) {
@@ -106,8 +106,6 @@ namespace transport_catalogue {
 
                 --count;
             }
-
-            return in;
         }
     }
 }
