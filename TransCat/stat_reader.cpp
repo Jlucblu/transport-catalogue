@@ -26,6 +26,7 @@ namespace transport_catalogue {
             }
         }
 
+        // Вывод информации о маршруте автобуса
         void PrintBusInfo(const std::string& str, std::ostream& out, TransportCatalogue& cat) {
             const std::string& number = str.substr(4, str.npos);
             const BusRoute* bus = cat.FindRoute(number);
@@ -33,12 +34,13 @@ namespace transport_catalogue {
                 out << "Bus "s << number << ": not found\n"s;
             }
             else {
-                RouteInfo info = cat.GetStopInfo(number);
+                RouteInfo info = cat.GetBusInfo(number);
                 out << "Bus "s << number << ": "s << info.stops_ << " stops on route, "s << info.unique_stops_
                     << " unique stops, "s << info.distance_ << " route length, "s << info.curvature_ << " curvature\n"s;
             }
         }
 
+        // Вывод информации об остановке (название, номера автобусов)
         void PrintStopInfo(const std::string& str, std::ostream& out, TransportCatalogue& cat) {
             const std::string& name = str.substr(5, str.npos);
             const BusStop* stop = cat.FindStop(name);
@@ -46,7 +48,7 @@ namespace transport_catalogue {
                 out << "Stop "s << name << ": not found\n"s;
             }
             else {
-                std::unordered_set<BusRoute*> numofbus = cat.GetBusInfo(name);
+                std::unordered_set<BusRoute*> numofbus = cat.GetStopInfo(name);
                 std::set<std::string> bus_numbers;
                 for (auto& num : numofbus) {
                     bus_numbers.emplace(num->number_);

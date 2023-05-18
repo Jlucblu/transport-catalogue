@@ -1,9 +1,17 @@
 #include "request_handler.h"
 
-/*
- * Здесь можно было бы разместить код обработчика запросов к базе, содержащего логику, которую не
- * хотелось бы помещать ни в transport_catalogue, ни в json reader.
- *
- * Если вы затрудняетесь выбрать, что можно было бы поместить в этот файл,
- * можете оставить его пустым.
- */
+namespace request_handler {
+
+	RequestHandler::RequestHandler(TransportCatalogue& tc)
+		: tc_(tc)
+	{}
+
+	std::optional<RouteInfo> RequestHandler::GetBusStat(const std::string_view& bus_name) const {
+		return tc_.GetBusInfo(bus_name);
+	}
+
+	std::unordered_set<BusRoute*> RequestHandler::GetBusesByStop(const std::string_view& stop_name) const {
+		return tc_.GetStopInfo(stop_name);
+	}
+
+}

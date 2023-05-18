@@ -3,26 +3,31 @@
 #include "json.h"
 #include "transport_catalogue.h"
 #include "domain.h"
+#include "request_handler.h"
 
 using namespace json;
 using namespace transport_catalogue;
+using namespace request_handler;
 
-namespace reading_queries {
+namespace json_reader {
+
 	class JSONReader {
 	public:
 		JSONReader() = default;
-		JSONReader(TransportCatalogue& tc);
-		//JSONReader(const Document& doc, TransportCatalogue& tc);
+		JSONReader(TransportCatalogue& tc, std::istream& input, std::ostream& output);
 
-		void ParseBaseRequest(const Document& doc);
+		void ParseBaseRequest() const;
+		BusRoute ParseBus(const json::Dict& businfo) const;
+		std::pair<BusStop, DistancePair> ParseStop(const json::Dict& stopinfo) const;
 
-		BusRoute ParseBus(const json::Dict& businfo);
-		BusStop ParseStop(const json::Dict& businfo);
-
+		Dict GetBusAnswer(const Dict& request) const;
+		Dict GetStopAnswer(const Dict& request) const;
 
 	private:
-		//const Document& doc_;
 		TransportCatalogue& tc_;
+		RequestHandler request_;
+		const Document& doc_;
+		std::ostream& output_;
 	};
 
 } // namespace reading_queries

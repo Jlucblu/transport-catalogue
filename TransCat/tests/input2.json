@@ -39,7 +39,7 @@
         "Marushkino",
         "Rasskazovka"
       ],
-      "is_roundtrip": false
+      "is_roundtrip": true
     },
     {
       "type": "Stop",

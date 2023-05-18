@@ -1,6 +1,4 @@
 #include "transport_catalogue.h"
-#include "stat_reader.h"
-#include "json.h"
 #include "json_reader.h"
 
 #include <cassert>
@@ -10,26 +8,29 @@
 
 using namespace std;
 using namespace transport_catalogue;
-using namespace reading_queries;
-using namespace statistics;
+using namespace json_reader;
 
 
 void Test7() {
-	TransportCatalogue tc;
-	JSONReader rq(tc);
-
 	std::ifstream file;
+	std::ofstream result;
+
 	file.open("TransCat\\tests\\input2.json");
+	result.open("TransCat\\tests\\result.json");
+
 	if (!file) {
 		std::cout << "No File!\n"s;
 		return;
 	}
 
-	json::Document doc = json::Load(file);
+	TransportCatalogue tc;
+	JSONReader rh(tc, file, result);
 
-	rq.ParseBaseRequest(doc);
+	rh.ParseBaseRequest();
 
-	PrintInfo(std::cin, std::cout, tc);
+	file.close();
+	result.close();
+
 	system("pause");
 }
 

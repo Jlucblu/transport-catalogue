@@ -16,7 +16,7 @@
 using namespace geo;
 using namespace std::string_literals;
 using namespace domain;
-using DistancePair = std::unordered_map<std::string_view, int>;
+using DistancePair = std::unordered_map<std::string_view, double>;
 
 namespace transport_catalogue {
 
@@ -29,9 +29,9 @@ namespace transport_catalogue {
 		void UpdateStop(const BusStop& stop);
 		BusRoute* FindRoute(std::string_view name) const;
 		BusStop* FindStop(std::string_view name) const;
-		RouteInfo GetStopInfo(BusRoute* route) const;
-		RouteInfo GetStopInfo(std::string_view stop_on_route) const;
-		std::unordered_set<BusRoute*> GetBusInfo(const std::string& stop_name) const;
+		RouteInfo GetBusInfo(BusRoute* route) const;
+		RouteInfo GetBusInfo(std::string_view stop_on_route) const;
+		std::unordered_set<BusRoute*> GetStopInfo(std::string_view stop_name) const;
 		void UpdateStopDistance(std::string_view from, const DistancePair& to);
 		double GetDistance(std::string_view from, std::string_view to) const;
 
@@ -43,4 +43,5 @@ namespace transport_catalogue {
 		std::unordered_map<BusStop*, std::unordered_set<BusRoute*>> route_stop_;
 		std::unordered_map<std::pair<BusStop*, BusStop*>, double, Hasher> stop_distance_;
 	};
-}
+
+} // namespace transport_catalogue

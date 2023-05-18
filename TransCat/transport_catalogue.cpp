@@ -48,12 +48,13 @@ namespace transport_catalogue {
 		return nullptr;
 	}
 
-	// Получение информации о маршруте
-	RouteInfo TransportCatalogue::GetStopInfo(BusRoute* route) const {
-		RouteInfo info;
-		std::unordered_set<std::string_view> unique;
+	// Получение информации о маршруте автобуса
+	RouteInfo TransportCatalogue::GetBusInfo(BusRoute* route) const {
+		RouteInfo info = {};
+		std::unordered_set<std::string_view> unique = {};
 		double length = 0.0;
 		const BusStop* ptr_start = nullptr;
+
 		for (const BusStop* prt_end : route->stops_) {
 			unique.insert(prt_end->name_);
 			if (ptr_start) {
@@ -68,12 +69,12 @@ namespace transport_catalogue {
 		return info;
 	}
 
-	// Получение информации об остановке
-	RouteInfo TransportCatalogue::GetStopInfo(const std::string_view name) const {
-		return GetStopInfo(FindRoute(name));
+	RouteInfo TransportCatalogue::GetBusInfo(const std::string_view name) const {
+		return GetBusInfo(FindRoute(name));
 	}
 
-	std::unordered_set<BusRoute*> TransportCatalogue::GetBusInfo(const std::string& stop_name) const {
+	// Получение информации об автобусах проходящих через остановку
+	std::unordered_set<BusRoute*> TransportCatalogue::GetStopInfo(std::string_view stop_name) const {
 		BusStop* stop = FindStop(stop_name);
 		return std::unordered_set<BusRoute*>(route_stop_.at(stop));
 	}
@@ -81,8 +82,8 @@ namespace transport_catalogue {
 	// Обновление расстояния между двумя точками (остановками)
 	void TransportCatalogue::UpdateStopDistance(std::string_view from, const DistancePair& to) {
 		for (auto& [stop, distance] : to) {
-			BusStop* toStop = FindStop(stop);
-			if (toStop == nullptr) {
+			BusStop* stopTo = FindStop(stop);
+			if (stopTo == nullptr) {
 				UpdateStop({ std::string(stop), {0.0, 0.0} });
 			}
 
@@ -101,4 +102,5 @@ namespace transport_catalogue {
 		}
 		return stop_distance_.at({ stopTo, stopFrom });
 	}
-}
+
+} // namespace transport_catalogue
