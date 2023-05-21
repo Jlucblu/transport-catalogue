@@ -33,13 +33,25 @@
     },
     {
       "type": "Bus",
+      "name": "999",
+      "stops": [
+        "Biryulyovo Zapadnoye",
+        "Universam",
+        "Rossoshanskaya ulitsa",
+        "Biryulyovo Zapadnoye",
+        "Marushkino"
+      ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Bus",
       "name": "750",
       "stops": [
         "Tolstopaltsevo",
         "Marushkino",
         "Rasskazovka"
       ],
-      "is_roundtrip": true
+      "is_roundtrip": false
     },
     {
       "type": "Stop",
@@ -139,6 +151,11 @@
       "id": 194217464
     },
     {
+      "type": "Bus",
+      "name": "828",
+      "id": 194217488
+    },
+    {
       "type": "Stop",
       "name": "Samara",
       "id": 746888088
@@ -152,6 +169,11 @@
       "type": "Stop",
       "name": "Biryulyovo Zapadnoye",
       "id": 1042838872
+    },
+    {
+      "type": "Stop",
+      "name": "Universam",
+      "id": 104872
     }
   ]
 }

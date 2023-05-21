@@ -61,7 +61,7 @@ namespace json_reader {
 	BusRoute JSONReader::ParseBus(const Dict& businfo) const {
 		BusRoute route = {};
 		route.number_ = businfo.at("name").AsString();
-		route.circle = businfo.at("is_roundtrip").IsBool();
+		route.circle = businfo.at("is_roundtrip").AsBool();
 		const auto& stops = businfo.at("stops").AsArray();
 		for (auto& stop : stops) {
 			BusStop* found = tc_.FindStop(stop.AsString());
@@ -71,7 +71,7 @@ namespace json_reader {
 			route.stops_.push_back(tc_.FindStop(stop.AsString()));
 		}
 
-		if (route.circle) {
+		if (!route.circle) {
 			for (int i = route.stops_.size() - 2; i >= 0; --i) {
 				route.stops_.push_back(route.stops_[i]);
 			}
@@ -128,10 +128,19 @@ namespace json_reader {
 		}
 		else {
 			Array set = {};
+			std::vector<std::string> forSort = {};
 			const auto& businfo = request_.GetBusesByStop(name);
+
 			for (const auto& bus : businfo) {
-				set.push_back(bus->number_);
+				forSort.push_back(bus->number_);
 			}
+			
+			std::sort(forSort.begin(), forSort.end());
+
+			for (const auto& fS : forSort) {
+				set.push_back(fS);
+			}
+
 			dict.emplace("buses"s, set);
 		}
 

@@ -100,7 +100,12 @@ namespace transport_catalogue {
 		if (stop_distance_.count({ stopFrom, stopTo })) {
 			return stop_distance_.at({ stopFrom, stopTo });
 		}
-		return stop_distance_.at({ stopTo, stopFrom });
+		else if (stop_distance_.count({ stopTo, stopFrom })) {
+			return stop_distance_.at({ stopTo, stopFrom });
+		}
+		else {
+			return 0.0;
+		}
 	}
 
 } // namespace transport_catalogue

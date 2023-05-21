@@ -3,15 +3,30 @@
     {
       "type": "Bus",
       "name": "114",
-      "stops": [ "MV", "RM" ],
-      "is_roundtrip": true
+      "stops": [
+        "MV",
+        "RM"
+      ],
+      "is_roundtrip": false
     },
     {
       "type": "Stop",
       "name": "RM",
       "latitude": 43.587795,
       "longitude": 39.716901,
-      "road_distances": { "MV": 850 }
+      "road_distances": {
+        "MV": 850
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "EL",
+      "latitude": 43.598701,
+      "longitude": 39.730623,
+      "road_distances": {
+        "Docuchaeva": 3000,
+        "Liza": 4300
+      }
     },
     {
       "type": "Stop",
@@ -19,7 +34,18 @@
       "latitude": 43.581969,
       "longitude": 39.719848,
       "road_distances": { "RM": 850 }
-    }
+    },
+    {
+      "type": "Bus",
+      "name": "14",
+      "stops": [
+        "Liza",
+        "EL",
+        "Docuchaeva",
+        "Liza"
+      ],
+      "is_roundtrip": true
+    } 
   ],
   "stat_requests": [
     {
@@ -31,6 +57,16 @@
       "id": 2,
       "type": "Bus",
       "name": "114"
-    }
+    },
+    {
+      "id": 12345678,
+      "type": "Bus",
+      "name": "14"
+    },
+    {
+      "id": 12345,
+      "type": "Stop",
+      "name": "Docuchaeva"
+    } 
   ]
 } 

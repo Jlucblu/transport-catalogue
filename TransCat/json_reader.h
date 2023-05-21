@@ -26,7 +26,7 @@ namespace json_reader {
 	private:
 		TransportCatalogue& tc_;
 		RequestHandler request_;
-		const Document& doc_;
+		const Document doc_;
 		std::ostream& output_;
 	};
 
