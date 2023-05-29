@@ -4,29 +4,37 @@
 #include "transport_catalogue.h"
 #include "domain.h"
 #include "request_handler.h"
+#include "map_renderer.h"
 
-using namespace json;
-using namespace transport_catalogue;
-using namespace request_handler;
+
+namespace tc = transport_catalogue;
+namespace rh = request_handler;
+namespace mr = map_renderer;
+
 
 namespace json_reader {
 
 	class JSONReader {
 	public:
 		JSONReader() = default;
-		JSONReader(TransportCatalogue& tc, std::istream& input, std::ostream& output);
+		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRender& mr, std::istream& input, std::ostream& output);
 
 		void ParseBaseRequest() const;
 		BusRoute ParseBus(const json::Dict& businfo) const;
 		std::pair<BusStop, DistancePair> ParseStop(const json::Dict& stopinfo) const;
 
-		Dict GetBusAnswer(const Dict& request) const;
-		Dict GetStopAnswer(const Dict& request) const;
+		json::Dict GetBusAnswer(const json::Dict& request) const;
+		json::Dict GetStopAnswer(const json::Dict& request) const;
+		
+
+		mr::RenderSettings ParseMapSettings(const json::Dict& request) const;
+		svg::Color GetColor(const json::Node& node) const;
 
 	private:
-		TransportCatalogue& tc_;
-		RequestHandler request_;
-		const Document doc_;
+		tc::TransportCatalogue& tc_;
+		mr::MapRender& render_;
+		rh::RequestHandler& request_;
+		const json::Document doc_;
 		std::ostream& output_;
 	};
 

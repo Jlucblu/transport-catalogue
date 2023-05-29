@@ -1,8 +1,9 @@
 #include "request_handler.h"
 
+
 namespace request_handler {
 
-	RequestHandler::RequestHandler(TransportCatalogue& tc)
+	RequestHandler::RequestHandler(tc::TransportCatalogue& tc)
 		: tc_(tc)
 	{}
 
@@ -13,5 +14,9 @@ namespace request_handler {
 	std::unordered_set<BusRoute*> RequestHandler::GetBusesByStop(const std::string_view& stop_name) const {
 		return tc_.GetStopInfo(stop_name);
 	}
+	
+	std::vector<BusRoute*> RequestHandler::GetRoutes() const {
+		return tc_.GetRoutes();
+	}
 
-}
+} // namespace request_handler

@@ -1,5 +1,6 @@
 #pragma once
 
+
 namespace geo {
 
     struct Coordinates {

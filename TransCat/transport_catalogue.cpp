@@ -1,5 +1,6 @@
 #include "transport_catalogue.h"
 
+
 namespace transport_catalogue {
 
 	// Обновление маршрута автобуса
@@ -106,6 +107,22 @@ namespace transport_catalogue {
 		else {
 			return 0.0;
 		}
+	}
+
+	// Получение всех маршрутов
+	std::vector<BusRoute*> TransportCatalogue::GetRoutes() const {
+		std::vector<BusRoute*> routes = {};
+
+		for (const std::pair<const std::string_view, BusRoute*>& route : route_name_) {
+			routes.push_back(route.second);
+		}
+
+		std::sort(routes.begin(), routes.end(), 
+			[](const domain::BusRoute* a, const domain::BusRoute* b) { 
+				return a->number_ < b->number_; 
+			});
+
+		return routes;
 	}
 
 } // namespace transport_catalogue

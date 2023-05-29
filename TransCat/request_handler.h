@@ -1,21 +1,22 @@
 #pragma once
 
-#include <optional>
-
 #include "transport_catalogue.h"
 #include "domain.h"
+#include "map_renderer.h"
+
+#include <optional>
 
 
-using namespace transport_catalogue;
+namespace tc = transport_catalogue;
+namespace mr = map_renderer;
 
 
 namespace request_handler {
 
     class RequestHandler {
     public:
-        // MapRenderer понадобится в следующей части итогового проекта
-        RequestHandler(TransportCatalogue& tc);
-        //RequestHandler(const TransportCatalogue& db, const renderer::MapRenderer& renderer);
+        RequestHandler() = default;
+        RequestHandler(tc::TransportCatalogue& tc);
 
         // Возвращает информацию о маршруте (запрос Bus)
         std::optional<RouteInfo> GetBusStat(const std::string_view& bus_name) const;
@@ -23,13 +24,11 @@ namespace request_handler {
         // Возвращает маршруты, проходящие через
         std::unordered_set<BusRoute*> GetBusesByStop(const std::string_view& stop_name) const;
 
-        // Этот метод будет нужен в следующей части итогового проекта
-        //svg::Document RenderMap() const;
+        // Получение всех маршрутов
+        std::vector<BusRoute*> GetRoutes() const;
 
     private:
-        // RequestHandler использует агрегацию объектов "Транспортный Справочник" и "Визуализатор Карты"
-        TransportCatalogue& tc_;
-        //const renderer::MapRenderer& renderer_;
+        tc::TransportCatalogue& tc_;
     };
 
 } // namespace request_handler

@@ -3,14 +3,15 @@
 
 namespace json_reader {
 
-	JSONReader::JSONReader(TransportCatalogue& tc, std::istream& input, std::ostream& output)
+	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRender& mr, std::istream& input, std::ostream& output)
 		: tc_(tc)
-		, request_(tc)
-		, doc_(Load(input))
+		, render_(mr)
+		, request_(rh)
+		, doc_(json::Load(input))
 		, output_(output)
 	{}
 
-	// Парсинг входящей запроса
+	// Парсинг входящего запроса
 	void JSONReader::ParseBaseRequest() const {
 		const auto& load = doc_.GetRoot().AsMap();
 
@@ -35,10 +36,10 @@ namespace json_reader {
 		}
 
 		if (load.count("stat_requests")) {
-			const auto& base = load.at("stat_requests").AsArray();
-			Array answer = {};
+			const auto& stat = load.at("stat_requests").AsArray();
+			json::Array answer = {};
 
-			for (const auto& request : base) {
+			for (const auto& request : stat) {
 				const auto& type = request.AsMap().at("type").AsString();
 
 				if (type == "Bus") {
@@ -52,13 +53,21 @@ namespace json_reader {
 				}
 			}
 
-			Print(Document(answer), output_);
+			if (!answer.empty()) {
+				json::Print(json::Document(answer), output_);
+			}
+		}
+
+		if (load.count("render_settings")) {
+			const auto& render = load.at("render_settings").AsMap();
+			render_.SetSettings(ParseMapSettings(render));
+			render_.MakeSVGDoc(request_.GetRoutes());
 		}
 	}
 
 
 	// Парсинг маршрута автобуса
-	BusRoute JSONReader::ParseBus(const Dict& businfo) const {
+	BusRoute JSONReader::ParseBus(const json::Dict& businfo) const {
 		BusRoute route = {};
 		route.number_ = businfo.at("name").AsString();
 		route.circle = businfo.at("is_roundtrip").AsBool();
@@ -81,7 +90,7 @@ namespace json_reader {
 	}
 
 	// Парсинг остановок на маршруте
-	std::pair<BusStop, DistancePair> JSONReader::ParseStop(const Dict& stopinfo) const {
+	std::pair<BusStop, DistancePair> JSONReader::ParseStop(const json::Dict& stopinfo) const {
 		BusStop stop = {};
 		DistancePair distance = {};
 		stop.name_ = stopinfo.at("name").AsString();
@@ -97,8 +106,8 @@ namespace json_reader {
 
 
 	// Формирование ответа на запрос по номеру автобуса
-	Dict JSONReader::GetBusAnswer(const Dict& request) const {
-		Dict dict = {};
+	json::Dict JSONReader::GetBusAnswer(const json::Dict& request) const {
+		json::Dict dict = {};
 		dict.emplace("request_id"s, request.at("id").AsInt());
 		const auto& name = request.at("name").AsString();
 		const auto& valid = tc_.FindRoute(name);
@@ -118,8 +127,8 @@ namespace json_reader {
 	}
 
 	// Формирование ответа на запрос по названию остановки
-	Dict JSONReader::GetStopAnswer(const Dict& request) const {
-		Dict dict = {};
+	json::Dict JSONReader::GetStopAnswer(const json::Dict& request) const {
+		json::Dict dict = {};
 		dict.emplace("request_id"s, request.at("id").AsInt());
 		const auto& name = request.at("name").AsString();
 		const auto& valid = tc_.FindStop(name);
@@ -127,7 +136,7 @@ namespace json_reader {
 			dict.emplace("error_message"s, "not found"s);
 		}
 		else {
-			Array set = {};
+			json::Array set = {};
 			std::vector<std::string> forSort = {};
 			const auto& businfo = request_.GetBusesByStop(name);
 
@@ -145,6 +154,47 @@ namespace json_reader {
 		}
 
 		return dict;
+	}
+
+	// Парсинг и заполнения данных для отрисовки
+	mr::RenderSettings JSONReader::ParseMapSettings(const json::Dict& request) const {
+		mr::RenderSettings settings = {};
+		settings.width = request.at("width"s).AsDouble();
+		settings.height = request.at("height"s).AsDouble();
+		settings.padding = request.at("padding"s).AsDouble();
+		settings.stop_radius = request.at("stop_radius"s).AsDouble();
+		settings.line_width = request.at("line_width"s).AsDouble();
+		settings.bus_label_font_size = request.at("bus_label_font_size"s).AsInt();
+		settings.bus_label_offset = { request.at("bus_label_offset"s).AsArray()[0].AsDouble(), 
+			request.at("bus_label_offset"s).AsArray()[1].AsDouble() };
+		settings.stop_label_font_size = request.at("stop_label_font_size"s).AsInt();
+		settings.stop_label_offset = { request.at("stop_label_offset"s).AsArray()[0].AsDouble(), 
+			request.at("stop_label_offset"s).AsArray()[1].AsDouble() };
+		settings.underlayer_color = GetColor(request.at("underlayer_color"));
+		settings.underlayer_width = request.at("underlayer_width"s).AsDouble();
+		for (const auto& palette : request.at("color_palette").AsArray()) {
+			settings.color_palette.push_back(GetColor(palette));
+		}
+
+		return settings;
+	}
+
+	// Возвращаем структуру Color
+	svg::Color JSONReader::GetColor(const json::Node& node) const  {
+		if (node.IsArray()) {
+			if (node.AsArray().size() == 3) {
+				svg::Rgb rgb ( node.AsArray()[0].AsInt(), node.AsArray()[1].AsInt(),
+					node.AsArray()[2].AsInt() );
+				return rgb;
+			}
+			else if (node.AsArray().size() == 4) {
+				svg::Rgba rgba( node.AsArray()[0].AsInt(), node.AsArray()[1].AsInt(),
+					node.AsArray()[2].AsInt(), node.AsArray()[3].AsDouble() );
+				return rgba;
+			}
+		}
+
+		return node.AsString();
 	}
 
 } // namespace reading_queries

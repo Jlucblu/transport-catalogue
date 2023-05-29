@@ -1,9 +1,13 @@
 #pragma once
-#include <string>
-#include <vector>
+
 #include "geo.h"
 
+#include <string>
+#include <vector>
+
+
 using namespace geo;
+
 
 namespace domain {
 
