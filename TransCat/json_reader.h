@@ -26,7 +26,6 @@ namespace json_reader {
 		json::Dict GetBusAnswer(const json::Dict& request) const;
 		json::Dict GetStopAnswer(const json::Dict& request) const;
 		
-
 		mr::RenderSettings ParseMapSettings(const json::Dict& request) const;
 		svg::Color GetColor(const json::Node& node) const;
 

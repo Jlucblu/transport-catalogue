@@ -24,11 +24,18 @@ namespace request_handler {
         // Возвращает маршруты, проходящие через остановку
         std::unordered_set<BusRoute*> GetBusesByStop(const std::string_view& stop_name) const;
 
-        // Получение всех маршрутов
-        std::vector<BusRoute*> GetRoutes() const;
 
         // Уникальные остановки на маршруте с сохранением порядка
-        std::vector<BusStop*> GetUniqueStops(const BusRoute& route) const;
+        std::vector<BusStop*> MakeUniqueStops(const std::vector<BusStop*> stops) const;
+
+        // Получение маршрута с уникальными остановками
+        std::vector<BusRoute*> GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const;
+
+        // Получение всех уникальных остановок на всех маршрутах отсортированных в лексографическом порядке
+        std::vector<BusStop*> GetAllUniqueStops() const;
+
+        // Получение всех маршрутов, отсортированных в лексографическом порядке
+        std::vector<BusRoute*> GetAllRoutes() const;
 
     private:
         tc::TransportCatalogue& tc_;

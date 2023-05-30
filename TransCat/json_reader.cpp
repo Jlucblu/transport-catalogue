@@ -60,8 +60,14 @@ namespace json_reader {
 
 		if (load.count("render_settings")) {
 			const auto& render = load.at("render_settings").AsMap();
+			const auto& routes = request_.GetAllRoutes();
 			render_.SetSettings(ParseMapSettings(render));
-			render_.MakeSVGDoc(request_.GetRoutes(), output_);
+			render_.SetProjector(routes);
+			render_.RendererPolyline(routes);
+			render_.RendererRouteName(routes);
+			render_.RendererStopSymbols(request_.GetAllUniqueStops());
+			render_.RendererStopNames(request_.GetAllUniqueStops());
+			render_.RendererXML(output_);
 		}
 	}
 

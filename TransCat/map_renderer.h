@@ -119,11 +119,11 @@ namespace map_renderer {
         void SetSettings(const RenderSettings& settings);
         void SetProjector(const std::vector<domain::BusRoute*> routes);
 
-        void RendererPolyline(const domain::BusRoute* route, size_t count);
-        void RendererRouteName(const domain::BusRoute* route, size_t number);
+        void RendererPolyline(const std::vector<domain::BusRoute*> routes);
+        void RendererRouteName(const std::vector<domain::BusRoute*> routes);
         void RendererStopSymbols(const std::vector<domain::BusStop*> stops);
         void RendererStopNames(const std::vector<domain::BusStop*> stops);
-        void MakeSVGDoc(const std::vector<domain::BusRoute*> routes, std::ostream& output = std::cout);
+        void RendererXML(std::ostream& output = std::cout);
 
     private:
         RenderSettings settings_;

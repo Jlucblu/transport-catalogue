@@ -9,6 +9,26 @@
 using namespace std;
 namespace jr = json_reader;
 
+int CompareFiles(ifstream& expectedFile, ifstream& outputFile) {
+	std::string expectedLine;
+	std::string outputLine;
+
+	int lineIndex = 0;
+
+	while (std::getline(expectedFile, expectedLine) && std::getline(outputFile, outputLine)) {
+		++lineIndex;
+		if (expectedLine != outputLine) {
+			std::cout << lineIndex << " | ";
+			continue;
+		}
+	}
+
+	if (!expectedFile.eof() || !outputFile.eof()) {
+		return lineIndex;
+	}
+
+	return -1; // Если расхождений не найдено
+}
 
 void Test6() {
 	//std::string line = "TransCat\\tests\\tsC_case1_input.txt";
@@ -72,6 +92,17 @@ void Test8() {
 
 	file.close();
 	result.close();
+
+	std::ifstream finalresult;
+	std::ifstream output;
+
+	finalresult.open("TransCat\\tests\\result.xml");
+	output.open("TransCat\\tests\\output4.txt");
+
+	std::cout << CompareFiles(finalresult, output) << endl;
+
+	finalresult.close();
+	output.close();
 
  	system("pause");
 }

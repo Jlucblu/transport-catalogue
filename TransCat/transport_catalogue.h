@@ -36,8 +36,10 @@ namespace transport_catalogue {
 		std::unordered_set<BusRoute*> GetStopInfo(std::string_view stop_name) const;
 		void UpdateStopDistance(std::string_view from, const DistancePair& to);
 		double GetDistance(std::string_view from, std::string_view to) const;
-		std::vector<BusStop*> GetUniqueStops(const BusRoute& route) const;
-		std::vector<BusRoute*> GetRoutes() const;
+		std::vector<BusStop*> MakeUniqueStops(const std::vector<BusStop*> route) const;
+		std::vector<BusRoute*> GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const;
+		std::vector<BusStop*> GetAllUniqueStops() const;
+		std::vector<BusRoute*> GetAllRoutes() const;
 
 	private:
 		std::deque<BusRoute> bus_cat_;

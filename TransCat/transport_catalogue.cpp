@@ -53,7 +53,7 @@ namespace transport_catalogue {
 	RouteInfo TransportCatalogue::GetBusInfo(BusRoute* route) const {
 		RouteInfo info = {};
 		double length = 0.0;
-		auto unique = GetUniqueStops(*route);
+		auto unique = MakeUniqueStops(route->stops_);
 
 		const BusStop* ptr_start = nullptr;
 		for (const BusStop* prt_end : route->stops_) {
@@ -110,11 +110,11 @@ namespace transport_catalogue {
 	}
 
 	// Уникальные остановки на маршруте с сохранением порядка
-	std::vector<BusStop*> TransportCatalogue::GetUniqueStops(const BusRoute& route) const {
-		std::vector<BusStop*> unique;
-		std::unordered_set<BusStop*> seenElements;
+	std::vector<BusStop*> TransportCatalogue::MakeUniqueStops(const std::vector<BusStop*> route) const {
+		std::vector<BusStop*> unique = {};
+		std::unordered_set<BusStop*> seenElements = {};
 
-		for (const auto& stops : route.stops_) {
+		for (const auto& stops : route) {
 			if (seenElements.insert(stops).second) {
 				unique.push_back(stops);
 			}
@@ -123,11 +123,46 @@ namespace transport_catalogue {
 		return unique;
 	}
 
-	// Получение всех маршрутов
-	std::vector<BusRoute*> TransportCatalogue::GetRoutes() const {
+	// Получение маршрута с уникальными остановками
+	std::vector<BusRoute*> TransportCatalogue::GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const {
+		std::vector<BusRoute*> uniqueRoutes = {};
+		for (const auto& route : routes) {
+			BusRoute* unique = new BusRoute;
+			const auto& stops = MakeUniqueStops(route->stops_);
+			unique->number_ = route->number_;
+			unique->circle = route->circle;
+			unique->stops_ = stops;
+			uniqueRoutes.push_back(unique);
+		}
+
+		return uniqueRoutes;
+	}
+
+	// Получение всех уникальных остановок на всех маршрутах отсортированных в лексографическом порядке
+	std::vector<BusStop*> TransportCatalogue::GetAllUniqueStops() const {
+		std::vector<BusStop*> allStops = {};
+		
+		for (const auto& [_, route] : route_name_) {
+			for (const auto& stop : route->stops_) {
+				allStops.push_back(stop);
+			}
+		}
+
+		auto uniqueStops = MakeUniqueStops(allStops);
+
+		std::sort(uniqueStops.begin(), uniqueStops.end(),
+			[](const domain::BusStop* a, const domain::BusStop* b) {
+				return a->name_ < b->name_;
+			});
+
+		return uniqueStops;
+	}
+
+	// Получение всех маршрутов, отсортированных в лексографическом порядке
+	std::vector<BusRoute*> TransportCatalogue::GetAllRoutes() const {
 		std::vector<BusRoute*> routes = {};
 
-		for (const std::pair<const std::string_view, BusRoute*>& route : route_name_) {
+		for (const auto& route : route_name_) {
 			routes.push_back(route.second);
 		}
 

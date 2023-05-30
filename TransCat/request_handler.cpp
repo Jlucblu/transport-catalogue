@@ -15,12 +15,20 @@ namespace request_handler {
 		return tc_.GetStopInfo(stop_name);
 	}
 
-	std::vector<BusRoute*> RequestHandler::GetRoutes() const {
-		return tc_.GetRoutes();
+	std::vector<BusStop*> RequestHandler::MakeUniqueStops(const std::vector<BusStop*> stops) const {
+		return tc_.MakeUniqueStops(stops);
 	}
 
-	std::vector<BusStop*> RequestHandler::GetUniqueStops(const BusRoute& route) const {
-		return tc_.GetUniqueStops(route);
+	std::vector<BusRoute*> RequestHandler::GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const {
+		return tc_.GetRoutesWithUniqueStops(routes);
+	}
+
+	std::vector<BusStop*> RequestHandler::GetAllUniqueStops() const {
+		return tc_.GetAllUniqueStops();
+	}
+
+	std::vector<BusRoute*> RequestHandler::GetAllRoutes() const {
+		return tc_.GetAllRoutes();
 	}
 
 } // namespace request_handler
