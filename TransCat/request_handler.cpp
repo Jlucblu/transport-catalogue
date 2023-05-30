@@ -14,9 +14,13 @@ namespace request_handler {
 	std::unordered_set<BusRoute*> RequestHandler::GetBusesByStop(const std::string_view& stop_name) const {
 		return tc_.GetStopInfo(stop_name);
 	}
-	
+
 	std::vector<BusRoute*> RequestHandler::GetRoutes() const {
 		return tc_.GetRoutes();
+	}
+
+	std::vector<BusStop*> RequestHandler::GetUniqueStops(const BusRoute& route) const {
+		return tc_.GetUniqueStops(route);
 	}
 
 } // namespace request_handler

@@ -218,8 +218,6 @@
   <text fill="tomato" x="26244.8" y="18295.4" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">NdS</text>
   <text fill="rgba(8,102,121,0.228016)" stroke="rgba(8,102,121,0.228016)" stroke-width="55206.6" stroke-linecap="round" stroke-linejoin="round" x="27737.2" y="31848.2" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">OT9Bcs7tyVD4B</text>
   <text fill="pink" x="27737.2" y="31848.2" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">OT9Bcs7tyVD4B</text>
-  <text fill="rgba(8,102,121,0.228016)" stroke="rgba(8,102,121,0.228016)" stroke-width="55206.6" stroke-linecap="round" stroke-linejoin="round" x="27737.2" y="31848.2" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">OT9Bcs7tyVD4B</text>
-  <text fill="pink" x="27737.2" y="31848.2" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">OT9Bcs7tyVD4B</text>
   <text fill="rgba(8,102,121,0.228016)" stroke="rgba(8,102,121,0.228016)" stroke-width="55206.6" stroke-linecap="round" stroke-linejoin="round" x="35478.8" y="41103.7" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">Ocm7e</text>
   <text fill="rgb(113,225,204)" x="35478.8" y="41103.7" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">Ocm7e</text>
   <text fill="rgba(8,102,121,0.228016)" stroke="rgba(8,102,121,0.228016)" stroke-width="55206.6" stroke-linecap="round" stroke-linejoin="round" x="30413.6" y="2398.56" dx="28287.7" dy="53899.4" font-size="34915" font-family="Verdana" font-weight="bold">Ocm7e</text>

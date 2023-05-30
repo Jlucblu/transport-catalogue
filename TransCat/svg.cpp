@@ -103,7 +103,7 @@ Circle& Circle::SetRadius(double radius)  {
 void Circle::RenderObject(const RenderContext& context) const {
     auto& out = context.out;
     out << "<circle cx=\""sv << center_.x << "\" cy=\""sv << center_.y << "\" "sv;
-    out << "r=\""sv << radius_ << "\" "sv;
+    out << "r=\""sv << radius_ << "\""sv;
     RenderAttrs(out);
     out << "/>"sv;
 }
@@ -179,19 +179,20 @@ Text& Text::SetData(std::string data) {
 
 void Text::RenderObject(const RenderContext& context) const {
     auto& out = context.out;
-    out << "<text x=\"" << pos_.x << "\" y=\"" << pos_.y << "\" ";
-    out << "dx=\"" << offset_.x << "\" dy=\"" << offset_.y << "\" ";
-    out << "font-size=\"" << size_ << "\"";
+    out << "<text"sv;
+    RenderAttrs(out);
+    out << " x=\""sv << pos_.x << "\" y=\""sv << pos_.y << "\" "sv;
+    out << "dx=\""sv << offset_.x << "\" dy=\""sv << offset_.y << "\" "sv;
+    out << "font-size=\""sv << size_ << "\""sv;
 
     if (font_family_) {
-        out << " font-family=\"" << *font_family_ << "\"";
+        out << " font-family=\""sv << *font_family_ << "\""sv;
     }
     if (font_weight_) {
-        out << " font-weight=\"" << *font_weight_ << "\"";
+        out << " font-weight=\""sv << *font_weight_ << "\""sv;
     }
 
-    RenderAttrs(out);
-    out << ">" << data_ << "</text>";
+    out << ">"sv << data_ << "</text>"sv;
 }
 
 // ---------- Document ------------------

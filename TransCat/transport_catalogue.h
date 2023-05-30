@@ -24,7 +24,6 @@ using DistancePair = std::unordered_map<std::string_view, double>;
 namespace transport_catalogue {
 
 	class TransportCatalogue {
-
 	public:
 		TransportCatalogue() = default;
 
@@ -37,6 +36,7 @@ namespace transport_catalogue {
 		std::unordered_set<BusRoute*> GetStopInfo(std::string_view stop_name) const;
 		void UpdateStopDistance(std::string_view from, const DistancePair& to);
 		double GetDistance(std::string_view from, std::string_view to) const;
+		std::vector<BusStop*> GetUniqueStops(const BusRoute& route) const;
 		std::vector<BusRoute*> GetRoutes() const;
 
 	private:

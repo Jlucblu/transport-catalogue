@@ -3,7 +3,7 @@
 
 namespace json_reader {
 
-	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRender& mr, std::istream& input, std::ostream& output)
+	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRenderer& mr, std::istream& input, std::ostream& output)
 		: tc_(tc)
 		, render_(mr)
 		, request_(rh)
@@ -53,15 +53,15 @@ namespace json_reader {
 				}
 			}
 
-			if (!answer.empty()) {
-				json::Print(json::Document(answer), output_);
-			}
+			//if (!answer.empty()) {
+			//	json::Print(json::Document(answer), output_);
+			//}
 		}
 
 		if (load.count("render_settings")) {
 			const auto& render = load.at("render_settings").AsMap();
 			render_.SetSettings(ParseMapSettings(render));
-			render_.MakeSVGDoc(request_.GetRoutes());
+			render_.MakeSVGDoc(request_.GetRoutes(), output_);
 		}
 	}
 

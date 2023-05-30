@@ -52,18 +52,18 @@ namespace transport_catalogue {
 	// Получение информации о маршруте автобуса
 	RouteInfo TransportCatalogue::GetBusInfo(BusRoute* route) const {
 		RouteInfo info = {};
-		std::unordered_set<std::string_view> unique = {};
 		double length = 0.0;
-		const BusStop* ptr_start = nullptr;
+		auto unique = GetUniqueStops(*route);
 
+		const BusStop* ptr_start = nullptr;
 		for (const BusStop* prt_end : route->stops_) {
-			unique.insert(prt_end->name_);
 			if (ptr_start) {
 				length += ComputeDistance(ptr_start->coordinates_, prt_end->coordinates_);
 				info.distance_ += GetDistance(ptr_start->name_, prt_end->name_);
 			}
 			ptr_start = prt_end;
 		}
+
 		info.stops_ = route->stops_.size();
 		info.unique_stops_ = unique.size();
 		info.curvature_ = info.distance_ / length;
@@ -107,6 +107,20 @@ namespace transport_catalogue {
 		else {
 			return 0.0;
 		}
+	}
+
+	// Уникальные остановки на маршруте с сохранением порядка
+	std::vector<BusStop*> TransportCatalogue::GetUniqueStops(const BusRoute& route) const {
+		std::vector<BusStop*> unique;
+		std::unordered_set<BusStop*> seenElements;
+
+		for (const auto& stops : route.stops_) {
+			if (seenElements.insert(stops).second) {
+				unique.push_back(stops);
+			}
+		}
+
+		return unique;
 	}
 
 	// Получение всех маршрутов

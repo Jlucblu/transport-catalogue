@@ -12,6 +12,9 @@
 #include <unordered_set>
 
 
+using namespace std::string_literals;
+
+
 namespace map_renderer {
 
     struct RenderSettings {
@@ -108,15 +111,18 @@ namespace map_renderer {
         double zoom_coeff_ = 0;
     };
 
-    class MapRender {
+    class MapRenderer {
     public:
-        MapRender() = default;
-        MapRender(const RenderSettings& settings);
+        MapRenderer() = default;
+        MapRenderer(const RenderSettings& settings);
 
         void SetSettings(const RenderSettings& settings);
-        void SetProjector(const std::vector<geo::Coordinates>& points);
+        void SetProjector(const std::vector<domain::BusRoute*> routes);
 
-        svg::Polyline RenderRoute(const domain::BusRoute* route, int count);
+        void RendererPolyline(const domain::BusRoute* route, size_t count);
+        void RendererRouteName(const domain::BusRoute* route, size_t number);
+        void RendererStopSymbols(const std::vector<domain::BusStop*> stops);
+        void RendererStopNames(const std::vector<domain::BusStop*> stops);
         void MakeSVGDoc(const std::vector<domain::BusRoute*> routes, std::ostream& output = std::cout);
 
     private:

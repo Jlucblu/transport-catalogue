@@ -21,11 +21,14 @@ namespace request_handler {
         // Возвращает информацию о маршруте (запрос Bus)
         std::optional<RouteInfo> GetBusStat(const std::string_view& bus_name) const;
 
-        // Возвращает маршруты, проходящие через
+        // Возвращает маршруты, проходящие через остановку
         std::unordered_set<BusRoute*> GetBusesByStop(const std::string_view& stop_name) const;
 
         // Получение всех маршрутов
         std::vector<BusRoute*> GetRoutes() const;
+
+        // Уникальные остановки на маршруте с сохранением порядка
+        std::vector<BusStop*> GetUniqueStops(const BusRoute& route) const;
 
     private:
         tc::TransportCatalogue& tc_;

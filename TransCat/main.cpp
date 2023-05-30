@@ -27,34 +27,35 @@ void Test6() {
 }
 
 void Test7() {
-	//std::ifstream file;
-	//std::ofstream result;
+	std::ifstream file;
+	std::ofstream result;
 
-	//file.open("TransCat\\tests\\input2.json");
-	//result.open("TransCat\\tests\\result.json");
+	file.open("TransCat\\tests\\input2.json");
+	result.open("TransCat\\tests\\result.json");
 
-	//if (!file) {
-	//	std::cout << "No File!\n"s;
-	//	return;
-	//}
+	if (!file) {
+		std::cout << "No File!\n"s;
+		return;
+	}
 
-	//tc::TransportCatalogue tc;
-	//mr::MapRender mr;
-	//jr::JSONReader rh(tc, mr, file, result);
+	tc::TransportCatalogue tc;
+	rh::RequestHandler rh(tc);
+	mr::MapRenderer mr;
+	jr::JSONReader jr(tc, rh, mr, file, result);
 
-	//rh.ParseBaseRequest();
+	jr.ParseBaseRequest();
 
-	//file.close();
-	//result.close();
+	file.close();
+	result.close();
 
-	//system("pause");
+	system("pause");
 }
 
 void Test8() {
 	std::ifstream file;
 	std::ofstream result;
 
-	file.open("TransCat\\tests\\input3.json");
+	file.open("TransCat\\tests\\input4.json");
 	result.open("TransCat\\tests\\result.xml");
 
 	if (!file) {
@@ -64,7 +65,7 @@ void Test8() {
 
 	tc::TransportCatalogue tc;
 	rh::RequestHandler rh(tc);
-	mr::MapRender mr;
+	mr::MapRenderer mr;
 	jr::JSONReader jr(tc, rh, mr, file, result);
 
 	jr.ParseBaseRequest();
@@ -72,7 +73,7 @@ void Test8() {
 	file.close();
 	result.close();
 
-	system("pause");
+ 	system("pause");
 }
 
 int main() {

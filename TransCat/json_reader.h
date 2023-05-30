@@ -17,7 +17,7 @@ namespace json_reader {
 	class JSONReader {
 	public:
 		JSONReader() = default;
-		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRender& mr, std::istream& input, std::ostream& output);
+		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRenderer& mr, std::istream& input = std::cin, std::ostream& output = std::cout);
 
 		void ParseBaseRequest() const;
 		BusRoute ParseBus(const json::Dict& businfo) const;
@@ -32,7 +32,7 @@ namespace json_reader {
 
 	private:
 		tc::TransportCatalogue& tc_;
-		mr::MapRender& render_;
+		mr::MapRenderer& render_;
 		rh::RequestHandler& request_;
 		const json::Document doc_;
 		std::ostream& output_;
