@@ -75,8 +75,8 @@ void Test8() {
 	std::ifstream file;
 	std::ofstream result;
 
-	file.open("TransCat\\tests\\input4.json");
-	result.open("TransCat\\tests\\result.xml");
+	file.open("TransCat\\tests\\input5.json");
+	result.open("TransCat\\tests\\result.json");
 
 	if (!file) {
 		std::cout << "No File!\n"s;
@@ -93,16 +93,16 @@ void Test8() {
 	file.close();
 	result.close();
 
-	std::ifstream finalresult;
-	std::ifstream output;
+	//std::ifstream finalresult;
+	//std::ifstream output;
 
-	finalresult.open("TransCat\\tests\\result.xml");
-	output.open("TransCat\\tests\\output4.txt");
+	//finalresult.open("TransCat\\tests\\result.xml");
+	//output.open("TransCat\\tests\\output4.txt");
 
-	std::cout << CompareFiles(finalresult, output) << endl;
+	//std::cout << CompareFiles(finalresult, output) << endl;
 
-	finalresult.close();
-	output.close();
+	//finalresult.close();
+	//output.close();
 
  	system("pause");
 }

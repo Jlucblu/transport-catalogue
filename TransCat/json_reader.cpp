@@ -35,6 +35,11 @@ namespace json_reader {
 			}
 		}
 
+		if (load.count("render_settings")) {
+			const auto& render = load.at("render_settings").AsMap();
+			render_.SetSettings(ParseMapSettings(render));
+		}
+
 		if (load.count("stat_requests")) {
 			const auto& stat = load.at("stat_requests").AsArray();
 			json::Array answer = {};
@@ -51,26 +56,20 @@ namespace json_reader {
 					const auto& stopAnswer = GetStopAnswer(request.AsMap());
 					answer.emplace_back(stopAnswer);
 				}
+				
+				if (type == "Map") {
+					const auto& mapAnswer = GetMapAnswer(request.AsMap());
+					answer.emplace_back(mapAnswer);
+				}
 			}
 
-			//if (!answer.empty()) {
-			//	json::Print(json::Document(answer), output_);
-			//}
-		}
-
-		if (load.count("render_settings")) {
-			const auto& render = load.at("render_settings").AsMap();
-			const auto& routes = request_.GetAllRoutes();
-			render_.SetSettings(ParseMapSettings(render));
-			render_.SetProjector(routes);
-			render_.RendererPolyline(routes);
-			render_.RendererRouteName(routes);
-			render_.RendererStopSymbols(request_.GetAllUniqueStops());
-			render_.RendererStopNames(request_.GetAllUniqueStops());
-			render_.RendererXML(output_);
+			if (!answer.empty()) {
+				json::Print(json::Document(answer), output_);
+			}
 		}
 	}
 
+	// ----------------------------------------------------------------------------- //
 
 	// Парсинг маршрута автобуса
 	BusRoute JSONReader::ParseBus(const json::Dict& businfo) const {
@@ -110,6 +109,7 @@ namespace json_reader {
 		return { stop, distance };
 	}
 
+	// ----------------------------------------------------------------------------- //
 
 	// Формирование ответа на запрос по номеру автобуса
 	json::Dict JSONReader::GetBusAnswer(const json::Dict& request) const {
@@ -162,6 +162,20 @@ namespace json_reader {
 		return dict;
 	}
 
+	// Формирование ответа на запрос визуализации карты
+	json::Dict JSONReader::GetMapAnswer(const json::Dict& request) const {
+		json::Dict dict = {};
+		dict.emplace("request_id"s, request.at("id").AsInt());
+
+		std::ostringstream oss;
+		RendererMap(oss);
+		dict.emplace("map", oss.str());
+
+		return dict;
+	}
+
+	// ----------------------------------------------------------------------------- //
+
 	// Парсинг и заполнения данных для отрисовки
 	mr::RenderSettings JSONReader::ParseMapSettings(const json::Dict& request) const {
 		mr::RenderSettings settings = {};
@@ -201,6 +215,17 @@ namespace json_reader {
 		}
 
 		return node.AsString();
+	}
+
+	// Отрисовка маршрутов
+	void JSONReader::RendererMap(std::ostream& output) const {
+		const auto& routes = request_.GetAllRoutes();
+		render_.SetProjector(routes);
+		render_.RendererPolyline(routes);
+		render_.RendererRouteName(routes);
+		render_.RendererStopSymbols(request_.GetAllUniqueStops());
+		render_.RendererStopNames(request_.GetAllUniqueStops());
+		render_.RendererXML(output);
 	}
 
 } // namespace reading_queries

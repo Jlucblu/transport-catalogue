@@ -6,6 +6,8 @@
 #include "request_handler.h"
 #include "map_renderer.h"
 
+#include <sstream>
+
 
 namespace tc = transport_catalogue;
 namespace rh = request_handler;
@@ -25,9 +27,11 @@ namespace json_reader {
 
 		json::Dict GetBusAnswer(const json::Dict& request) const;
 		json::Dict GetStopAnswer(const json::Dict& request) const;
+		json::Dict GetMapAnswer(const json::Dict& request) const;
 		
 		mr::RenderSettings ParseMapSettings(const json::Dict& request) const;
 		svg::Color GetColor(const json::Node& node) const;
+		void RendererMap(std::ostream& output) const;
 
 	private:
 		tc::TransportCatalogue& tc_;
