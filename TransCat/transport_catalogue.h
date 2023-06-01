@@ -42,12 +42,12 @@ namespace transport_catalogue {
 		std::vector<BusRoute*> GetAllRoutes() const;
 
 	private:
-		std::deque<BusRoute> bus_cat_;
-		std::deque<BusStop> stop_cat_;
-		std::unordered_map<std::string_view, BusStop*> stop_name_;
-		std::unordered_map<std::string_view, BusRoute*> route_name_;
-		std::unordered_map<BusStop*, std::unordered_set<BusRoute*>> route_stop_;
-		std::unordered_map<std::pair<BusStop*, BusStop*>, double, Hasher> stop_distance_;
+		std::deque<BusRoute> buses_;
+		std::deque<BusStop> stops_;
+		std::unordered_map<std::string_view, BusStop*> stop_info_map_;
+		std::unordered_map<std::string_view, BusRoute*> route_info_map_;
+		std::unordered_map<BusStop*, std::unordered_set<BusRoute*>> route_stop_map_;
+		std::unordered_map<std::pair<BusStop*, BusStop*>, double, Hasher> stop_distance_map_;
 	};
 
 } // namespace transport_catalogue

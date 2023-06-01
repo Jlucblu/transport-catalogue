@@ -19,16 +19,15 @@ namespace json {
         using runtime_error::runtime_error;
     };
 
-    class Node {
+    class Node : private Value {
     public:
-        Node() = default;
-        Node(Array array);
-        Node(Dict map);
-        Node(int value);
-        Node(std::string value);
-        Node(double value);
-        Node(bool value);
-        Node(std::nullptr_t);
+
+        using variant::variant;
+        using InputValue = variant;
+
+        Node(Node::InputValue& value) {
+            this->swap(value);
+        }
 
         bool IsInt() const;
         bool IsDouble() const;
@@ -47,19 +46,16 @@ namespace json {
         const Dict& AsMap() const;
 
         Value GetValue() const {
-            return data_;
+            return *this;
         }
 
         bool operator==(const Node& other) const {
-            return data_ == other.data_;
+            return *this == other;
         }
 
         bool operator!=(const Node& other) const {
-            return data_ != other.data_;
+            return (*this == other);
         }
-
-    private:
-        Value data_;
     };
 
     class Document {
