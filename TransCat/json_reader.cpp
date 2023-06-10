@@ -13,20 +13,20 @@ namespace json_reader {
 
 	// Парсинг входящего запроса
 	void JSONReader::ParseBaseRequest() const {
-		const auto& load = doc_.GetRoot().AsMap();
+		const auto& load = doc_.GetRoot().AsDict();
 
 		if (load.count("base_requests")){
 			const auto& base = load.at("base_requests").AsArray();
 
 			for (const auto& request : base) {
-				const auto& type = request.AsMap().at("type").AsString();
+				const auto& type = request.AsDict().at("type").AsString();
 
 				if (type == "Bus") {
-					tc_.UpdateRoute(ParseBus(request.AsMap()));
+					tc_.UpdateRoute(ParseBus(request.AsDict()));
 				}
 
 				if (type == "Stop") {
-					const auto& stopInfo = ParseStop(request.AsMap());
+					const auto& stopInfo = ParseStop(request.AsDict());
 					tc_.UpdateStop(stopInfo.first);
 					if (!stopInfo.second.empty()) {
 						tc_.UpdateStopDistance(stopInfo.first.name_, stopInfo.second);
@@ -36,29 +36,31 @@ namespace json_reader {
 		}
 
 		if (load.count("render_settings")) {
-			const auto& render = load.at("render_settings").AsMap();
+			const auto& render = load.at("render_settings").AsDict();
 			render_.SetSettings(ParseMapSettings(render));
 		}
 
 		if (load.count("stat_requests")) {
 			const auto& stat = load.at("stat_requests").AsArray();
 			json::Array answer = {};
+			json::Builder builder {};
+
 
 			for (const auto& request : stat) {
-				const auto& type = request.AsMap().at("type").AsString();
+				const auto& type = request.AsDict().at("type").AsString();
 
 				if (type == "Bus") {
-					const auto& busAnswer = GetBusAnswer(request.AsMap());
+					const auto& busAnswer = GetBusAnswer(request.AsDict());
 					answer.emplace_back(busAnswer);
 				}
 
 				if (type == "Stop") {
-					const auto& stopAnswer = GetStopAnswer(request.AsMap());
+					const auto& stopAnswer = GetStopAnswer(request.AsDict());
 					answer.emplace_back(stopAnswer);
 				}
 				
 				if (type == "Map") {
-					const auto& mapAnswer = GetMapAnswer(request.AsMap());
+					const auto& mapAnswer = GetMapAnswer(request.AsDict());
 					answer.emplace_back(mapAnswer);
 				}
 			}
@@ -102,7 +104,7 @@ namespace json_reader {
 		stop.coordinates_.lat = stopinfo.at("latitude").AsDouble();
 		stop.coordinates_.lng = stopinfo.at("longitude").AsDouble();
 		
-		for (const auto& [name, interval] : stopinfo.at("road_distances").AsMap()) {
+		for (const auto& [name, interval] : stopinfo.at("road_distances").AsDict()) {
 			distance.insert({ name, interval.AsInt() });
 		}
 
@@ -112,66 +114,65 @@ namespace json_reader {
 	// ----------------------------------------------------------------------------- //
 
 	// Формирование ответа на запрос по номеру автобуса
-	json::Dict JSONReader::GetBusAnswer(const json::Dict& request) const {
-		json::Dict dict = {};
-		dict.emplace("request_id"s, request.at("id").AsInt());
+	json::Node JSONReader::GetBusAnswer(const json::Dict& request) const {
+		json::Builder builder;
 		const auto& name = request.at("name").AsString();
 		const auto& valid = tc_.FindRoute(name);
 
+		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
 		if (!valid) {
-			dict.emplace("error_message"s, "not found"s);
+			builder.Key("error_message"s).Value("not found"s);
 		}
 		else {
 			const auto& businfo = request_.GetBusStat(name);
-			dict.emplace("curvature"s, businfo->curvature_);
-			dict.emplace("route_length"s, businfo->distance_);
-			dict.emplace("stop_count"s, businfo->stops_);
-			dict.emplace("unique_stop_count"s, businfo->unique_stops_);
+			builder.Key("curvature"s).Value(businfo->curvature_)
+				.Key("route_length"s).Value(businfo->distance_)
+				.Key("stop_count"s).Value(businfo->stops_)
+				.Key("unique_stop_count"s).Value(businfo->unique_stops_);
 		}
 
-		return dict;
+		return builder.EndDict().Build();
 	}
 
 	// Формирование ответа на запрос по названию остановки
-	json::Dict JSONReader::GetStopAnswer(const json::Dict& request) const {
-		json::Dict dict = {};
-		dict.emplace("request_id"s, request.at("id").AsInt());
+	json::Node JSONReader::GetStopAnswer(const json::Dict& request) const {
+		json::Builder builder;
 		const auto& name = request.at("name").AsString();
 		const auto& valid = tc_.FindStop(name);
+
+		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
 		if (!valid) {
-			dict.emplace("error_message"s, "not found"s);
+			builder.Key("error_message"s).Value("not found"s);
 		}
 		else {
 			json::Array set = {};
 			std::vector<std::string> forSort = {};
 			const auto& businfo = request_.GetBusesByStop(name);
-
 			for (const auto& bus : businfo) {
 				forSort.push_back(bus->number_);
 			}
-			
 			std::sort(forSort.begin(), forSort.end());
 
 			for (const auto& fS : forSort) {
 				set.push_back(fS);
 			}
 
-			dict.emplace("buses"s, set);
+			builder.Key("buses"s).Value(set);
 		}
 
-		return dict;
+		return builder.EndDict().Build();
 	}
 
 	// Формирование ответа на запрос визуализации карты
-	json::Dict JSONReader::GetMapAnswer(const json::Dict& request) const {
-		json::Dict dict = {};
-		dict.emplace("request_id"s, request.at("id").AsInt());
+	json::Node JSONReader::GetMapAnswer(const json::Dict& request) const {
+		json::Builder builder;
+		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
 
 		std::ostringstream oss;
 		RendererMap(oss);
-		dict.emplace("map", oss.str());
 
-		return dict;
+		builder.Key("map").Value(oss.str());
+		return builder.EndDict().Build();
 	}
 
 	// ----------------------------------------------------------------------------- //

@@ -24,7 +24,6 @@ namespace request_handler {
         // Возвращает маршруты, проходящие через остановку
         std::unordered_set<BusRoute*> GetBusesByStop(const std::string_view& stop_name) const;
 
-
         // Уникальные остановки на маршруте с сохранением порядка
         std::vector<BusStop*> MakeUniqueStops(const std::vector<BusStop*> stops) const;
 

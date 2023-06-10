@@ -74,9 +74,11 @@ void Test7() {
 void Test8() {
 	std::ifstream file;
 	std::ofstream result;
+	std::ifstream compareresult;
 
-	file.open("TransCat\\tests\\input5.json");
+	file.open("TransCat\\tests\\input4.json");
 	result.open("TransCat\\tests\\result.json");
+	compareresult.open("TransCat\\tests\\result_compare.json");
 
 	if (!file) {
 		std::cout << "No File!\n"s;
@@ -90,8 +92,12 @@ void Test8() {
 
 	jr.ParseBaseRequest();
 
-	file.close();
 	result.close();
+	file.close();
+
+	std::ifstream resultread("TransCat\\tests\\result.json");
+	CompareFiles(resultread, compareresult);
+	resultread.close();
 
 	//std::ifstream finalresult;
 	//std::ifstream output;

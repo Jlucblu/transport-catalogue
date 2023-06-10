@@ -5,6 +5,7 @@
 #include "domain.h"
 #include "request_handler.h"
 #include "map_renderer.h"
+#include "json_builder.h"
 
 #include <sstream>
 
@@ -25,9 +26,9 @@ namespace json_reader {
 		BusRoute ParseBus(const json::Dict& businfo) const;
 		std::pair<BusStop, DistancePair> ParseStop(const json::Dict& stopinfo) const;
 
-		json::Dict GetBusAnswer(const json::Dict& request) const;
-		json::Dict GetStopAnswer(const json::Dict& request) const;
-		json::Dict GetMapAnswer(const json::Dict& request) const;
+		json::Node GetBusAnswer(const json::Dict& request) const;
+		json::Node GetStopAnswer(const json::Dict& request) const;
+		json::Node GetMapAnswer(const json::Dict& request) const;
 		
 		mr::RenderSettings ParseMapSettings(const json::Dict& request) const;
 		svg::Color GetColor(const json::Node& node) const;
