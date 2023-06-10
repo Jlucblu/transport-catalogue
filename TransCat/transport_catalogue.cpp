@@ -133,6 +133,7 @@ namespace transport_catalogue {
 			unique->circle = route->circle;
 			unique->stops_ = stops;
 			uniqueRoutes.push_back(unique);
+			delete unique;
 		}
 
 		return uniqueRoutes;
