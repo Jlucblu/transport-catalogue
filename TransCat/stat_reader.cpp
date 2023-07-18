@@ -34,7 +34,7 @@ namespace transport_catalogue {
                 out << "Bus "s << number << ": not found\n"s;
             }
             else {
-                RouteInfo info = cat.GetBusInfo(number);
+                RouteStats info = cat.GetBusInfo(number);
                 out << "Bus "s << number << ": "s << info.stops_ << " stops on route, "s << info.unique_stops_
                     << " unique stops, "s << info.distance_ << " route length, "s << info.curvature_ << " curvature\n"s;
             }

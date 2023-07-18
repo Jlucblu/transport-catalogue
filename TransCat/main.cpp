@@ -8,6 +8,7 @@
 
 using namespace std;
 namespace jr = json_reader;
+namespace tr = transport_router;
 
 int CompareFiles(ifstream& expectedFile, ifstream& outputFile) {
 	std::string expectedLine;
@@ -47,28 +48,28 @@ void Test6() {
 }
 
 void Test7() {
-	std::ifstream file;
-	std::ofstream result;
+	//std::ifstream file;
+	//std::ofstream result;
 
-	file.open("TransCat\\tests\\input2.json");
-	result.open("TransCat\\tests\\result.json");
+	//file.open("TransCat\\tests\\input2.json");
+	//result.open("TransCat\\tests\\result.json");
 
-	if (!file) {
-		std::cout << "No File!\n"s;
-		return;
-	}
+	//if (!file) {
+	//	std::cout << "No File!\n"s;
+	//	return;
+	//}
 
-	tc::TransportCatalogue tc;
-	rh::RequestHandler rh(tc);
-	mr::MapRenderer mr;
-	jr::JSONReader jr(tc, rh, mr, file, result);
+	//tc::TransportCatalogue tc;
+	//rh::RequestHandler rh(tc);
+	//mr::MapRenderer mr;
+	//jr::JSONReader jr(tc, rh, mr, file, result);
 
-	jr.ParseBaseRequest();
+	//jr.ParseBaseRequest();
 
-	file.close();
-	result.close();
+	//file.close();
+	//result.close();
 
-	system("pause");
+	//system("pause");
 }
 
 void Test8() {
@@ -76,28 +77,30 @@ void Test8() {
 	std::ofstream result;
 	std::ifstream compareresult;
 
-	file.open("TransCat\\tests\\input4.json");
-	result.open("TransCat\\tests\\result.json");
-	compareresult.open("TransCat\\tests\\result_compare.json");
+	file.open("TransCat\\tests\\tests sprint 12\\s12_final_opentest_3.json");
+	result.open("TransCat\\tests\\tests sprint 12\\result.json");
+	compareresult.open("TransCat\\tests\\tests sprint 12\\s12_final_opentest_3_answer.json");
 
 	if (!file) {
 		std::cout << "No File!\n"s;
+		system("pause");
 		return;
 	}
 
 	tc::TransportCatalogue tc;
 	rh::RequestHandler rh(tc);
 	mr::MapRenderer mr;
-	jr::JSONReader jr(tc, rh, mr, file, result);
+	tr::TransportRouter tr(tc);
+	jr::JSONReader jr(tc, rh, mr, tr, file, result);
 
 	jr.ParseBaseRequest();
 
 	result.close();
 	file.close();
 
-	std::ifstream resultread("TransCat\\tests\\result.json");
-	CompareFiles(resultread, compareresult);
-	resultread.close();
+	std::ifstream myresultread("TransCat\\tests\\tests sprint 12\\result.json");
+	CompareFiles(myresultread, compareresult);
+	myresultread.close();
 
 	//std::ifstream finalresult;
 	//std::ifstream output;

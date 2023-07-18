@@ -50,8 +50,8 @@ namespace transport_catalogue {
 	}
 
 	// Получение информации о маршруте автобуса
-	RouteInfo TransportCatalogue::GetBusInfo(BusRoute* route) const {
-		RouteInfo info = {};
+	RouteStats TransportCatalogue::GetBusInfo(BusRoute* route) const {
+		RouteStats info = {};
 		double length = 0.0;
 		auto unique = MakeUniqueStops(route->stops_);
 
@@ -70,7 +70,7 @@ namespace transport_catalogue {
 		return info;
 	}
 
-	RouteInfo TransportCatalogue::GetBusInfo(const std::string_view name) const {
+	RouteStats TransportCatalogue::GetBusInfo(const std::string_view name) const {
 		return GetBusInfo(FindRoute(name));
 	}
 
@@ -123,26 +123,10 @@ namespace transport_catalogue {
 		return unique;
 	}
 
-	// Получение маршрута с уникальными остановками
-	std::vector<BusRoute*> TransportCatalogue::GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const {
-		std::vector<BusRoute*> uniqueRoutes = {};
-		for (const auto& route : routes) {
-			BusRoute* unique = new BusRoute;
-			const auto& stops = MakeUniqueStops(route->stops_);
-			unique->number_ = route->number_;
-			unique->circle = route->circle;
-			unique->stops_ = stops;
-			uniqueRoutes.push_back(unique);
-			delete unique;
-		}
-
-		return uniqueRoutes;
-	}
-
 	// Получение всех уникальных остановок на всех маршрутах отсортированных в лексографическом порядке
 	std::vector<BusStop*> TransportCatalogue::GetAllUniqueStops() const {
 		std::vector<BusStop*> allStops = {};
-		
+
 		for (const auto& [_, route] : route_info_map_) {
 			for (const auto& stop : route->stops_) {
 				allStops.push_back(stop);
@@ -167,12 +151,21 @@ namespace transport_catalogue {
 			routes.push_back(route.second);
 		}
 
-		std::sort(routes.begin(), routes.end(), 
-			[](const domain::BusRoute* a, const domain::BusRoute* b) { 
-				return a->number_ < b->number_; 
+		std::sort(routes.begin(), routes.end(),
+			[](const domain::BusRoute* a, const domain::BusRoute* b) {
+				return a->number_ < b->number_;
 			});
 
 		return routes;
+	}
+
+
+	const std::deque<BusStop>& TransportCatalogue::GetStopList() const {
+		return stops_;
+	}
+
+	const std::deque<BusRoute>& TransportCatalogue::GetBusList() const {
+		return buses_;
 	}
 
 } // namespace transport_catalogue

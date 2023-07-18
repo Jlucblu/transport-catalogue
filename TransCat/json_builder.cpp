@@ -101,7 +101,6 @@ namespace json {
         }
         return nullptr;
     }
-    // --------- BUILDER --------- // 
 
 
     // --------- KeyItemContext --------- //
@@ -116,7 +115,6 @@ namespace json {
     ArrayItemContext KeyItemContext::StartArray() {
         return builder_.StartArray();
     }
-    // --------- KeyItemContext --------- //
 
 
     // --------- ArrayItemContext --------- //
@@ -135,7 +133,6 @@ namespace json {
     ArrayItemContext ArrayItemContext::StartArray() {
         return builder_.StartArray();
     }
-    // --------- ArrayItemContext --------- //
 
 
     // --------- DictItemContext --------- //
@@ -146,5 +143,4 @@ namespace json {
     Builder& DictItemContext::EndDict() {
         return builder_.EndDict();
     }
-    // --------- DictItemContext --------- //
 }

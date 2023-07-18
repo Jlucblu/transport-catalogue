@@ -57,9 +57,6 @@ namespace map_renderer {
 			svg::Text back;
 			size_t colorIndex = index % settings_.color_palette.size();
 			std::string name = route->number_;
-			//if (name == "OT9Bcs7tyVD4B") {
-			//	system("pause");
-			//}
 
 			text.SetFillColor(settings_.color_palette[colorIndex])
 				.SetPosition(projector_(route->stops_.front()->coordinates_))

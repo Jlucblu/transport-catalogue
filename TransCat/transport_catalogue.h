@@ -29,17 +29,19 @@ namespace transport_catalogue {
 
 		void UpdateRoute(const BusRoute& bus);
 		void UpdateStop(const BusStop& stop);
+		void UpdateStopDistance(std::string_view from, const DistancePair& to);
 		BusRoute* FindRoute(std::string_view name) const;
 		BusStop* FindStop(std::string_view name) const;
-		RouteInfo GetBusInfo(BusRoute* route) const;
-		RouteInfo GetBusInfo(std::string_view stop_on_route) const;
-		std::unordered_set<BusRoute*> GetStopInfo(std::string_view stop_name) const;
-		void UpdateStopDistance(std::string_view from, const DistancePair& to);
-		double GetDistance(std::string_view from, std::string_view to) const;
 		std::vector<BusStop*> MakeUniqueStops(const std::vector<BusStop*> route) const;
-		std::vector<BusRoute*> GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const;
+
+		RouteStats GetBusInfo(BusRoute* route) const;
+		RouteStats GetBusInfo(std::string_view stop_on_route) const;
+		std::unordered_set<BusRoute*> GetStopInfo(std::string_view stop_name) const;
+		double GetDistance(std::string_view from, std::string_view to) const;
 		std::vector<BusStop*> GetAllUniqueStops() const;
 		std::vector<BusRoute*> GetAllRoutes() const;
+		const std::deque<BusStop>& GetStopList() const;
+		const std::deque<BusRoute>& GetBusList() const;
 
 	private:
 		std::deque<BusRoute> buses_;

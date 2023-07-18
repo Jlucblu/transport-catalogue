@@ -7,7 +7,7 @@ namespace request_handler {
 		: tc_(tc)
 	{}
 
-	std::optional<RouteInfo> RequestHandler::GetBusStat(const std::string_view& bus_name) const {
+	std::optional<RouteStats> RequestHandler::GetBusStat(const std::string_view& bus_name) const {
 		return tc_.GetBusInfo(bus_name);
 	}
 
@@ -17,10 +17,6 @@ namespace request_handler {
 
 	std::vector<BusStop*> RequestHandler::MakeUniqueStops(const std::vector<BusStop*> stops) const {
 		return tc_.MakeUniqueStops(stops);
-	}
-
-	std::vector<BusRoute*> RequestHandler::GetRoutesWithUniqueStops(const std::vector<BusRoute*> routes) const {
-		return tc_.GetRoutesWithUniqueStops(routes);
 	}
 
 	std::vector<BusStop*> RequestHandler::GetAllUniqueStops() const {

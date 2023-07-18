@@ -6,6 +6,7 @@
 #include "request_handler.h"
 #include "map_renderer.h"
 #include "json_builder.h"
+#include "transport_router.h"
 
 #include <sstream>
 
@@ -13,6 +14,7 @@
 namespace tc = transport_catalogue;
 namespace rh = request_handler;
 namespace mr = map_renderer;
+namespace tr = transport_router;
 
 
 namespace json_reader {
@@ -20,7 +22,7 @@ namespace json_reader {
 	class JSONReader {
 	public:
 		JSONReader() = default;
-		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRenderer& mr, std::istream& input = std::cin, std::ostream& output = std::cout);
+		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRenderer& mr, tr::TransportRouter& tr, std::istream& input = std::cin, std::ostream& output = std::cout);
 
 		void ParseBaseRequest() const;
 		BusRoute ParseBus(const json::Dict& businfo) const;
@@ -29,6 +31,7 @@ namespace json_reader {
 		json::Node GetBusAnswer(const json::Dict& request) const;
 		json::Node GetStopAnswer(const json::Dict& request) const;
 		json::Node GetMapAnswer(const json::Dict& request) const;
+		json::Node GetRouteAnswer(const json::Dict& request) const;
 		
 		mr::RenderSettings ParseMapSettings(const json::Dict& request) const;
 		svg::Color GetColor(const json::Node& node) const;
@@ -36,8 +39,9 @@ namespace json_reader {
 
 	private:
 		tc::TransportCatalogue& tc_;
-		mr::MapRenderer& render_;
 		rh::RequestHandler& request_;
+		mr::MapRenderer& render_;
+		tr::TransportRouter& router_;
 		const json::Document doc_;
 		std::ostream& output_;
 	};
