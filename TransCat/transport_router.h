@@ -58,7 +58,7 @@ namespace transport_router {
 			for (auto next_it = std::next(it); next_it != end; next_it++) {
 				distance += tc_.GetDistance((*curr_it)->name_, (*next_it)->name_);
 				double transit_time = settings_.bus_wait_time_ + (distance / (settings_.bus_velocity_ * METERS_PER_MINUTE));
-				RouteItem item{ number , (*it)->name_, (*next_it)->name_, transit_time, span_count++ };
+				RouteItem item{ number , (*it)->name_, (*next_it)->name_, transit_time, settings_.bus_wait_time_, span_count++ };
 				graph_.AddEdge({ stop_id_[(*it)->name_], stop_id_[(*next_it)->name_], item });
 				curr_it = next_it;
 			}

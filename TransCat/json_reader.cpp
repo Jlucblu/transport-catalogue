@@ -197,7 +197,6 @@ namespace json_reader {
 		json::Builder builder;
 		const auto& from = request.at("from"s).AsString();
 		const auto& to = request.at("to"s).AsString();
-		const auto& wait_time = router_.GetSettings().bus_wait_time_;
 		const auto& response = router_.MakeRouteResponse(from, to);
 
 		builder.StartDict().Key("request_id"s).Value(request.at("id"s).AsInt());
@@ -210,11 +209,11 @@ namespace json_reader {
 			for (auto it = response->items_.begin(); it != response->items_.end(); it++) {
 				builder.StartDict().Key("type"s).Value("Wait"s)
 					.Key("stop_name"s).Value(std::string((*it).from_stop_))
-					.Key("time"s).Value(wait_time).EndDict();
-
+					.Key("time"s).Value((*it).wait_time_).EndDict();
+				
 				builder.StartDict().Key("type"s).Value("Bus"s)
 					.Key("bus"s).Value(std::string((*it).bus_name_))
-					.Key("time"s).Value((*it).time_ - wait_time)
+					.Key("time"s).Value((*it).route_time_ - (*it).wait_time_)
 					.Key("span_count"s).Value((*it).span_count_).EndDict();
 			}
 

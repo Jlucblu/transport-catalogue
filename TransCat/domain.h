@@ -37,12 +37,14 @@ namespace domain {
 	struct RouteItem {
 		std::string_view bus_name_;
 		std::string_view from_stop_;
-		std::string_view from_to_;
-		double time_;
+		std::string_view to_stop_;
+		double route_time_;
+		double wait_time_;
 		int span_count_;
 
 		bool operator==(const RouteItem& other) const {
-			return bus_name_ == other.bus_name_ && time_ == other.time_ && span_count_ == other.span_count_;
+			return bus_name_ == other.bus_name_ && from_stop_ == other.from_stop_ && to_stop_ == other.to_stop_
+				&& route_time_ == other.route_time_ && span_count_ == other.span_count_ && wait_time_ == other.wait_time_;
 		}
 
 		bool operator!=(const RouteItem& other) const {
@@ -50,10 +52,10 @@ namespace domain {
 		}
 
 		bool operator<(const RouteItem& other) const {
-			if (time_ == other.time_) {
+			if (route_time_ == other.route_time_) {
 				return span_count_ < other.span_count_;
 			}
-			return time_ < other.time_;
+			return route_time_ < other.route_time_;
 		}
 
 		bool operator>(const RouteItem& other) const {
@@ -61,7 +63,7 @@ namespace domain {
 		}
 
 		RouteItem& operator+=(const RouteItem& other) {
-			time_ += other.time_;
+			route_time_ += other.route_time_;
 			span_count_ += other.span_count_;
 			return *this;
 		}

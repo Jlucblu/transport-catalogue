@@ -60,7 +60,7 @@ namespace transport_router {
 			return std::nullopt;
 		}
 
-		response.total_time_ = way->weight.time_;
+		response.total_time_ = way->weight.route_time_;
 
 		for (auto it = way->edges.begin(); it != way->edges.end(); it++) {
 			const auto& edge = graph_.GetEdge(*it);
