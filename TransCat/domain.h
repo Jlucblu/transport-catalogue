@@ -36,6 +36,8 @@ namespace domain {
 
 	struct RouteItem {
 		std::string_view bus_name_;
+		std::string_view from_stop_;
+		std::string_view from_to_;
 		double time_;
 		int span_count_;
 
@@ -60,7 +62,7 @@ namespace domain {
 
 		RouteItem& operator+=(const RouteItem& other) {
 			time_ += other.time_;
-			 span_count_ += other.span_count_;
+			span_count_ += other.span_count_;
 			return *this;
 		}
 
@@ -74,7 +76,6 @@ namespace domain {
 	struct RouteResponse {
 		double total_time_{ 0.0 };
 		std::vector<RouteItem> items_;
-		std::vector<std::pair<std::string_view, double>> stop_;
 	};
 
 	class Hasher {

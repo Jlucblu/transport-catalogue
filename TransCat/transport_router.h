@@ -49,7 +49,7 @@ namespace transport_router {
 		}
 
 		template <typename Iter>
-		void MakeEdges(Iter begin, Iter end, const BusRoute* route);
+		void MakeEdges(Iter begin, Iter end, const std::string& number);
 
 		void BuildGraph() {
 			const auto& stops = tc_.GetAllUniqueStops();
@@ -65,11 +65,11 @@ namespace transport_router {
 			for (const auto& bus : buses) {
 				if (!bus->circle) {
 					auto middle_it = std::next(bus->stops_.begin(), bus->stops_.size() / 2);
-					MakeEdges(bus->stops_.begin(), middle_it + 1, bus);
-					MakeEdges(middle_it, bus->stops_.end(), bus);
+					MakeEdges(bus->stops_.begin(), middle_it + 1, bus->number_);
+					MakeEdges(middle_it, bus->stops_.end(), bus->number_);
 				}
 				else {
-					MakeEdges(bus->stops_.begin(), bus->stops_.end(), bus);
+					MakeEdges(bus->stops_.begin(), bus->stops_.end(), bus->number_);
 				}
 			}
 
@@ -78,6 +78,13 @@ namespace transport_router {
 
 		std::optional<RouteResponse> MakeRouteResponse(const std::string_view from, const std::string_view to) {
 			RouteResponse response;
+			const auto& valid_stop_1 = tc_.GetStopInfo(from);
+			const auto& valid_stop_2 = tc_.GetStopInfo(to);
+
+			if (valid_stop_1.empty() || valid_stop_2.empty()) {
+				return std::nullopt;
+			}
+
 			auto const& way = router_->BuildRoute(stop_id_.at(from), stop_id_.at(to));
 			if (!way.has_value()) {
 				return std::nullopt;
@@ -87,7 +94,6 @@ namespace transport_router {
 			
 			for (auto it = way->edges.begin(); it != way->edges.end(); it++) {
 				const auto& edge = graph_.GetEdge(*it);
-				response.stop_.push_back({ FindStopByIndex(edge.from), settings_.bus_wait_time_ });
 				response.items_.push_back(edge.weight);
 			}
 
@@ -104,7 +110,7 @@ namespace transport_router {
 
 
 	template <typename Iter>
-	void TransportRouter::MakeEdges(Iter begin, Iter end, const BusRoute* route) {
+	void TransportRouter::MakeEdges(Iter begin, Iter end, const std::string& number) {
 		for (auto it = begin; it != end - 1; it++) {
 			int span_count = 1;
 			double distance = 0.0;
@@ -113,7 +119,7 @@ namespace transport_router {
 			for (auto next_it = std::next(it); next_it != end; next_it++) {
 				distance += tc_.GetDistance((*curr_it)->name_, (*next_it)->name_);
 				double transit_time = settings_.bus_wait_time_ + (distance / (settings_.bus_velocity_ * METERS_PER_MINUTE));
-				RouteItem item{ route->number_ , transit_time, span_count++ };
+				RouteItem item{ number , (*it)->name_, (*next_it)->name_, transit_time, span_count++ };
 				graph_.AddEdge({ stop_id_[(*it)->name_], stop_id_[(*next_it)->name_], item });
 				curr_it = next_it;
 			}

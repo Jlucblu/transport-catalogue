@@ -133,10 +133,10 @@ namespace json_reader {
 	// Формирование ответа на запрос Bus
 	json::Node JSONReader::GetBusAnswer(const json::Dict& request) const {
 		json::Builder builder;
-		const auto& name = request.at("name").AsString();
+		const auto& name = request.at("name"s).AsString();
 		const auto& valid = tc_.FindRoute(name);
 
-		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
+		builder.StartDict().Key("request_id"s).Value(request.at("id"s).AsInt());
 		if (!valid) {
 			builder.Key("error_message"s).Value("not found"s);
 		}
@@ -154,10 +154,10 @@ namespace json_reader {
 	// Формирование ответа на запрос Stop
 	json::Node JSONReader::GetStopAnswer(const json::Dict& request) const {
 		json::Builder builder;
-		const auto& name = request.at("name").AsString();
+		const auto& name = request.at("name"s).AsString();
 		const auto& valid = tc_.FindStop(name);
 
-		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
+		builder.StartDict().Key("request_id"s).Value(request.at("id"s).AsInt());
 		if (!valid) {
 			builder.Key("error_message"s).Value("not found"s);
 		}
@@ -183,7 +183,7 @@ namespace json_reader {
 	// Формирование ответа на запрос Map
 	json::Node JSONReader::GetMapAnswer(const json::Dict& request) const {
 		json::Builder builder;
-		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
+		builder.StartDict().Key("request_id"s).Value(request.at("id"s).AsInt());
 
 		std::ostringstream oss;
 		RendererMap(oss);
@@ -197,27 +197,25 @@ namespace json_reader {
 		json::Builder builder;
 		const auto& from = request.at("from"s).AsString();
 		const auto& to = request.at("to"s).AsString();
-		const auto& response = router_.MakeRouteResponse(from, to);
 		const auto& wait_time = router_.GetSettings().bus_wait_time_;
-		const auto& valid_stop_1 = tc_.FindStop(from);
-		const auto& valid_stop_2 = tc_.FindStop(to);
+		const auto& response = router_.MakeRouteResponse(from, to);
 
-		builder.StartDict().Key("request_id"s).Value(request.at("id").AsInt());
-		if (!response.has_value() || !valid_stop_1 || !valid_stop_2) {
+		builder.StartDict().Key("request_id"s).Value(request.at("id"s).AsInt());
+		if (!response.has_value()) {
 			builder.Key("error_message"s).Value("not found"s);
 		}
 		else {
 			builder.Key("total_time"s).Value(response->total_time_).Key("items"s).StartArray();
 
-			for (auto i = 0; i != (response->stop_.size()); i++) {
+			for (auto it = response->items_.begin(); it != response->items_.end(); it++) {
 				builder.StartDict().Key("type"s).Value("Wait"s)
-					.Key("stop_name"s).Value(std::string(response->stop_[i].first))
-					.Key("time"s).Value(response->stop_[i].second).EndDict();
+					.Key("stop_name"s).Value(std::string((*it).from_stop_))
+					.Key("time"s).Value(wait_time).EndDict();
 
 				builder.StartDict().Key("type"s).Value("Bus"s)
-					.Key("bus"s).Value(std::string(response->items_[i].bus_name_))
-					.Key("time"s).Value(response->items_[i].time_ - wait_time)
-					.Key("span_count"s).Value(response->items_[i].span_count_).EndDict();
+					.Key("bus"s).Value(std::string((*it).bus_name_))
+					.Key("time"s).Value((*it).time_ - wait_time)
+					.Key("span_count"s).Value((*it).span_count_).EndDict();
 			}
 
 			builder.EndArray();
