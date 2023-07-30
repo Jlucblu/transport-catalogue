@@ -30,6 +30,7 @@
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
+#include "map_renderer.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_transport_5fcatalogue_2eproto
@@ -1634,6 +1635,7 @@ class Base final :
     kBusesFieldNumber = 1,
     kStopsFieldNumber = 2,
     kStopDistanceMapFieldNumber = 3,
+    kMapSettingsFieldNumber = 4,
   };
   // repeated .serializator.BusRoute buses = 1;
   int buses_size() const;
@@ -1689,6 +1691,24 @@ class Base final :
   const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::StopDistance >&
       stop_distance_map() const;
 
+  // .serializator.RenderSettings map_settings = 4;
+  bool has_map_settings() const;
+  private:
+  bool _internal_has_map_settings() const;
+  public:
+  void clear_map_settings();
+  const ::serializator::RenderSettings& map_settings() const;
+  PROTOBUF_NODISCARD ::serializator::RenderSettings* release_map_settings();
+  ::serializator::RenderSettings* mutable_map_settings();
+  void set_allocated_map_settings(::serializator::RenderSettings* map_settings);
+  private:
+  const ::serializator::RenderSettings& _internal_map_settings() const;
+  ::serializator::RenderSettings* _internal_mutable_map_settings();
+  public:
+  void unsafe_arena_set_allocated_map_settings(
+      ::serializator::RenderSettings* map_settings);
+  ::serializator::RenderSettings* unsafe_arena_release_map_settings();
+
   // @@protoc_insertion_point(class_scope:serializator.Base)
  private:
   class _Internal;
@@ -1700,6 +1720,7 @@ class Base final :
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::BusRoute > buses_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::BusStop > stops_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::StopDistance > stop_distance_map_;
+    ::serializator::RenderSettings* map_settings_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2666,6 +2687,91 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::StopDist
 Base::stop_distance_map() const {
   // @@protoc_insertion_point(field_list:serializator.Base.stop_distance_map)
   return _impl_.stop_distance_map_;
+}
+
+// .serializator.RenderSettings map_settings = 4;
+inline bool Base::_internal_has_map_settings() const {
+  return this != internal_default_instance() && _impl_.map_settings_ != nullptr;
+}
+inline bool Base::has_map_settings() const {
+  return _internal_has_map_settings();
+}
+inline const ::serializator::RenderSettings& Base::_internal_map_settings() const {
+  const ::serializator::RenderSettings* p = _impl_.map_settings_;
+  return p != nullptr ? *p : reinterpret_cast<const ::serializator::RenderSettings&>(
+      ::serializator::_RenderSettings_default_instance_);
+}
+inline const ::serializator::RenderSettings& Base::map_settings() const {
+  // @@protoc_insertion_point(field_get:serializator.Base.map_settings)
+  return _internal_map_settings();
+}
+inline void Base::unsafe_arena_set_allocated_map_settings(
+    ::serializator::RenderSettings* map_settings) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.map_settings_);
+  }
+  _impl_.map_settings_ = map_settings;
+  if (map_settings) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:serializator.Base.map_settings)
+}
+inline ::serializator::RenderSettings* Base::release_map_settings() {
+  
+  ::serializator::RenderSettings* temp = _impl_.map_settings_;
+  _impl_.map_settings_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::serializator::RenderSettings* Base::unsafe_arena_release_map_settings() {
+  // @@protoc_insertion_point(field_release:serializator.Base.map_settings)
+  
+  ::serializator::RenderSettings* temp = _impl_.map_settings_;
+  _impl_.map_settings_ = nullptr;
+  return temp;
+}
+inline ::serializator::RenderSettings* Base::_internal_mutable_map_settings() {
+  
+  if (_impl_.map_settings_ == nullptr) {
+    auto* p = CreateMaybeMessage<::serializator::RenderSettings>(GetArenaForAllocation());
+    _impl_.map_settings_ = p;
+  }
+  return _impl_.map_settings_;
+}
+inline ::serializator::RenderSettings* Base::mutable_map_settings() {
+  ::serializator::RenderSettings* _msg = _internal_mutable_map_settings();
+  // @@protoc_insertion_point(field_mutable:serializator.Base.map_settings)
+  return _msg;
+}
+inline void Base::set_allocated_map_settings(::serializator::RenderSettings* map_settings) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.map_settings_);
+  }
+  if (map_settings) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(map_settings));
+    if (message_arena != submessage_arena) {
+      map_settings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, map_settings, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.map_settings_ = map_settings;
+  // @@protoc_insertion_point(field_set_allocated:serializator.Base.map_settings)
 }
 
 #ifdef __GNUC__

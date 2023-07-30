@@ -146,6 +146,7 @@ PROTOBUF_CONSTEXPR Base::Base(
     /*decltype(_impl_.buses_)*/{}
   , /*decltype(_impl_.stops_)*/{}
   , /*decltype(_impl_.stop_distance_map_)*/{}
+  , /*decltype(_impl_.map_settings_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct BaseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR BaseDefaultTypeInternal()
@@ -243,6 +244,7 @@ const uint32_t TableStruct_transport_5fcatalogue_2eproto::offsets[] PROTOBUF_SEC
   PROTOBUF_FIELD_OFFSET(::serializator::Base, _impl_.buses_),
   PROTOBUF_FIELD_OFFSET(::serializator::Base, _impl_.stops_),
   PROTOBUF_FIELD_OFFSET(::serializator::Base, _impl_.stop_distance_map_),
+  PROTOBUF_FIELD_OFFSET(::serializator::Base, _impl_.map_settings_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::serializator::Coordinates)},
@@ -270,32 +272,37 @@ static const ::_pb::Message* const file_default_instances[] = {
 
 const char descriptor_table_protodef_transport_5fcatalogue_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031transport_catalogue.proto\022\014serializato"
-  "r\"2\n\013Coordinates\022\020\n\010latitude\030\001 \001(\001\022\021\n\tlo"
-  "ngitude\030\002 \001(\001\"G\n\007BusStop\022\014\n\004name\030\001 \001(\t\022."
-  "\n\013coordinates\030\002 \001(\0132\031.serializator.Coord"
-  "inates\"P\n\010BusRoute\022\016\n\006number\030\001 \001(\t\022$\n\005st"
-  "ops\030\002 \003(\0132\025.serializator.BusStop\022\016\n\006circ"
-  "le\030\003 \001(\010\"V\n\nRouteStats\022\r\n\005stops\030\001 \001(\005\022\024\n"
-  "\014unique_stops\030\002 \001(\005\022\020\n\010distance\030\003 \001(\001\022\021\n"
-  "\tcurvature\030\004 \001(\001\"<\n\rRouteSettings\022\024\n\014bus"
-  "_velocity\030\001 \001(\001\022\025\n\rbus_wait_time\030\002 \001(\001\"|"
-  "\n\tRouteItem\022\020\n\010bus_name\030\001 \001(\t\022\021\n\tfrom_st"
-  "op\030\002 \001(\t\022\017\n\007to_stop\030\003 \001(\t\022\022\n\nroute_time\030"
-  "\004 \001(\001\022\021\n\twait_time\030\005 \001(\001\022\022\n\nspan_count\030\006"
-  " \001(\005\"K\n\rRouteResponse\022\022\n\ntotal_time\030\001 \001("
-  "\001\022&\n\005items\030\002 \003(\0132\027.serializator.RouteIte"
-  "m\"D\n\014StopDistance\022\021\n\tfrom_stop\030\001 \001(\t\022\017\n\007"
-  "to_stop\030\002 \001(\t\022\020\n\010distance\030\003 \001(\001\"\212\001\n\004Base"
-  "\022%\n\005buses\030\001 \003(\0132\026.serializator.BusRoute\022"
-  "$\n\005stops\030\002 \003(\0132\025.serializator.BusStop\0225\n"
-  "\021stop_distance_map\030\003 \003(\0132\032.serializator."
-  "StopDistanceb\006proto3"
+  "r\032\022map_renderer.proto\"2\n\013Coordinates\022\020\n\010"
+  "latitude\030\001 \001(\001\022\021\n\tlongitude\030\002 \001(\001\"G\n\007Bus"
+  "Stop\022\014\n\004name\030\001 \001(\t\022.\n\013coordinates\030\002 \001(\0132"
+  "\031.serializator.Coordinates\"P\n\010BusRoute\022\016"
+  "\n\006number\030\001 \001(\t\022$\n\005stops\030\002 \003(\0132\025.serializ"
+  "ator.BusStop\022\016\n\006circle\030\003 \001(\010\"V\n\nRouteSta"
+  "ts\022\r\n\005stops\030\001 \001(\005\022\024\n\014unique_stops\030\002 \001(\005\022"
+  "\020\n\010distance\030\003 \001(\001\022\021\n\tcurvature\030\004 \001(\001\"<\n\r"
+  "RouteSettings\022\024\n\014bus_velocity\030\001 \001(\001\022\025\n\rb"
+  "us_wait_time\030\002 \001(\001\"|\n\tRouteItem\022\020\n\010bus_n"
+  "ame\030\001 \001(\t\022\021\n\tfrom_stop\030\002 \001(\t\022\017\n\007to_stop\030"
+  "\003 \001(\t\022\022\n\nroute_time\030\004 \001(\001\022\021\n\twait_time\030\005"
+  " \001(\001\022\022\n\nspan_count\030\006 \001(\005\"K\n\rRouteRespons"
+  "e\022\022\n\ntotal_time\030\001 \001(\001\022&\n\005items\030\002 \003(\0132\027.s"
+  "erializator.RouteItem\"D\n\014StopDistance\022\021\n"
+  "\tfrom_stop\030\001 \001(\t\022\017\n\007to_stop\030\002 \001(\t\022\020\n\010dis"
+  "tance\030\003 \001(\001\"\276\001\n\004Base\022%\n\005buses\030\001 \003(\0132\026.se"
+  "rializator.BusRoute\022$\n\005stops\030\002 \003(\0132\025.ser"
+  "ializator.BusStop\0225\n\021stop_distance_map\030\003"
+  " \003(\0132\032.serializator.StopDistance\0222\n\014map_"
+  "settings\030\004 \001(\0132\034.serializator.RenderSett"
+  "ingsb\006proto3"
   ;
+static const ::_pbi::DescriptorTable* const descriptor_table_transport_5fcatalogue_2eproto_deps[1] = {
+  &::descriptor_table_map_5frenderer_2eproto,
+};
 static ::_pbi::once_flag descriptor_table_transport_5fcatalogue_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_transport_5fcatalogue_2eproto = {
-    false, false, 820, descriptor_table_protodef_transport_5fcatalogue_2eproto,
+    false, false, 892, descriptor_table_protodef_transport_5fcatalogue_2eproto,
     "transport_catalogue.proto",
-    &descriptor_table_transport_5fcatalogue_2eproto_once, nullptr, 0, 9,
+    &descriptor_table_transport_5fcatalogue_2eproto_once, descriptor_table_transport_5fcatalogue_2eproto_deps, 1, 9,
     schemas, file_default_instances, TableStruct_transport_5fcatalogue_2eproto::offsets,
     file_level_metadata_transport_5fcatalogue_2eproto, file_level_enum_descriptors_transport_5fcatalogue_2eproto,
     file_level_service_descriptors_transport_5fcatalogue_2eproto,
@@ -2501,8 +2508,19 @@ void StopDistance::InternalSwap(StopDistance* other) {
 
 class Base::_Internal {
  public:
+  static const ::serializator::RenderSettings& map_settings(const Base* msg);
 };
 
+const ::serializator::RenderSettings&
+Base::_Internal::map_settings(const Base* msg) {
+  return *msg->_impl_.map_settings_;
+}
+void Base::clear_map_settings() {
+  if (GetArenaForAllocation() == nullptr && _impl_.map_settings_ != nullptr) {
+    delete _impl_.map_settings_;
+  }
+  _impl_.map_settings_ = nullptr;
+}
 Base::Base(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
@@ -2516,9 +2534,13 @@ Base::Base(const Base& from)
       decltype(_impl_.buses_){from._impl_.buses_}
     , decltype(_impl_.stops_){from._impl_.stops_}
     , decltype(_impl_.stop_distance_map_){from._impl_.stop_distance_map_}
+    , decltype(_impl_.map_settings_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_map_settings()) {
+    _this->_impl_.map_settings_ = new ::serializator::RenderSettings(*from._impl_.map_settings_);
+  }
   // @@protoc_insertion_point(copy_constructor:serializator.Base)
 }
 
@@ -2530,6 +2552,7 @@ inline void Base::SharedCtor(
       decltype(_impl_.buses_){arena}
     , decltype(_impl_.stops_){arena}
     , decltype(_impl_.stop_distance_map_){arena}
+    , decltype(_impl_.map_settings_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -2548,6 +2571,7 @@ inline void Base::SharedDtor() {
   _impl_.buses_.~RepeatedPtrField();
   _impl_.stops_.~RepeatedPtrField();
   _impl_.stop_distance_map_.~RepeatedPtrField();
+  if (this != internal_default_instance()) delete _impl_.map_settings_;
 }
 
 void Base::SetCachedSize(int size) const {
@@ -2563,6 +2587,10 @@ void Base::Clear() {
   _impl_.buses_.Clear();
   _impl_.stops_.Clear();
   _impl_.stop_distance_map_.Clear();
+  if (GetArenaForAllocation() == nullptr && _impl_.map_settings_ != nullptr) {
+    delete _impl_.map_settings_;
+  }
+  _impl_.map_settings_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2608,6 +2636,14 @@ const char* Base::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // .serializator.RenderSettings map_settings = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_map_settings(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -2664,6 +2700,13 @@ uint8_t* Base::_InternalSerialize(
         InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
   }
 
+  // .serializator.RenderSettings map_settings = 4;
+  if (this->_internal_has_map_settings()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(4, _Internal::map_settings(this),
+        _Internal::map_settings(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2701,6 +2744,13 @@ size_t Base::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
+  // .serializator.RenderSettings map_settings = 4;
+  if (this->_internal_has_map_settings()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.map_settings_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -2722,6 +2772,10 @@ void Base::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_
   _this->_impl_.buses_.MergeFrom(from._impl_.buses_);
   _this->_impl_.stops_.MergeFrom(from._impl_.stops_);
   _this->_impl_.stop_distance_map_.MergeFrom(from._impl_.stop_distance_map_);
+  if (from._internal_has_map_settings()) {
+    _this->_internal_mutable_map_settings()->::serializator::RenderSettings::MergeFrom(
+        from._internal_map_settings());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -2742,6 +2796,7 @@ void Base::InternalSwap(Base* other) {
   _impl_.buses_.InternalSwap(&other->_impl_.buses_);
   _impl_.stops_.InternalSwap(&other->_impl_.stops_);
   _impl_.stop_distance_map_.InternalSwap(&other->_impl_.stop_distance_map_);
+  swap(_impl_.map_settings_, other->_impl_.map_settings_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Base::GetMetadata() const {

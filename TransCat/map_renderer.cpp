@@ -134,4 +134,8 @@ namespace map_renderer {
 		doc_.Render(output);
 	}
 
+	RenderSettings MapRenderer::GetSettings() const {
+		return settings_;
+	}
+
 } // namespace map_renderer

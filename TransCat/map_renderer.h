@@ -125,6 +125,8 @@ namespace map_renderer {
         void RendererStopNames(const std::vector<domain::BusStop*> stops);
         void RendererXML(std::ostream& output = std::cout);
 
+        RenderSettings GetSettings() const;
+
     private:
         RenderSettings settings_;
         SphereProjector projector_;

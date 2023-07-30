@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package serializator;
 
+import "map_renderer.proto";
+
 message Coordinates {
     double latitude = 1;
     double longitude = 2;
@@ -54,4 +56,5 @@ message Base {
   repeated BusRoute buses = 1;
   repeated BusStop stops = 2;
   repeated StopDistance stop_distance_map = 3;
+  RenderSettings map_settings = 4;
 }
