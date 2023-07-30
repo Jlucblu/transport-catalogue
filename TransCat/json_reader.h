@@ -26,7 +26,7 @@ namespace json_reader {
 		JSONReader() = default;
 		JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh,
 			mr::MapRenderer& mr, tr::TransportRouter& tr, sr::Serialization& ser,
-			sr::Deserialization deser, std::istream& input = std::cin, std::ostream& output = std::cout);
+			std::istream& input = std::cin, std::ostream& output = std::cout);
 
 		void MakeBase() const;
 		void ProcessRequests() const;
@@ -48,7 +48,6 @@ namespace json_reader {
 		mr::MapRenderer& render_;
 		tr::TransportRouter& router_;
 		sr::Serialization& ser_;
-		sr::Deserialization& deser_;
 		const json::Document doc_;
 		std::ostream& output_;
 	};

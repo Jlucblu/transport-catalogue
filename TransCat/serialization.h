@@ -17,7 +17,7 @@ namespace serialization {
 
     class Serialization {
     public:
-        Serialization(const tc::TransportCatalogue& tc, const mr::MapRenderer& mr, const tr::TransportRouter& tr)
+        Serialization(tc::TransportCatalogue& tc, mr::MapRenderer& mr, tr::TransportRouter& tr)
             : catalogue_(tc)
             , map_render_(mr)
             , router_(tr) {}
@@ -66,25 +66,6 @@ namespace serialization {
                 new_distance_map->set_to_stop(stops.second->name_);
                 new_distance_map->set_distance(distance);
             }
-        }
-
-    private:
-        const tc::TransportCatalogue& catalogue_;
-        const tr::TransportRouter& router_;
-        const mr::MapRenderer& map_render_;
-        serializator::Base base_;
-        std::filesystem::path path_;
-    };
-
-    class Deserialization {
-    public:
-        Deserialization(tc::TransportCatalogue& tc, mr::MapRenderer& mr, tr::TransportRouter& tr)
-            : catalogue_(tc)
-            , map_render_(mr)
-            , router_(tr) {}
-
-        void SetPath(const std::filesystem::path& path) {
-            path_ = path;
         }
 
         void DeserializeTransportCatalogue() {
@@ -139,5 +120,26 @@ namespace serialization {
         serializator::Base base_;
         std::filesystem::path path_;
     };
+
+    //class Deserialization {
+    //public:
+    //    Deserialization(tc::TransportCatalogue& tc, mr::MapRenderer& mr, tr::TransportRouter& tr)
+    //        : catalogue_(tc)
+    //        , map_render_(mr)
+    //        , router_(tr) {}
+
+    //    void SetPath(const std::filesystem::path& path) {
+    //        path_ = path;
+    //    }
+
+
+
+    //private:
+    //    tc::TransportCatalogue& catalogue_;
+    //    tr::TransportRouter& router_;
+    //    mr::MapRenderer& map_render_;
+    //    serializator::Base base_;
+    //    std::filesystem::path path_;
+    //};
 
 } // namespace serialization

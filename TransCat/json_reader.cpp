@@ -5,13 +5,12 @@ namespace json_reader {
 
 	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, 
 		mr::MapRenderer& mr, tr::TransportRouter& tr, sr::Serialization& ser, 
-		sr::Deserialization deser, std::istream& input, std::ostream& output)
+		std::istream& input, std::ostream& output)
 		: tc_(tc)
 		, request_(rh)
 		, render_(mr)
 		, router_(tr)
 		, ser_(ser)
-		, deser_(deser)
 		, doc_(json::Load(input))
 		, output_(output)
 	{}
@@ -70,8 +69,8 @@ namespace json_reader {
 
 		if (load.count("serialization_settings"s)) {
 			const auto& deser = load.at("serialization_settings"s).AsDict();
-			deser_.SetPath(deser.at("file"s).AsString());
-			deser_.DeserializeTransportCatalogue();
+			ser_.SetPath(deser.at("file"s).AsString());
+			ser_.DeserializeTransportCatalogue();
 		}
 
 		if (load.count("stat_requests"s)) {

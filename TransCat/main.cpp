@@ -4,6 +4,7 @@
 #include <cassert>
 #include <iostream>
 #include <fstream>
+#include <string_view>
 
 
 using namespace std;
@@ -28,6 +29,7 @@ int CompareFiles(ifstream& expectedFile, ifstream& outputFile) {
 		return lineIndex;
 	}
 
+	std::cout << "Nothing!\n";
 	return -1; // Если расхождений не найдено
 }
 
@@ -113,14 +115,69 @@ void Test8() {
 	////finalresult.close();
 	////output.close();
 
- //	system("pause");
+	//system("pause");
 }
 
-//int main() {
-//	Test6();
-//	Test7();
-//	Test8();
-//}
+void Test9in() {
+	std::ifstream file;
+	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\test_1_21_make_base.json");
+
+	tc::TransportCatalogue tc;
+	rh::RequestHandler rh(tc);
+	mr::MapRenderer mr;
+	tr::TransportRouter tr(tc);
+	sr::Serialization ser(tc, mr, tr);
+	jr::JSONReader jr(tc, rh, mr, tr, ser, file);
+	jr.MakeBase();
+
+	if (!file) {
+		std::cout << "No File!\n"s;
+		system("pause");
+		return;
+	}
+
+	file.close();
+	std::cout << "MakeBase Done!\n";
+}
+
+void Test10out() {
+	std::ifstream file;
+	std::ofstream result;
+	std::ifstream compareresult;
+
+	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\test_1_21_process_requests.json");
+	result.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\test_1_21_result.json");
+	compareresult.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\out_test_1_21.json");
+
+	if (!file) {
+		std::cout << "No File!\n"s;
+		system("pause");
+		return;
+	}
+
+	tc::TransportCatalogue tc;
+	rh::RequestHandler rh(tc);
+	mr::MapRenderer mr;
+	tr::TransportRouter tr(tc);
+	sr::Serialization ser(tc, mr, tr);
+	jr::JSONReader jr(tc, rh, mr, tr, ser, file, result);
+
+	jr.ProcessRequests();
+	std::cout << "ProcessRequests Done!\n";
+	file.close();
+	result.close();
+
+	std::ifstream myresultread("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\test_1_21_result.json");
+	if (!myresultread) {
+		std::cout << "No File!\n"s;
+		system("pause");
+		return;
+	}
+
+	CompareFiles(myresultread, compareresult);
+	myresultread.close();
+	compareresult.close();
+}
 
 using namespace std::literals;
 
@@ -134,38 +191,40 @@ int main(int argc, char* argv[]) {
 	//	return 1;
 	//}
 
+	Test9in();
+	Test10out();
+	//std::string_view mode = "process_requests"sv;
+
+	//std::ifstream file;
+	//file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\s14_1_opentest_1_process_requests.json");
+	//	if (!file) {
+	//	std::cout << "No File!\n"s;
+	//	system("pause");
+	//	return 3;
+	//	}
+
 	//const std::string_view mode(argv[1]);
 
-	std::string_view mode = "process_requests"sv;
+	//tc::TransportCatalogue tc;
+	//rh::RequestHandler rh(tc);
+	//mr::MapRenderer mr;
+	//tr::TransportRouter tr(tc);
+	//sr::Serialization ser(tc, mr, tr);
+	//sr::Deserialization deser(tc, mr, tr);
+	//jr::JSONReader jr(tc, rh, mr, tr, ser, deser);
 
-	std::ifstream file;
-	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\s14_1_opentest_1_process_requests.json");
-		if (!file) {
-		std::cout << "No File!\n"s;
-		system("pause");
-		return 3;
-		}
+	//if (mode == "make_base"sv) {
 
-	tc::TransportCatalogue tc;
-	rh::RequestHandler rh(tc);
-	mr::MapRenderer mr;
-	tr::TransportRouter tr(tc);
-	sr::Serialization ser(tc, mr, tr);
-	sr::Deserialization deser(tc, mr, tr);
-	jr::JSONReader jr(tc, rh, mr, tr, ser, deser, file);
+	//	jr.MakeBase();
 
-	if (mode == "make_base"sv) {
+	//}
+	//else if (mode == "process_requests"sv) {
 
-		jr.MakeBase();
+	//	jr.ProcessRequests();
 
-	}
-	else if (mode == "process_requests"sv) {
-
-		jr.ProcessRequests();
-
-	}
-	else {
-		PrintUsage();
-		return 1;
-	}
+	//}
+	//else {
+	//	PrintUsage();
+	//	return 1;
+	//}
 }

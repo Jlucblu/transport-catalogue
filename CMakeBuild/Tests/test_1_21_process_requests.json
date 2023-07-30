@@ -1,0 +1,55 @@
+{
+  "serialization_settings": { "file": "transport_catalogue.db" },
+  "stat_requests": [
+    {
+      "id": 665703914,
+      "type": "Stop",
+      "name": "7AZGfE4 tjo9nqV2WJTNL Lfd"
+    },
+    {
+      "id": 563660449,
+      "type": "Bus",
+      "name": "Ztn6R4Za"
+    },
+    {
+      "id": 113956506,
+      "type": "Bus",
+      "name": "U"
+    },
+    {
+      "id": 2007132547,
+      "type": "Bus",
+      "name": "9fhtOpf1pj8GZvg"
+    },
+    {
+      "id": 1533093792,
+      "type": "Stop",
+      "name": "QOHDaB JOKxjA8ZuXG7AhS"
+    },
+    {
+      "id": 1711717620,
+      "type": "Stop",
+      "name": "PICxJMYKaMdNf05dMuGQYTWmh"
+    },
+    {
+      "id": 113956506,
+      "type": "Bus",
+      "name": "U"
+    },
+    {
+      "id": 966209287,
+      "type": "Bus",
+      "name": "X9 JXmC4Xil"
+    },
+    {
+      "id": 1247247177,
+      "type": "Bus",
+      "name": "tvbsKz 1lZPF8ZeNdS"
+    },
+    {
+      "id": 1840548955,
+      "type": "Stop",
+      "name": "eOxyhZ8Wg6"
+    }
+  ]
+}

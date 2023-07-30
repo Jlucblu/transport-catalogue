@@ -1,0 +1,4256 @@
+{
+  "serialization_settings": { "file": "transport_catalogue.db" },
+  "base_requests": [
+    {
+      "type": "Stop",
+      "name": "spQTphz7jMfM",
+      "latitude": 44.978006145177346,
+      "longitude": 37.14061636082076,
+      "road_distances": {
+        "YsFlCLmhOtAk": 880903,
+        "V": 937663
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "nF74AUIm5mdBQABl6OMZs",
+      "latitude": 42.280124256170744,
+      "longitude": 38.51234091532187,
+      "road_distances": {
+        "E4NbH": 987827,
+        "uJvf": 360744
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Ukho0",
+      "latitude": 43.592918549750195,
+      "longitude": 39.98558272799708,
+      "road_distances": {
+        "I2qFVLTRqHJyn9NaHMdu": 587228,
+        "hP27kWw146Bw5ky67bDv4": 907392
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "fohfUckqMSQz1DuvVGX",
+      "latitude": 38.5722430264953,
+      "longitude": 37.548227779658845,
+      "road_distances": { "KmZeoAcdxxVYMLa9WheLySg": 860174 }
+    },
+    {
+      "type": "Stop",
+      "name": "MlrgKzMZkPzWrrMmvh02y t",
+      "latitude": 38.781771947521925,
+      "longitude": 39.338285958425985,
+      "road_distances": {
+        "Bavt": 677095,
+        "QcP8 33gzDFKLyRHA9": 814136
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "wp3bXE3659HHh 8JlJ sPYg",
+      "latitude": 41.43366147483454,
+      "longitude": 39.911166285807056,
+      "road_distances": {
+        "Zk SKfr3LBy": 746920,
+        "wcwPaWqKYFD3c": 593708,
+        "uJvf": 557530
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "cQiOcm7eyr",
+      "latitude": 44.15049238835759,
+      "longitude": 38.34538200653905,
+      "road_distances": { "plTe": 813600 }
+    },
+    {
+      "type": "Stop",
+      "name": "U",
+      "latitude": 41.63160041212388,
+      "longitude": 38.78747853221396,
+      "road_distances": { "JZxDgXiBKhNRALNF": 371032 }
+    },
+    {
+      "type": "Stop",
+      "name": "8w5xeUHBtls7",
+      "latitude": 40.49721296240617,
+      "longitude": 34.82894133098458,
+      "road_distances": {
+        "I5VrTJ2Kp s": 956989,
+        "Fm3gtJ1Jzvf": 697395
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "VAKuA7yCeqZ",
+      "latitude": 46.60795344512543,
+      "longitude": 35.87174450596669,
+      "road_distances": {
+        "l": 971526,
+        "umzVLtd": 925514,
+        "BS4Tm0c8aXftoy8JhX5zwKTn": 689875
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1qMaMTZSFYwiUFv",
+      "latitude": 39.81479291149678,
+      "longitude": 37.818850818052205,
+      "road_distances": {
+        "VAKuA7yCeqZ": 817164,
+        "KgT": 114270
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4m",
+      "latitude": 42.43502589123611,
+      "longitude": 37.86445202634378,
+      "road_distances": {
+        "51mSl6lCc0hS7ASqymamrFx": 767988,
+        "B4lpu7Cgq2JDmgTcHXgJyI": 336513,
+        "5": 383399
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ylXqoV2mD6hhf4",
+      "latitude": 45.817679845584735,
+      "longitude": 35.710697146941676,
+      "road_distances": { "PPSMfjWXp": 93546 }
+    },
+    {
+      "type": "Stop",
+      "name": "hHIybMWGs",
+      "latitude": 44.53428896440498,
+      "longitude": 37.53163506496994,
+      "road_distances": {
+        "DY5XgFg7hMcR": 892058,
+        "OhNfjMREoeIqExavaMt3T": 929349
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "M2hoOVq",
+      "latitude": 42.083953832744754,
+      "longitude": 38.3451498537141,
+      "road_distances": {
+        "rqNp6Yf": 960864,
+        "tlToC": 576222,
+        "pBu2hxYaZEctmqR17u8 0e": 348832,
+        "41WZ": 992401,
+        "Ko9Be": 667889
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "yikjjtRNYjldkJ29",
+      "latitude": 38.78697945502961,
+      "longitude": 37.9297651984259,
+      "road_distances": { "NLTbWRY90OXCeWhD3SXNGT": 493339 }
+    },
+    {
+      "type": "Stop",
+      "name": "JUUPv4A",
+      "latitude": 45.775628599220596,
+      "longitude": 37.77261649657117,
+      "road_distances": { "fohfUckqMSQz1DuvVGX": 898903 }
+    },
+    {
+      "type": "Stop",
+      "name": "x",
+      "latitude": 39.73262263958677,
+      "longitude": 36.81977850325626,
+      "road_distances": {
+        "1ZDDhZaidCzpXgE": 982308,
+        "udYu EjRjDONYOvnhb65": 614367,
+        "Sz5qQ2KtLqGgWjLC": 800607,
+        "fokhgveK2": 337950
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "HyC9kI3",
+      "latitude": 44.14911235835761,
+      "longitude": 35.067002404729294,
+      "road_distances": {
+        "btpedAOgrBSpx fjEE": 557326,
+        "M2hoOVq": 382933,
+        "es5gEBiRvgQKjH7 Zr": 943907
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "fokhgveK2",
+      "latitude": 44.54899476287501,
+      "longitude": 35.14487471259751,
+      "road_distances": {
+        "hs4kMehO5oSWuTMUDT6eXUHT": 610565,
+        "Ov9yGnMh1lnnbTy": 533609
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "eVsundDxqpIEUTsnJCJb",
+      "latitude": 46.057209651176336,
+      "longitude": 38.66414581807761,
+      "road_distances": { "4uKFRmnWVfx7PwApS1iq1": 482730 }
+    },
+    {
+      "type": "Stop",
+      "name": "nk",
+      "latitude": 40.08489808845237,
+      "longitude": 38.42293054640195,
+      "road_distances": {
+        "Rz7anphHg": 836215,
+        "es5gEBiRvgQKjH7 Zr": 313307
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "hc4Gqqppweb60pJ0jKGXTlE",
+      "latitude": 41.37931404106122,
+      "longitude": 38.60836440710079,
+      "road_distances": {
+        "BzT5wZS2fQtQ6HUECcjWQKWh": 494230,
+        "JPXJwEH": 753026
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Q2JXBHwjBgn",
+      "latitude": 46.35854166341463,
+      "longitude": 36.44309568036488,
+      "road_distances": {
+        "qzv1Y7VPcP": 491109,
+        "Ko9Be": 798777,
+        "M2hoOVq": 719402,
+        "owETtHQY": 276655
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "V",
+      "latitude": 41.13753640272971,
+      "longitude": 36.48658941680244,
+      "road_distances": { "oPwXtIK zTFhgMt": 51001 }
+    },
+    {
+      "type": "Stop",
+      "name": "azhym",
+      "latitude": 40.79028402046996,
+      "longitude": 35.1023682834183,
+      "road_distances": {
+        "l7 bVI4X4ndOLPVzc": 498513,
+        "md33 GJuke": 998573
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "rTvZVrlRMMZ4CoI4cTksTrXsG",
+      "latitude": 45.278373382021044,
+      "longitude": 36.84977969626163,
+      "road_distances": {
+        "BF6rd": 831269,
+        "UFO01ykkkHdFSBR": 389103
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "I4ASWnREBOusE2KD4msd",
+      "latitude": 45.156085792697716,
+      "longitude": 35.23948461973446,
+      "road_distances": { "jxc3CAvpTM9fiKIq1ew": 341270 }
+    },
+    {
+      "type": "Stop",
+      "name": "qAInwiH72Yegg",
+      "latitude": 38.53812610370367,
+      "longitude": 35.70501417971527,
+      "road_distances": { "cAR24f8o": 709478 }
+    },
+    {
+      "type": "Stop",
+      "name": "7tOBboXxWccY3",
+      "latitude": 40.43139864901352,
+      "longitude": 35.92140900982283,
+      "road_distances": {
+        "Vxo22kXPfNVcP12j": 851310,
+        "oBnF": 752082
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "xKobSHmAGJe5fO0ITA",
+      "latitude": 44.92064140912592,
+      "longitude": 35.74970146630883,
+      "road_distances": {
+        "Cma0ZwmwB60EXifCn0Hb": 699565,
+        "hc4Gqqppweb60pJ0jKGXTlE": 269875
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "g2zZqs3pkSCpTk",
+      "latitude": 41.329325540538576,
+      "longitude": 35.28166270137438,
+      "road_distances": {
+        "3MdMuFA17gfY6l7": 736281,
+        "9gzdmWcI": 76036,
+        "rlmDO": 544516,
+        "vrYE1KZS91Pe": 328971
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "es5gEBiRvgQKjH7 Zr",
+      "latitude": 45.949894054002506,
+      "longitude": 37.414260392956216,
+      "road_distances": {
+        "YXhW AeAxD6or UgVmC": 848539,
+        "WkEQktpVh": 64441
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "wtHA28ZWk5LmKMGbXRBMYbeuT",
+      "latitude": 45.195154860194826,
+      "longitude": 38.048774984791926,
+      "road_distances": {
+        "DY5XgFg7hMcR": 728259,
+        "G7JjRt": 302684
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "CaFyn",
+      "latitude": 40.54322421848418,
+      "longitude": 39.681991862969234,
+      "road_distances": {
+        "xI0": 658955,
+        "eXxhN3GV0VM8T4FPQ9ngP78Rl": 94777
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "vuMphq",
+      "latitude": 41.69685218931523,
+      "longitude": 37.704983173802376,
+      "road_distances": {
+        "cpTAHOmTsVpxNUPyGnw6eA": 630358,
+        "Dq": 539613
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "D5Kb5jipNV39QX9UDaBg51",
+      "latitude": 44.80395053543995,
+      "longitude": 36.55840199757494,
+      "road_distances": { "fUZ": 401355 }
+    },
+    {
+      "type": "Stop",
+      "name": "5UNzln4CTF58KhQDEyVlY08n6",
+      "latitude": 42.17601859888016,
+      "longitude": 35.13443555639458,
+      "road_distances": {
+        "1ZDDhZaidCzpXgE": 927378,
+        "5jUq7fLxjM3": 963643,
+        "gzW2yjqcyAwD": 40045
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1cMzvaDT3PgIAiqR3vyC4N",
+      "latitude": 46.26506042659917,
+      "longitude": 39.0600805558726,
+      "road_distances": { "vrYE1KZS91Pe": 449980 }
+    },
+    {
+      "type": "Stop",
+      "name": "ybawB73fFJrtTS",
+      "latitude": 42.16464304297686,
+      "longitude": 38.52906798209786,
+      "road_distances": {
+        "UFO01ykkkHdFSBR": 907079,
+        "VAKuA7yCeqZ": 949787
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "A",
+      "latitude": 39.070076269681316,
+      "longitude": 38.34982796953399,
+      "road_distances": {
+        "4BjzGi9yZaIBgU2yHhyj5JRy": 914501,
+        "xG FC61Sl2": 777281,
+        "eUR76t": 959664
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "l7 bVI4X4ndOLPVzc",
+      "latitude": 42.127535572808945,
+      "longitude": 37.559395570124465,
+      "road_distances": {
+        "B6Ii0PZsfsmiMvaxj": 516976,
+        "5c11GcP0mgE": 769684,
+        "KWnI3A0tEMbhPElVWyEFN": 534806,
+        "e2q16cYcmg": 576165
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "oBnF",
+      "latitude": 45.09063175037006,
+      "longitude": 36.01756918484724,
+      "road_distances": {
+        "o306d": 308783,
+        "koLwW": 894317
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "KmZeoAcdxxVYMLa9WheLySg",
+      "latitude": 38.74704723545847,
+      "longitude": 38.73329706927684,
+      "road_distances": {
+        "Yr2iCsyIlsIpxzMF2a2Npgnev": 875090,
+        "hc4Gqqppweb60pJ0jKGXTlE": 579622
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "aicoZgJvpInP",
+      "latitude": 46.52727884299495,
+      "longitude": 35.62229511007092,
+      "road_distances": {
+        "9jfRrR1Kh4ryehKQJO4qMic": 972162,
+        "NLtewwi3Xt9 X": 475781
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "81tTYG8RU6",
+      "latitude": 41.09204097514515,
+      "longitude": 36.7863671044361,
+      "road_distances": { "Up2SZz3vSfuABG": 907651 }
+    },
+    {
+      "type": "Stop",
+      "name": "SN86leubmmVrty4lNPXiWMZ",
+      "latitude": 41.904343420256204,
+      "longitude": 36.142144207109595,
+      "road_distances": { "xG FC61Sl2": 950001 }
+    },
+    {
+      "type": "Stop",
+      "name": "WcWW4",
+      "latitude": 39.012621145632494,
+      "longitude": 39.30598846466087,
+      "road_distances": {
+        "JJohY": 668632,
+        "a3Y3vWilSTRnn": 527366
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "DtkElx",
+      "latitude": 44.12904788680038,
+      "longitude": 37.37432432543286,
+      "road_distances": { "m4XN6CfJfUSMydyi9i": 488825 }
+    },
+    {
+      "type": "Stop",
+      "name": "8TrMo37n4",
+      "latitude": 45.46685247477235,
+      "longitude": 35.70265746668423,
+      "road_distances": {
+        "SxQ1iMzVaNqIrO6f722D": 887936,
+        "7nnIN": 868369
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "OIyJ1mHhKTY",
+      "latitude": 39.49362835061473,
+      "longitude": 38.92552646374802,
+      "road_distances": { "M2hoOVq": 329730 }
+    },
+    {
+      "type": "Stop",
+      "name": "v",
+      "latitude": 42.97840965414372,
+      "longitude": 34.82510644138873,
+      "road_distances": { "rqNp6Yf": 525754 }
+    },
+    {
+      "type": "Stop",
+      "name": "5jUq7fLxjM3",
+      "latitude": 44.008675117484,
+      "longitude": 38.36890728235053,
+      "road_distances": {
+        "OhsdE3KtQxtXfd5zdR": 590262,
+        "yaQixyudQyM82CXAE8P64 IYT": 751841,
+        "euG54dKO71bmCwC": 85834
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "uStAQGY9I",
+      "latitude": 42.175723923287165,
+      "longitude": 34.96788534080785,
+      "road_distances": {
+        "hc4Gqqppweb60pJ0jKGXTlE": 404883,
+        "o4sUlKdGCQkBJ": 265878,
+        "4610m5MhtQXg2YCd0eYJIZxs": 894591
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4610m5MhtQXg2YCd0eYJIZxs",
+      "latitude": 42.61232996086731,
+      "longitude": 34.7739890879802,
+      "road_distances": {
+        "G7JjRt": 470905,
+        "4fLwlrM": 963296,
+        "bbXyP6MRYblocK6OonT5": 470548
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "WtDaTgNHin",
+      "stops": [ "wp3bXE3659HHh 8JlJ sPYg", "Zk SKfr3LBy", "i94r 6t3qcX2jV", "uzU SJ5ob6XWSMw0", "9XlZ5sZpOs56", "4w44c1RLfMCw", "0pvTOFW", "9gE", "JAUZs8KAedtRCAtAgBwizG", "B6Ii0PZsfsmiMvaxj", "xuwT7B6PDlR7oT3yc", "Y", "rTvZVrlRMMZ4CoI4cTksTrXsG" ],
+      "is_roundtrip": false
+    },
+    {
+      "type": "Stop",
+      "name": "MNKI",
+      "latitude": 41.9955772229891,
+      "longitude": 35.61342043840007,
+      "road_distances": {
+        "OT": 496102,
+        "PICxJMYKaMdNf05dMuGQYTWmh": 450148
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7alx38v5FZK",
+      "latitude": 38.70073802895816,
+      "longitude": 37.648448450955186,
+      "road_distances": {
+        "XuJyDwmcwyY189 iyUDnKXA": 673487,
+        "Ed q3XBN9p9": 868979
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9WKnD",
+      "latitude": 40.812229884619974,
+      "longitude": 34.85433866529208,
+      "road_distances": { "PICxJMYKaMdNf05dMuGQYTWmh": 28801 }
+    },
+    {
+      "type": "Stop",
+      "name": "KmT QGCiRbgPwBXBjo0MvMSI",
+      "latitude": 38.98184598674618,
+      "longitude": 36.15355086055342,
+      "road_distances": {
+        "OhNfjMREoeIqExavaMt3T": 840678,
+        "tLTF": 169103
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "pUSLWyWgGYV3JN7Nm",
+      "latitude": 42.34842345711525,
+      "longitude": 34.971742324941005,
+      "road_distances": {
+        "0alN91GUfZHgkl3R1S": 683867,
+        "SdalH44ChbsNm9qxrysMPIV": 965449,
+        "pxPtlAFaOGJ2CWGY7f": 398472
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "YsFlCLmhOtAk",
+      "latitude": 39.75818848087313,
+      "longitude": 38.480123546215395,
+      "road_distances": {
+        "B5puSb F5hZ": 769877,
+        "sVagNm": 667707
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "BO7QyJQjuSuBCsTXsEPxv",
+      "latitude": 39.980847483914715,
+      "longitude": 37.137800593644734,
+      "road_distances": {
+        "vplIZoO4m": 557712,
+        "9XlZ5sZpOs56": 622329,
+        "YXhW AeAxD6or UgVmC": 254842
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "prrB",
+      "latitude": 43.81609142623225,
+      "longitude": 38.65072791634392,
+      "road_distances": { "apPFQ5PD9": 408835 }
+    },
+    {
+      "type": "Stop",
+      "name": "1bd9dQQxYQSjtHZ",
+      "latitude": 44.391999027034714,
+      "longitude": 36.65621077967439,
+      "road_distances": { "Sz5qQ2KtLqGgWjLC": 804793 }
+    },
+    {
+      "type": "Stop",
+      "name": "VhSWclPfT6",
+      "latitude": 44.35593452406302,
+      "longitude": 36.19174059474134,
+      "road_distances": {
+        "Nhj": 687949,
+        "Ptmiar": 717832,
+        "vrHJ4NRsFVCX5 AD8 Is": 808417
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "FIlGNVPbGMI2P",
+      "latitude": 44.34768282524817,
+      "longitude": 37.310544799301546,
+      "road_distances": { "KWnI3A0tEMbhPElVWyEFN": 148850 }
+    },
+    {
+      "type": "Stop",
+      "name": "Jw7ZzFl1C",
+      "latitude": 45.22360443336206,
+      "longitude": 35.34096824462791,
+      "road_distances": {
+        "o4sUlKdGCQkBJ": 504828,
+        "rlmDO": 887722,
+        "x": 778852,
+        "UH5SdMbEYWGvHkksuiq2K": 283885
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "D",
+      "latitude": 43.6502767796145,
+      "longitude": 39.295230418299475,
+      "road_distances": {
+        "soXQOwNsGx41450OO8EoyxV0": 789839,
+        "l7 bVI4X4ndOLPVzc": 767974,
+        "pDRF8moQstx": 982426,
+        "OIyJ1mHhKTY": 355147
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4Rt1ru",
+      "latitude": 39.545325302027,
+      "longitude": 36.500707075138294,
+      "road_distances": { "hs4kMehO5oSWuTMUDT6eXUHT": 187342 }
+    },
+    {
+      "type": "Stop",
+      "name": "uzU SJ5ob6XWSMw0",
+      "latitude": 39.430764019308974,
+      "longitude": 37.77774838384748,
+      "road_distances": {
+        "9XlZ5sZpOs56": 577471,
+        "a3Y3vWilSTRnn": 884272,
+        "gFWBcjspD6vFD3fz1": 756517
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "r3eLkZCt5L",
+      "latitude": 43.07821994070322,
+      "longitude": 37.73285008279036,
+      "road_distances": {
+        "hP27kWw146Bw5ky67bDv4": 852096,
+        "KWnI3A0tEMbhPElVWyEFN": 332608
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "PYB8jvJO",
+      "latitude": 45.594502474678585,
+      "longitude": 39.488865410413624,
+      "road_distances": { "RkXC9GBg": 882632 }
+    },
+    {
+      "type": "Stop",
+      "name": "SdalH44ChbsNm9qxrysMPIV",
+      "latitude": 39.93609389669414,
+      "longitude": 36.991590989284596,
+      "road_distances": {
+        "azhym": 531888,
+        "zXJn": 501373
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ri0jd",
+      "latitude": 38.956525624023435,
+      "longitude": 34.74544641251708,
+      "road_distances": {
+        "vplIZoO4m": 314694,
+        "uQ9ViomDyub": 309763
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "87Nep jbIUg",
+      "latitude": 41.98057348914945,
+      "longitude": 39.775823367637024,
+      "road_distances": {
+        "7ytoNEwFiXtry jML": 886618,
+        "yaQixyudQyM82CXAE8P64 IYT": 760709
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "YG",
+      "latitude": 43.0229327460825,
+      "longitude": 36.59137147790415,
+      "road_distances": {
+        "MwAwawl xGnT5yIoINY7": 576034,
+        "d526HReqpCPNaQ4": 886870
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Ed q3XBN9p9",
+      "latitude": 45.1697391464301,
+      "longitude": 36.29258431304114,
+      "road_distances": { "CaoNo6dm5OypY": 135377 }
+    },
+    {
+      "type": "Stop",
+      "name": "wzsu84jMOR2",
+      "latitude": 40.78510114759227,
+      "longitude": 35.463291321287315,
+      "road_distances": {
+        "0UlXMo UT0A1": 736449,
+        "m4XN6CfJfUSMydyi9i": 356418
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "kKZ12w30JeAacW8w LMT",
+      "latitude": 45.39742748117905,
+      "longitude": 37.5226853226623,
+      "road_distances": { "YsFlCLmhOtAk": 692046 }
+    },
+    {
+      "type": "Stop",
+      "name": "0hSCTEXBHcP",
+      "latitude": 44.33620493754199,
+      "longitude": 35.36367052593823,
+      "road_distances": { "SN86leubmmVrty4lNPXiWMZ": 964807 }
+    },
+    {
+      "type": "Stop",
+      "name": "3d3OUQzKJJQB9 wWi8NEnO",
+      "latitude": 43.18814564985365,
+      "longitude": 39.513430397204154,
+      "road_distances": { "prrB": 666103 }
+    },
+    {
+      "type": "Stop",
+      "name": "IXV",
+      "latitude": 40.15484082171345,
+      "longitude": 39.64388994692578,
+      "road_distances": { "euG54dKO71bmCwC": 15604 }
+    },
+    {
+      "type": "Stop",
+      "name": "VIgVbEgk",
+      "latitude": 45.54360086845654,
+      "longitude": 35.142764694426994,
+      "road_distances": {
+        "lg": 272309,
+        "xG FC61Sl2": 913969,
+        "Eue9Yz6JsAECUwwFOn": 726061
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "15rJ3iztgHZsM9iFAfbBuUJE",
+      "latitude": 40.10059340401176,
+      "longitude": 38.542810355956775,
+      "road_distances": {
+        "8TrMo37n4": 893930,
+        "a3Y3vWilSTRnn": 920875
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "vrYE1KZS91Pe",
+      "latitude": 42.62009256207294,
+      "longitude": 39.68740311580333,
+      "road_distances": {
+        "5": 848732,
+        "6lBiH81RS1vqh0JGLsSq2p": 816891
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "G7JjRt",
+      "latitude": 44.21767885888885,
+      "longitude": 37.91688375999733,
+      "road_distances": {
+        "u": 940682,
+        "BS4Tm0c8aXftoy8JhX5zwKTn": 669601,
+        "r3eLkZCt5L": 822471
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "36Ojy PryTb6J1KILAxgrzb",
+      "latitude": 45.71663508231901,
+      "longitude": 37.374134217760776,
+      "road_distances": { "PICxJMYKaMdNf05dMuGQYTWmh": 252150 }
+    },
+    {
+      "type": "Stop",
+      "name": "PJfy64MRl5U",
+      "latitude": 40.3948945678537,
+      "longitude": 36.436710034091526,
+      "road_distances": { "89r6SHT84kSv6s": 590546 }
+    },
+    {
+      "type": "Stop",
+      "name": "a3Y3vWilSTRnn",
+      "latitude": 41.90982299730133,
+      "longitude": 38.50677957884419,
+      "road_distances": {
+        "rTvZVrlRMMZ4CoI4cTksTrXsG": 401365,
+        "M2hoOVq": 352133,
+        "KmT QGCiRbgPwBXBjo0MvMSI": 964849
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "JPXJwEH",
+      "latitude": 39.446757313108925,
+      "longitude": 35.09437688159837,
+      "road_distances": { "5jUq7fLxjM3": 584956 }
+    },
+    {
+      "type": "Stop",
+      "name": "6lBiH81RS1vqh0JGLsSq2p",
+      "latitude": 46.05979951191507,
+      "longitude": 35.0174121663582,
+      "road_distances": { "xKobSHmAGJe5fO0ITA": 231066 }
+    },
+    {
+      "type": "Stop",
+      "name": "0ZSSjG0TLnI4DMTo xRz",
+      "latitude": 39.05100036162059,
+      "longitude": 35.61534161704926,
+      "road_distances": { "cPG3CM2oLxP8gFWs": 40250 }
+    },
+    {
+      "type": "Stop",
+      "name": "Ptmiar",
+      "latitude": 41.071154442034995,
+      "longitude": 35.49491577368558,
+      "road_distances": {
+        "sVagNm": 777436,
+        "47KPy4t": 862751,
+        "Ed q3XBN9p9": 95171
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "JAUZs8KAedtRCAtAgBwizG",
+      "latitude": 43.56803054298903,
+      "longitude": 39.73846581022037,
+      "road_distances": {
+        "B6Ii0PZsfsmiMvaxj": 890483,
+        "cpTAHOmTsVpxNUPyGnw6eA": 439635,
+        "qzv1Y7VPcP": 895308,
+        "yW2um9nrjdsdKq2Srk": 424737
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "J9NbMaVxZq",
+      "latitude": 44.65582113935253,
+      "longitude": 35.830147053973235,
+      "road_distances": {
+        "lSt5Qpd": 983031,
+        "A": 518205
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "AgNuuxGmwH",
+      "latitude": 42.308803578399214,
+      "longitude": 35.7354759415473,
+      "road_distances": { "NLtewwi3Xt9 X": 733909 }
+    },
+    {
+      "type": "Stop",
+      "name": "cm4p3ZqQr4Xf",
+      "latitude": 39.49213358370178,
+      "longitude": 39.32806005987128,
+      "road_distances": { "iLZXYnuq4x": 696507 }
+    },
+    {
+      "type": "Stop",
+      "name": "9BbQ6zUCFk",
+      "latitude": 39.20532118771223,
+      "longitude": 35.566992540921326,
+      "road_distances": {
+        "51mSl6lCc0hS7ASqymamrFx": 393764,
+        "9gzdmWcI": 874175,
+        "VAKuA7yCeqZ": 435206
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4M0zIiqq3XuQALz",
+      "latitude": 42.73306801967822,
+      "longitude": 38.44657323981048,
+      "road_distances": { "dAc5B3jdzldvnp1": 897862 }
+    },
+    {
+      "type": "Stop",
+      "name": "fQvdwkTW3OXYqDE",
+      "latitude": 44.03308198043802,
+      "longitude": 35.054438211690865,
+      "road_distances": { "GLDs1R6P": 608169 }
+    },
+    {
+      "type": "Bus",
+      "name": "KWEBtqv4LjpNI",
+      "stops": [ "Ptmiar", "sVagNm", "vFE1k1oT9vT7Bc", "rMB xrHQyN4W", "y44O8xYuP", "1q1C", "aicoZgJvpInP", "9jfRrR1Kh4ryehKQJO4qMic", "BS4Tm0c8aXftoy8JhX5zwKTn", "fGlTAQy7ALCs9IIx6d", "a3Y3vWilSTRnn", "rTvZVrlRMMZ4CoI4cTksTrXsG", "BF6rd", "m4XN6CfJfUSMydyi9i", "WexwM9t3uQuu52IUQw8FR9", "4cHvraeZQlOx2mnOqdGiHHc", "JAUZs8KAedtRCAtAgBwizG", "cpTAHOmTsVpxNUPyGnw6eA", "owETtHQY", "wzsu84jMOR2", "0UlXMo UT0A1", "TABBgJMTRd", "8I5B1p38jgjIyoffJhN", "2lHcIAPEK", "pRdgYPBJHRy5zIU9AyRgyMG7", "4cu0ZaBI0QdntRGClM", "4610m5MhtQXg2YCd0eYJIZxs", "G7JjRt", "BS4Tm0c8aXftoy8JhX5zwKTn", "iRwvlGWgXNp", "vuMphq", "cpTAHOmTsVpxNUPyGnw6eA", "51mSl6lCc0hS7ASqymamrFx", "ck 2occraqtGgQchTqO", "4q0", "W2yGQ0BkLT7jhl8", "BF6rd", "8IoaJKLSQzSgiX2G7Rfv7h", "5UNzln4CTF58KhQDEyVlY08n6", "1ZDDhZaidCzpXgE", "KdOcVomS4tiI XPTLn7", "9KP", "JXxbMVWD7cgY4", "51mSl6lCc0hS7ASqymamrFx", "VIgVbEgk", "xG FC61Sl2", "LEm6Lks4h L279DwQ uMGQ", "VlcjolEoGY", "o306d", "LO9", "7ytoNEwFiXtry jML", "4q0", "qzv1Y7VPcP", "Mhq92BcHJr0vMMRcLQ", "Ov9yGnMh1lnnbTy", "cTdNpr", "sRjudxUauC4Lv8p38C0vgJJ", "03qz7y54scTVX3t2XapUkgrRw", "M2hoOVq", "rqNp6Yf", "RB", "5UNzln4CTF58KhQDEyVlY08n6", "5jUq7fLxjM3", "yaQixyudQyM82CXAE8P64 IYT", "es5gEBiRvgQKjH7 Zr", "YXhW AeAxD6or UgVmC", "N2elTZobTU2XcYyCESw", "W2yGQ0BkLT7jhl8", "ej6lZ5fnKEknDLvkHt38", "KmZeoAcdxxVYMLa9WheLySg", "Yr2iCsyIlsIpxzMF2a2Npgnev", "NLtewwi3Xt9 X", "QcP8 33gzDFKLyRHA9", "nVoVsn0vg30MNwjl kzR93qkH", "JUXnV6YhGEA", "Lrh", "EFSNQg8F19mBEuS", "NLtewwi3Xt9 X", "64x9ye7Em6ibfsAVog6w9", "xG FC61Sl2", "RB", "dw6AQs48H7JfplHF9sgNuv", "7nnIN", "VtjspZorRFD", "w2", "Y9PqplBRcZiXOZNf4kfEdmNTj", "Ptmiar" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "owETtHQY",
+      "latitude": 40.16080095613894,
+      "longitude": 39.35191479154699,
+      "road_distances": {
+        "wzsu84jMOR2": 371483,
+        "9AvJ": 535572
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "B5puSb F5hZ",
+      "latitude": 42.686134091629334,
+      "longitude": 38.936302226905376,
+      "road_distances": {
+        "4610m5MhtQXg2YCd0eYJIZxs": 755379,
+        "Mv3qtsfcpkhpJ": 249556,
+        "bbZMFzV6g80iwcJ0T": 771409
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1ue2",
+      "latitude": 42.43514889393103,
+      "longitude": 37.662205128023615,
+      "road_distances": { "akClT8gNRpEw": 754888 }
+    },
+    {
+      "type": "Stop",
+      "name": "BS4Tm0c8aXftoy8JhX5zwKTn",
+      "latitude": 45.263646363304154,
+      "longitude": 35.738103755764094,
+      "road_distances": {
+        "fGlTAQy7ALCs9IIx6d": 918494,
+        "iRwvlGWgXNp": 787620,
+        "5SEA5XmqFQ4ri": 57225
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "NLtewwi3Xt9 X",
+      "latitude": 42.470864036947354,
+      "longitude": 37.99625288198373,
+      "road_distances": {
+        "QcP8 33gzDFKLyRHA9": 520056,
+        "64x9ye7Em6ibfsAVog6w9": 614394,
+        "U": 171311
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "pxPtlAFaOGJ2CWGY7f",
+      "latitude": 42.10807283207579,
+      "longitude": 39.471697506927924,
+      "road_distances": {
+        "g2zZqs3pkSCpTk": 799007,
+        "tGDY6jiJQdaRh": 7043
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tLTF",
+      "latitude": 40.85791399511665,
+      "longitude": 38.71706939149476,
+      "road_distances": {
+        "hWc5qNf": 975757,
+        "x": 190400
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7AZGfE4 tjo9nqV2WJTNL Lfd",
+      "latitude": 43.25781810477749,
+      "longitude": 35.778730969632434,
+      "road_distances": {
+        "dw6AQs48H7JfplHF9sgNuv": 877972,
+        "fokhgveK2": 448402,
+        "VAKuA7yCeqZ": 190679
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4cHvraeZQlOx2mnOqdGiHHc",
+      "latitude": 43.94512760120979,
+      "longitude": 38.51173613418907,
+      "road_distances": {
+        "JAUZs8KAedtRCAtAgBwizG": 838315,
+        "3MdMuFA17gfY6l7": 163922
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "OT",
+      "latitude": 45.174808929157294,
+      "longitude": 37.72288035898131,
+      "road_distances": {
+        "HyC9kI3": 254347,
+        "md33 GJuke": 562107,
+        "xG FC61Sl2": 805612
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1vxJQU277MKrnlBg2Rg",
+      "latitude": 42.88328131896001,
+      "longitude": 34.738326960480066,
+      "road_distances": { "BS4Tm0c8aXftoy8JhX5zwKTn": 195969 }
+    },
+    {
+      "type": "Stop",
+      "name": "uE",
+      "latitude": 38.758747887902054,
+      "longitude": 34.670299401297015,
+      "road_distances": {
+        "TPsMhHODt5aOjT": 471438,
+        "gLgxidt9PZ": 481671
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "RkXC9GBg",
+      "latitude": 41.32604844499133,
+      "longitude": 38.11185016671616,
+      "road_distances": { "5fYDOP": 503452 }
+    },
+    {
+      "type": "Stop",
+      "name": "EP95Mil403JTla8roJTn",
+      "latitude": 45.6838030005424,
+      "longitude": 36.083178595564405,
+      "road_distances": { "4cHvraeZQlOx2mnOqdGiHHc": 295685 }
+    },
+    {
+      "type": "Stop",
+      "name": "VIW3NLwOpWCYs",
+      "latitude": 43.9209270292486,
+      "longitude": 37.75400729834598,
+      "road_distances": { "9KP": 933692 }
+    },
+    {
+      "type": "Stop",
+      "name": "R72ty5Ar",
+      "latitude": 44.43548039181481,
+      "longitude": 36.30350694145476,
+      "road_distances": {
+        "hHIybMWGs": 629205,
+        "Mjel2SwfV753sfQQQX": 968678
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "3MdMuFA17gfY6l7",
+      "latitude": 38.88829998043983,
+      "longitude": 39.51124971733502,
+      "road_distances": {
+        "GLDs1R6P": 695133,
+        "apPFQ5PD9": 721625
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4cu0ZaBI0QdntRGClM",
+      "latitude": 44.76683134578631,
+      "longitude": 37.532675954220124,
+      "road_distances": {
+        "4610m5MhtQXg2YCd0eYJIZxs": 655984,
+        "JAUZs8KAedtRCAtAgBwizG": 759049,
+        "0p": 536839
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "IMY5r5dHa",
+      "latitude": 38.40401734970003,
+      "longitude": 36.39587103511626,
+      "road_distances": { "6gWGimtfok": 4518 }
+    },
+    {
+      "type": "Stop",
+      "name": "soXQOwNsGx41450OO8EoyxV0",
+      "latitude": 41.5318952111422,
+      "longitude": 37.17214331170253,
+      "road_distances": {
+        "9XlZ5sZpOs56": 750291,
+        "Dq": 739778
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "2AoMeFbiw3LVGEo",
+      "latitude": 45.7894052592323,
+      "longitude": 35.80375936796714,
+      "road_distances": {
+        "7tOBboXxWccY3": 837239,
+        "rqNp6Yf": 969484,
+        "KdOcVomS4tiI XPTLn7": 596565
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "LO9",
+      "latitude": 46.43283455155348,
+      "longitude": 38.87378904737929,
+      "road_distances": {
+        "7ytoNEwFiXtry jML": 447624,
+        "dfhJQzqV9y9GvTVc": 668820
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9AvJ",
+      "latitude": 41.0732427870991,
+      "longitude": 37.42597280257438,
+      "road_distances": {
+        "P2vD2qaWg lGnidtkjx0tPX": 700225,
+        "64x9ye7Em6ibfsAVog6w9": 466164
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "VtjspZorRFD",
+      "latitude": 44.26892595722964,
+      "longitude": 39.91400706915926,
+      "road_distances": {
+        "xuwT7B6PDlR7oT3yc": 946534,
+        "w2": 326470,
+        "MwAwawl xGnT5yIoINY7": 607437
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1Q",
+      "latitude": 43.32771441058618,
+      "longitude": 37.49400585563662,
+      "road_distances": { "1vxJQU277MKrnlBg2Rg": 989455 }
+    },
+    {
+      "type": "Stop",
+      "name": "Fm3gtJ1Jzvf",
+      "latitude": 41.95851327256848,
+      "longitude": 35.334990482504224,
+      "road_distances": {
+        "wz2smMVe8isF0u7yP5Yjf": 876210,
+        "88Z1": 841378
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "YXhW AeAxD6or UgVmC",
+      "latitude": 38.67525393818243,
+      "longitude": 35.092332510264754,
+      "road_distances": {
+        "N2elTZobTU2XcYyCESw": 617409,
+        "EFSNQg8F19mBEuS": 154342
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "h2AbT2rz5ODGx",
+      "latitude": 43.94271046634026,
+      "longitude": 38.44052094925802,
+      "road_distances": { "B5puSb F5hZ": 988893 }
+    },
+    {
+      "type": "Stop",
+      "name": "51mSl6lCc0hS7ASqymamrFx",
+      "latitude": 39.49024145075346,
+      "longitude": 34.93542632135101,
+      "road_distances": {
+        "Xem w": 872052,
+        "ck 2occraqtGgQchTqO": 722105,
+        "VIgVbEgk": 706940,
+        "4uKFRmnWVfx7PwApS1iq1": 660580,
+        "2sC29LGX9qZxptP": 636186,
+        "WkEQktpVh": 417285,
+        "i94r 6t3qcX2jV": 285545
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9ZApOu7",
+      "latitude": 45.9925732734674,
+      "longitude": 34.88877834284063,
+      "road_distances": { "4cHvraeZQlOx2mnOqdGiHHc": 521060 }
+    },
+    {
+      "type": "Stop",
+      "name": "akClT8gNRpEw",
+      "latitude": 41.526500666259835,
+      "longitude": 38.17093844791422,
+      "road_distances": {
+        "VhSWclPfT6": 439302,
+        "bM6k9ptc": 400300
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "DZ 7nOe5GrbQ8ZLNrmQ94",
+      "latitude": 45.631372503830185,
+      "longitude": 39.82519729177264,
+      "road_distances": { "cPG3CM2oLxP8gFWs": 240746 }
+    },
+    {
+      "type": "Stop",
+      "name": "OikOTB9AIPGK6P0KvkBnB",
+      "latitude": 44.45595081843497,
+      "longitude": 34.65387484037942,
+      "road_distances": {
+        "0UlXMo UT0A1": 612236,
+        "ylXqoV2mD6hhf4": 131071
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "uJvf",
+      "latitude": 44.55915511864053,
+      "longitude": 36.41071830806994,
+      "road_distances": {
+        "L5f3SMzgx9sVs1U": 668917,
+        "Sx9olsn1IYSdjI0SY": 353319
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Cma0ZwmwB60EXifCn0Hb",
+      "latitude": 45.54432038348088,
+      "longitude": 38.408169173560225,
+      "road_distances": {
+        "5SEA5XmqFQ4ri": 366089,
+        "bbZMFzV6g80iwcJ0T": 612370
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "cPG3CM2oLxP8gFWs",
+      "latitude": 41.77619324954915,
+      "longitude": 39.625612502122934,
+      "road_distances": {
+        "TPsMhHODt5aOjT": 811119,
+        "bcAjvfoIg": 121035
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "TABBgJMTRd",
+      "latitude": 42.7301792908284,
+      "longitude": 35.13756358434157,
+      "road_distances": {
+        "8I5B1p38jgjIyoffJhN": 258599,
+        "qzv1Y7VPcP": 351673
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "QRyk",
+      "latitude": 38.8955131248095,
+      "longitude": 36.175913653636464,
+      "road_distances": { "txyI04Ge2": 930228 }
+    },
+    {
+      "type": "Stop",
+      "name": "vv1ZMLlZx3hF9GY4IwqiqaE",
+      "latitude": 45.45160624155007,
+      "longitude": 34.762915950549726,
+      "road_distances": { "51mSl6lCc0hS7ASqymamrFx": 646550 }
+    },
+    {
+      "type": "Stop",
+      "name": "OtJfE",
+      "latitude": 38.88104100654795,
+      "longitude": 39.769924351763315,
+      "road_distances": { "KmZeoAcdxxVYMLa9WheLySg": 112197 }
+    },
+    {
+      "type": "Stop",
+      "name": "GLDs1R6P",
+      "latitude": 40.74907920856568,
+      "longitude": 37.490190422187936,
+      "road_distances": {
+        "m4XN6CfJfUSMydyi9i": 766261,
+        "7Qx3VP": 996696,
+        "I4ASWnREBOusE2KD4msd": 964469
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "mPm8l7LDmldlrerO",
+      "latitude": 39.19232970043854,
+      "longitude": 37.73168842397101,
+      "road_distances": {
+        "hNQl0bnnDP": 927385,
+        "WkEQktpVh": 558533
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4uKFRmnWVfx7PwApS1iq1",
+      "latitude": 43.183121381467735,
+      "longitude": 36.6459049654732,
+      "road_distances": {
+        "W2yGQ0BkLT7jhl8": 655482,
+        "md33 GJuke": 706692,
+        "xG FC61Sl2": 421396,
+        "apPFQ5PD9": 808507
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "2CKwH0uX HRBn",
+      "latitude": 42.20326731988869,
+      "longitude": 37.2019132721209,
+      "road_distances": { "Ed q3XBN9p9": 603626 }
+    },
+    {
+      "type": "Stop",
+      "name": "pPWWzMieRGf",
+      "latitude": 45.645210077641266,
+      "longitude": 39.67787920490607,
+      "road_distances": { "KmT QGCiRbgPwBXBjo0MvMSI": 278106 }
+    },
+    {
+      "type": "Stop",
+      "name": "Dq",
+      "latitude": 46.60526839676159,
+      "longitude": 35.16056212348802,
+      "road_distances": {
+        "o4sUlKdGCQkBJ": 812196,
+        "D5Kb5jipNV39QX9UDaBg51": 436795
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Ra1",
+      "latitude": 46.42158854221259,
+      "longitude": 37.8620780977181,
+      "road_distances": {
+        "pUSLWyWgGYV3JN7Nm": 699163,
+        "hY dGGniDmC": 278611
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "TPsMhHODt5aOjT",
+      "latitude": 40.47229780467421,
+      "longitude": 34.81898894024878,
+      "road_distances": {
+        "gzW2yjqcyAwD": 670345,
+        "KzhM": 593730,
+        "L6p2LaRJthyGEX": 155965
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "sVagNm",
+      "latitude": 46.446894597934225,
+      "longitude": 36.98748787505865,
+      "road_distances": {
+        "8w5xeUHBtls7": 746294,
+        "vFE1k1oT9vT7Bc": 576597,
+        "eXxhN3GV0VM8T4FPQ9ngP78Rl": 114376
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "apPFQ5PD9",
+      "latitude": 46.42134745291341,
+      "longitude": 34.76585856068313,
+      "road_distances": { "cGoYRDB7mQ2udc DfhpTcM": 323147 }
+    },
+    {
+      "type": "Stop",
+      "name": "m80zs6J5XE",
+      "latitude": 39.05196644924163,
+      "longitude": 39.5802243557533,
+      "road_distances": {
+        "wz2smMVe8isF0u7yP5Yjf": 543553,
+        "d526HReqpCPNaQ4": 353498
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "Ztn6R4Za",
+      "stops": [ "B5puSb F5hZ", "4610m5MhtQXg2YCd0eYJIZxs", "4fLwlrM", "N2elTZobTU2XcYyCESw", "Hc1q Z1ztVb", "47KPy4t", "akClT8gNRpEw", "VhSWclPfT6", "Ptmiar", "47KPy4t", "5SEA5XmqFQ4ri", "zmYb9aqQj2QbbGEN", "VWVzIMV", "ZpiIW8KJ4VmAa", "KgT", "z60Hf3EIpQYPJQAGsMedyl14", "r3eLkZCt5L", "hP27kWw146Bw5ky67bDv4", "plTe", "9BbQ6zUCFk", "51mSl6lCc0hS7ASqymamrFx", "4uKFRmnWVfx7PwApS1iq1", "W2yGQ0BkLT7jhl8", "zrQLquXtEP", "bMiupBjStgeWw", "x", "udYu EjRjDONYOvnhb65", "9KP", "YBS", "HmXj", "9BbQ6zUCFk", "9gzdmWcI", "Vxo22kXPfNVcP12j", "Dq", "o4sUlKdGCQkBJ", "5OfxynCww5", "D", "soXQOwNsGx41450OO8EoyxV0", "9XlZ5sZpOs56", "AYOZrxww47 MQ0", "UH5SdMbEYWGvHkksuiq2K", "I2qFVLTRqHJyn9NaHMdu", "l", "5fYDOP", "RcqbdxjiBKAPVUBuMu", "Nhj", "MwAwawl xGnT5yIoINY7", "M9qkIYf", "dAc5B3jdzldvnp1", "WkEQktpVh", "wtHA28ZWk5LmKMGbXRBMYbeuT", "DY5XgFg7hMcR", "J9NbMaVxZq", "lSt5Qpd", "BO7QyJQjuSuBCsTXsEPxv", "vplIZoO4m", "cpTAHOmTsVpxNUPyGnw6eA", "oBnF", "o306d", "uStAQGY9I", "o4sUlKdGCQkBJ", "51mSl6lCc0hS7ASqymamrFx", "2sC29LGX9qZxptP", "JJohY", "nF74AUIm5mdBQABl6OMZs", "E4NbH", "Q2JXBHwjBgn", "qzv1Y7VPcP", "mxn", "7Qx3VP", "e2q16cYcmg", "Mv3qtsfcpkhpJ", "Sz5qQ2KtLqGgWjLC", "Nhj", "aPkm5T1F6cZw E d9Ew4 y", "NDSf5icxFG", "Jw7ZzFl1C", "x", "Sz5qQ2KtLqGgWjLC", "dw6AQs48H7JfplHF9sgNuv", "rpyH", "2AoMeFbiw3LVGEo", "rqNp6Yf", "ATigTSkgzqCjHenGFw", "BO7QyJQjuSuBCsTXsEPxv", "9XlZ5sZpOs56", "CaFyn", "xI0", "4uKFRmnWVfx7PwApS1iq1", "md33 GJuke", "N2elTZobTU2XcYyCESw", "sxusPlqeL3Qrtk", "txyI04Ge2", "wcwPaWqKYFD3c", "ydaOiY", "6rmv90OJyutCkFLNyqITKCF", "spQTphz7jMfM", "YsFlCLmhOtAk", "B5puSb F5hZ" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "9XlZ5sZpOs56",
+      "latitude": 40.03866625806817,
+      "longitude": 36.49413875251634,
+      "road_distances": {
+        "4w44c1RLfMCw": 915943,
+        "AYOZrxww47 MQ0": 618057,
+        "CaFyn": 593471,
+        "YG": 67643
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "fGlTAQy7ALCs9IIx6d",
+      "latitude": 40.86818148915955,
+      "longitude": 38.43239088358477,
+      "road_distances": {
+        "a3Y3vWilSTRnn": 780996,
+        "OhsdE3KtQxtXfd5zdR": 15902
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "AYqf8dMko367d0JQbb",
+      "latitude": 41.363551355228026,
+      "longitude": 39.90697188336384,
+      "road_distances": {
+        "B6Ii0PZsfsmiMvaxj": 977657,
+        "MQ kNK0rH77FAQAQrUklD7K": 268573
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9",
+      "latitude": 43.76844642110646,
+      "longitude": 38.90610343505992,
+      "road_distances": {
+        "Zk SKfr3LBy": 866873,
+        "5jUq7fLxjM3": 94221
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4q0",
+      "latitude": 46.18395434126554,
+      "longitude": 35.93298802574609,
+      "road_distances": {
+        "VtjspZorRFD": 836501,
+        "W2yGQ0BkLT7jhl8": 261497,
+        "qzv1Y7VPcP": 858869,
+        "Dq": 556953
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4w44c1RLfMCw",
+      "latitude": 39.40096173770184,
+      "longitude": 37.90352112373823,
+      "road_distances": {
+        "0pvTOFW": 889189,
+        "vFE1k1oT9vT7Bc": 21490
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Y",
+      "latitude": 42.70885533121642,
+      "longitude": 39.541363011559284,
+      "road_distances": {
+        "rTvZVrlRMMZ4CoI4cTksTrXsG": 939857,
+        "SMLm91xYLEUQ7Da6E6nJ0": 676104
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "QioJn4IYuxNvSy4oCwB7",
+      "latitude": 43.462046402435284,
+      "longitude": 34.956525739114014,
+      "road_distances": {
+        "zrQLquXtEP": 908363,
+        "OhsdE3KtQxtXfd5zdR": 267413
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "68P675etBb25JaPw",
+      "latitude": 39.02366557263741,
+      "longitude": 36.04871401161656,
+      "road_distances": { "pCOSXpiYVKrepuorXJALeDTSA": 183438 }
+    },
+    {
+      "type": "Stop",
+      "name": "WexwM9t3uQuu52IUQw8FR9",
+      "latitude": 41.50174528667161,
+      "longitude": 37.864171331710445,
+      "road_distances": {
+        "4cHvraeZQlOx2mnOqdGiHHc": 418509,
+        "r1KfVMLPgYawvj5": 837869
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "6rmv90OJyutCkFLNyqITKCF",
+      "latitude": 45.39766970230112,
+      "longitude": 39.363632926931665,
+      "road_distances": {
+        "spQTphz7jMfM": 669746,
+        "6BP9u4N": 899951
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ZJjOGrZ4",
+      "latitude": 41.382184351516706,
+      "longitude": 37.70780901563996,
+      "road_distances": {
+        "Ukho0": 583651,
+        "fGlTAQy7ALCs9IIx6d": 294414
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "03qz7y54scTVX3t2XapUkgrRw",
+      "latitude": 45.655807944385295,
+      "longitude": 37.80153147332579,
+      "road_distances": {
+        "M2hoOVq": 805102,
+        "ri0jd": 102932
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "bbXyP6MRYblocK6OonT5",
+      "latitude": 40.67344760046215,
+      "longitude": 39.815692304205776,
+      "road_distances": {
+        "m4XN6CfJfUSMydyi9i": 578559,
+        "Mv3qtsfcpkhpJ": 717477,
+        "6lBiH81RS1vqh0JGLsSq2p": 817814
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "RcqbdxjiBKAPVUBuMu",
+      "latitude": 39.648789551557115,
+      "longitude": 37.588233949489315,
+      "road_distances": {
+        "PzwfxvUHVhWPZq": 927057,
+        "ybawB73fFJrtTS": 337866,
+        "Nhj": 971958,
+        "u": 928799
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "otGiX35UKjHwP6j6",
+      "latitude": 45.452760786406486,
+      "longitude": 39.523279700145885,
+      "road_distances": { "3MdMuFA17gfY6l7": 592380 }
+    },
+    {
+      "type": "Stop",
+      "name": "QLFp2JAudwk5YUPnlrlxgnfGn",
+      "latitude": 45.38727794731359,
+      "longitude": 37.13679174581037,
+      "road_distances": {
+        "BF6rd": 860625,
+        "Bavt": 132146
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Yr2iCsyIlsIpxzMF2a2Npgnev",
+      "latitude": 44.6223394325755,
+      "longitude": 36.023230738426875,
+      "road_distances": {
+        "NLtewwi3Xt9 X": 830353,
+        "r3eLkZCt5L": 245907
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "jxc3CAvpTM9fiKIq1ew",
+      "latitude": 45.45298090766351,
+      "longitude": 35.46839401892566,
+      "road_distances": { "ANAQKb9YmSsjKebjWdNwndmk": 41078 }
+    },
+    {
+      "type": "Stop",
+      "name": "9gzdmWcI",
+      "latitude": 41.707214998076026,
+      "longitude": 35.514829648646256,
+      "road_distances": {
+        "MlrgKzMZkPzWrrMmvh02y t": 610632,
+        "eOxyhZ8Wg6": 798402,
+        "Vxo22kXPfNVcP12j": 868178,
+        "oItROJAAPMK NeZN j": 880582
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "vplIZoO4m",
+      "latitude": 38.43334419312505,
+      "longitude": 34.667683234018476,
+      "road_distances": {
+        "cpTAHOmTsVpxNUPyGnw6eA": 987594,
+        "uE": 583315,
+        "OIyJ1mHhKTY": 515655
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ck 2occraqtGgQchTqO",
+      "latitude": 41.2236817971794,
+      "longitude": 36.637114393198985,
+      "road_distances": {
+        "4q0": 775836,
+        "r3eLkZCt5L": 963429
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "KzhM",
+      "latitude": 42.83973110220759,
+      "longitude": 37.69912034769936,
+      "road_distances": {
+        "L6p2LaRJthyGEX": 882025,
+        "Q2JXBHwjBgn": 383133
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "qKwbxH4q",
+      "latitude": 46.342700115484064,
+      "longitude": 38.8373653828559,
+      "road_distances": { "WexwM9t3uQuu52IUQw8FR9": 438934 }
+    },
+    {
+      "type": "Stop",
+      "name": "KgT",
+      "latitude": 45.573506469732365,
+      "longitude": 37.79974239141587,
+      "road_distances": {
+        "z60Hf3EIpQYPJQAGsMedyl14": 973670,
+        "ownJ0Dez8TWlA95UBwhvr8": 818987
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4XbfxhDYu1Pzbt",
+      "latitude": 41.65572906403464,
+      "longitude": 38.649034939955556,
+      "road_distances": { "q2TtQs2UNgmWupFmHytOQZK": 832530 }
+    },
+    {
+      "type": "Stop",
+      "name": "plTe",
+      "latitude": 41.39745008037228,
+      "longitude": 38.38249401496301,
+      "road_distances": {
+        "aPkm5T1F6cZw E d9Ew4 y": 949766,
+        "9BbQ6zUCFk": 479939,
+        "lwScscvm9vbi4ZbMm": 638302
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "pCOSXpiYVKrepuorXJALeDTSA",
+      "latitude": 42.00111353703519,
+      "longitude": 35.96937390855461,
+      "road_distances": {
+        "g2zZqs3pkSCpTk": 695541,
+        "0alN91GUfZHgkl3R1S": 827511
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "aC4Ucq",
+      "latitude": 45.82521496965978,
+      "longitude": 36.13258645967032,
+      "road_distances": { "JJohY": 260252 }
+    },
+    {
+      "type": "Stop",
+      "name": "Up2SZz3vSfuABG",
+      "latitude": 39.67581727261817,
+      "longitude": 39.0623041492893,
+      "road_distances": { "JXxbMVWD7cgY4": 10327 }
+    },
+    {
+      "type": "Stop",
+      "name": "c2nMypd9b",
+      "latitude": 43.93381254785553,
+      "longitude": 38.44497449534892,
+      "road_distances": { "ybawB73fFJrtTS": 74824 }
+    },
+    {
+      "type": "Stop",
+      "name": "90TEJ32nCAMJ9yi v3dZ5",
+      "latitude": 38.611778905376966,
+      "longitude": 37.74630524222111,
+      "road_distances": { "VNB25TegPf8LybBblJ 6jyq3l": 650697 }
+    },
+    {
+      "type": "Stop",
+      "name": "IrRsx",
+      "latitude": 39.692081154120544,
+      "longitude": 39.388550911332025,
+      "road_distances": { "9": 857296 }
+    },
+    {
+      "type": "Bus",
+      "name": "U",
+      "stops": [ "47KPy4t", "pxPtlAFaOGJ2CWGY7f", "g2zZqs3pkSCpTk", "9gzdmWcI", "MlrgKzMZkPzWrrMmvh02y t", "Bavt", "Jw7ZzFl1C", "o4sUlKdGCQkBJ", "VAKuA7yCeqZ", "l", "XuJyDwmcwyY189 iyUDnKXA", "G7JjRt", "u", "uJvf", "L5f3SMzgx9sVs1U", "plTe", "aPkm5T1F6cZw E d9Ew4 y", "z", "eXxhN3GV0VM8T4FPQ9ngP78Rl", "sxusPlqeL3Qrtk", "A", "4BjzGi9yZaIBgU2yHhyj5JRy", "PICxJMYKaMdNf05dMuGQYTWmh", "15rJ3iztgHZsM9iFAfbBuUJE", "8TrMo37n4", "SxQ1iMzVaNqIrO6f722D", "ej6lZ5fnKEknDLvkHt38", "5jUq7fLxjM3", "OhsdE3KtQxtXfd5zdR", "HzpNfhov8sblSBCm6SjFhC3Q", "vrYE1KZS91Pe", "5", "x", "1ZDDhZaidCzpXgE", "CZgo6HLz58RJyfbKTNawMaRnT", "7vOV 0RcEGkmG2", "CaoNo6dm5OypY", "4q0", "VtjspZorRFD", "xuwT7B6PDlR7oT3yc", "7alx38v5FZK", "XuJyDwmcwyY189 iyUDnKXA", "RcqbdxjiBKAPVUBuMu", "ybawB73fFJrtTS", "UFO01ykkkHdFSBR", "WcWW4", "JJohY", "pUSLWyWgGYV3JN7Nm", "0alN91GUfZHgkl3R1S", "47KPy4t" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "p7II1VaDNAvsc",
+      "latitude": 38.67617917107278,
+      "longitude": 39.02961288228637,
+      "road_distances": { "ZJjOGrZ4": 471010 }
+    },
+    {
+      "type": "Stop",
+      "name": "pRdgYPBJHRy5zIU9AyRgyMG7",
+      "latitude": 43.168641131195194,
+      "longitude": 36.830260065557134,
+      "road_distances": {
+        "4cu0ZaBI0QdntRGClM": 302610,
+        "tCyDmp1i1RYAPF": 689610
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "qUlolDsUKutT7sCBKV5Sm",
+      "stops": [ "abHHLtCa1GwIwJdCI", "pDRF8moQstx", "cPG3CM2oLxP8gFWs", "TPsMhHODt5aOjT", "gzW2yjqcyAwD", "OT", "HyC9kI3", "btpedAOgrBSpx fjEE", "0UlXMo UT0A1", "lwScscvm9vbi4ZbMm", "tatqpmtC71q9LAoEhunPvQ5", "0p", "Jw7ZzFl1C", "rlmDO", "btpedAOgrBSpx fjEE", "OikOTB9AIPGK6P0KvkBnB", "0UlXMo UT0A1", "iLZXYnuq4x", "5bIloVUyl58rj6n8uQeU", "l7 bVI4X4ndOLPVzc", "B6Ii0PZsfsmiMvaxj", "abHHLtCa1GwIwJdCI" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "W2yGQ0BkLT7jhl8",
+      "latitude": 46.63482816889365,
+      "longitude": 36.24700241143373,
+      "road_distances": {
+        "BF6rd": 987593,
+        "ej6lZ5fnKEknDLvkHt38": 731269,
+        "zrQLquXtEP": 835744,
+        "cGoYRDB7mQ2udc DfhpTcM": 447715
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "dPgsEcMdqi9gAIamT2HE",
+      "latitude": 46.02287843793281,
+      "longitude": 37.419502492296985,
+      "road_distances": { "2AoMeFbiw3LVGEo": 165182 }
+    },
+    {
+      "type": "Stop",
+      "name": "UQmmQl1cjWW6AaxpH",
+      "latitude": 41.70048385259062,
+      "longitude": 35.92042217880642,
+      "road_distances": { "3sei": 332782 }
+    },
+    {
+      "type": "Stop",
+      "name": "9KP",
+      "latitude": 46.701698409759985,
+      "longitude": 37.674673672183246,
+      "road_distances": {
+        "g2zZqs3pkSCpTk": 716347,
+        "JXxbMVWD7cgY4": 819960,
+        "YBS": 936479,
+        "OhsdE3KtQxtXfd5zdR": 528082
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7vOV 0RcEGkmG2",
+      "latitude": 46.09750503050131,
+      "longitude": 35.36793411847458,
+      "road_distances": {
+        "RcqbdxjiBKAPVUBuMu": 753958,
+        "CaoNo6dm5OypY": 947272,
+        "gqn6b86CKv": 158838
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "wz2smMVe8isF0u7yP5Yjf",
+      "latitude": 39.20296124728618,
+      "longitude": 36.603779899451524,
+      "road_distances": {
+        "4m": 805619,
+        "Ra1": 982484,
+        "M9qkIYf": 487599
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1ZDDhZaidCzpXgE",
+      "latitude": 46.24119356513528,
+      "longitude": 38.10932564415277,
+      "road_distances": {
+        "CZgo6HLz58RJyfbKTNawMaRnT": 975916,
+        "KdOcVomS4tiI XPTLn7": 689278,
+        "OT": 546228
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tPJm7JDTcL 7G24AKTbheFN",
+      "latitude": 40.69661187448202,
+      "longitude": 38.30381859013662,
+      "road_distances": { "Ra1": 821059 }
+    },
+    {
+      "type": "Stop",
+      "name": "zmYb9aqQj2QbbGEN",
+      "latitude": 45.34674194886272,
+      "longitude": 34.86401322018247,
+      "road_distances": {
+        "VWVzIMV": 333887,
+        "fkdDcT9 Gl3B2IujW": 13206
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "w2",
+      "latitude": 45.44643657601302,
+      "longitude": 37.10085566923628,
+      "road_distances": {
+        "Y9PqplBRcZiXOZNf4kfEdmNTj": 979053,
+        "rMB xrHQyN4W": 101888
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "z60Hf3EIpQYPJQAGsMedyl14",
+      "latitude": 41.92763616056115,
+      "longitude": 34.702018355108365,
+      "road_distances": {
+        "r3eLkZCt5L": 429945,
+        "1kkeiUFWO8k36 hx24v": 275840
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ZzVPILJ",
+      "latitude": 39.52223384773649,
+      "longitude": 38.440373671340645,
+      "road_distances": { "MM": 814083 }
+    },
+    {
+      "type": "Stop",
+      "name": "86nrk9K90l8r",
+      "latitude": 39.92268383765658,
+      "longitude": 36.07134235297217,
+      "road_distances": { "dPgsEcMdqi9gAIamT2HE": 134936 }
+    },
+    {
+      "type": "Stop",
+      "name": "OhNfjMREoeIqExavaMt3T",
+      "latitude": 45.53623870957461,
+      "longitude": 37.73819340823232,
+      "road_distances": {
+        "zXJn": 999021,
+        "QLFp2JAudwk5YUPnlrlxgnfGn": 500196,
+        "YG": 303810,
+        "dy5Ue2Swg9zGQbZpyMxjlybg": 29359
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "r1KfVMLPgYawvj5",
+      "latitude": 42.046769911201054,
+      "longitude": 37.30689425279954,
+      "road_distances": { "uzU SJ5ob6XWSMw0": 502669 }
+    },
+    {
+      "type": "Stop",
+      "name": "JZxDgXiBKhNRALNF",
+      "latitude": 40.10817320203579,
+      "longitude": 36.71138568114498,
+      "road_distances": { "CWPC7X3r84SDNuD9RT5sz6": 728824 }
+    },
+    {
+      "type": "Stop",
+      "name": "PPSMfjWXp",
+      "latitude": 45.77984691897981,
+      "longitude": 38.72124331221295,
+      "road_distances": {
+        "SMLm91xYLEUQ7Da6E6nJ0": 592794,
+        "L5f3SMzgx9sVs1U": 209883
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "y44O8xYuP",
+      "latitude": 41.857906647297675,
+      "longitude": 38.910812394164026,
+      "road_distances": {
+        "1q1C": 673830,
+        "v": 835705
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "MQ kNK0rH77FAQAQrUklD7K",
+      "latitude": 46.06981417488747,
+      "longitude": 37.35879523497691,
+      "road_distances": { "1ZDDhZaidCzpXgE": 714113 }
+    },
+    {
+      "type": "Stop",
+      "name": "47KPy4t",
+      "latitude": 41.03281099921021,
+      "longitude": 37.56992311079062,
+      "road_distances": {
+        "pxPtlAFaOGJ2CWGY7f": 296852,
+        "akClT8gNRpEw": 410905,
+        "5SEA5XmqFQ4ri": 437249,
+        "0pvTOFW": 386033
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "KWnI3A0tEMbhPElVWyEFN",
+      "latitude": 41.73166226926509,
+      "longitude": 37.52446976996593,
+      "road_distances": {
+        "Lrh": 455242,
+        "pDRF8moQstx": 195299
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "pDRF8moQstx",
+      "latitude": 44.71507203520204,
+      "longitude": 35.98394188438493,
+      "road_distances": {
+        "cPG3CM2oLxP8gFWs": 620610,
+        "uzU SJ5ob6XWSMw0": 767123,
+        "JJohY": 828829
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "niduHb0o8",
+      "latitude": 39.609619529274525,
+      "longitude": 38.63289375850311,
+      "road_distances": {
+        "lSt5Qpd": 630268,
+        "umzVLtd": 703318
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "dfhJQzqV9y9GvTVc",
+      "latitude": 46.144365787437756,
+      "longitude": 39.14046006145182,
+      "road_distances": { "FM1s0JRtw5D": 595467 }
+    },
+    {
+      "type": "Stop",
+      "name": "ownJ0Dez8TWlA95UBwhvr8",
+      "latitude": 40.426058873160486,
+      "longitude": 38.79039461116218,
+      "road_distances": { "txyI04Ge2": 603740 }
+    },
+    {
+      "type": "Stop",
+      "name": "VpeL89cE7IfQrcoeRVLhD",
+      "latitude": 41.6772866631229,
+      "longitude": 36.54510713186898,
+      "road_distances": { "DtkElx": 962564 }
+    },
+    {
+      "type": "Stop",
+      "name": "rlmDO",
+      "latitude": 42.16167477305176,
+      "longitude": 36.5294462124764,
+      "road_distances": {
+        "1qMaMTZSFYwiUFv": 773541,
+        "btpedAOgrBSpx fjEE": 525360,
+        "x": 618722
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tmq0L5",
+      "latitude": 41.8413596221502,
+      "longitude": 36.01148343319183,
+      "road_distances": {
+        "KdOcVomS4tiI XPTLn7": 953106,
+        "KmT QGCiRbgPwBXBjo0MvMSI": 977341,
+        "yaQixyudQyM82CXAE8P64 IYT": 84597
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "N2elTZobTU2XcYyCESw",
+      "latitude": 43.41594286618182,
+      "longitude": 36.68745644029833,
+      "road_distances": {
+        "W2yGQ0BkLT7jhl8": 783600,
+        "Hc1q Z1ztVb": 410972,
+        "sxusPlqeL3Qrtk": 874570,
+        "uJvf": 111137
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "yW2um9nrjdsdKq2Srk",
+      "latitude": 41.17878634146408,
+      "longitude": 38.06409847877385,
+      "road_distances": { "GLDs1R6P": 389895 }
+    },
+    {
+      "type": "Stop",
+      "name": "umzVLtd",
+      "latitude": 39.53728727321463,
+      "longitude": 39.35064371067204,
+      "road_distances": {
+        "A": 265144,
+        "dy5Ue2Swg9zGQbZpyMxjlybg": 567997
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "xG FC61Sl2",
+      "latitude": 44.51209795224261,
+      "longitude": 34.764088497846586,
+      "road_distances": {
+        "9gzdmWcI": 389554,
+        "LEm6Lks4h L279DwQ uMGQ": 507730,
+        "RB": 973324,
+        "xI0": 693841,
+        "Y9PqplBRcZiXOZNf4kfEdmNTj": 361300
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1kkeiUFWO8k36 hx24v",
+      "latitude": 45.71441583216456,
+      "longitude": 37.95165948862026,
+      "road_distances": { "41WZ": 770065 }
+    },
+    {
+      "type": "Stop",
+      "name": "FyBxlNVGp8ZOKXazdRbj2 Dyr",
+      "latitude": 44.49733787059641,
+      "longitude": 34.855878193261674,
+      "road_distances": { "7Qx3VP": 186507 }
+    },
+    {
+      "type": "Stop",
+      "name": "l",
+      "latitude": 40.920652663937325,
+      "longitude": 37.22977798515818,
+      "road_distances": {
+        "XuJyDwmcwyY189 iyUDnKXA": 356906,
+        "5fYDOP": 964278,
+        "PPSMfjWXp": 689192,
+        "9KP": 359619
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "JUXnV6YhGEA",
+      "latitude": 41.034750155842666,
+      "longitude": 34.998780742906185,
+      "road_distances": {
+        "Lrh": 375467,
+        "9ZApOu7": 136378
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "koLwW",
+      "latitude": 42.21220029233627,
+      "longitude": 39.69770151341578,
+      "road_distances": { "KgT": 400568 }
+    },
+    {
+      "type": "Stop",
+      "name": "2sC29LGX9qZxptP",
+      "latitude": 40.489516091888035,
+      "longitude": 37.51952886237125,
+      "road_distances": {
+        "9AvJ": 205994,
+        "RB": 450628,
+        "JJohY": 656392,
+        "1ZDDhZaidCzpXgE": 237537
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "QcP8 33gzDFKLyRHA9",
+      "latitude": 45.77678415004548,
+      "longitude": 39.160107332040354,
+      "road_distances": {
+        "nVoVsn0vg30MNwjl kzR93qkH": 802635,
+        "4610m5MhtQXg2YCd0eYJIZxs": 825249
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ej6lZ5fnKEknDLvkHt38",
+      "latitude": 45.04158051986249,
+      "longitude": 37.30006396403558,
+      "road_distances": {
+        "2sC29LGX9qZxptP": 531283,
+        "5jUq7fLxjM3": 865227,
+        "KmZeoAcdxxVYMLa9WheLySg": 951038,
+        "L6p2LaRJthyGEX": 628401
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Bavt",
+      "latitude": 40.476306364505874,
+      "longitude": 34.77593875681914,
+      "road_distances": {
+        "Jw7ZzFl1C": 792400,
+        "9": 753016,
+        "oPwXtIK zTFhgMt": 893974
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "VNB25TegPf8LybBblJ 6jyq3l",
+      "latitude": 41.579051354562175,
+      "longitude": 35.318725772165685,
+      "road_distances": { "9ZApOu7": 699271 }
+    },
+    {
+      "type": "Stop",
+      "name": "v0xZmssZ7",
+      "latitude": 39.98666912842502,
+      "longitude": 34.84150954284851,
+      "road_distances": { "lg": 664334 }
+    },
+    {
+      "type": "Stop",
+      "name": "5fYDOP",
+      "latitude": 44.16921220456027,
+      "longitude": 38.06396387325654,
+      "road_distances": {
+        "RcqbdxjiBKAPVUBuMu": 679106,
+        "z60Hf3EIpQYPJQAGsMedyl14": 842636
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Cv6Ep6yB6UZaRnazM5hxZ",
+      "latitude": 46.158457716964726,
+      "longitude": 39.02874803729992,
+      "road_distances": { "oBnF": 301204 }
+    },
+    {
+      "type": "Stop",
+      "name": "7 LZ4ijpmAOVS3SWW",
+      "latitude": 38.87919062163945,
+      "longitude": 36.8925488656102,
+      "road_distances": { "wtHA28ZWk5LmKMGbXRBMYbeuT": 396101 }
+    },
+    {
+      "type": "Stop",
+      "name": "nwBMcE2gWc09",
+      "latitude": 46.63588465947817,
+      "longitude": 39.03538451822247,
+      "road_distances": {
+        "VD": 962853,
+        "CZgo6HLz58RJyfbKTNawMaRnT": 520558
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "rugGahsegjBLbfmyXn",
+      "latitude": 42.490620673587024,
+      "longitude": 38.26184223989102,
+      "road_distances": {
+        "WxnaS": 655009,
+        "OT": 769177
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "uQ9ViomDyub",
+      "latitude": 39.17508262630534,
+      "longitude": 36.83220425343003,
+      "road_distances": { "Hc1q Z1ztVb": 532474 }
+    },
+    {
+      "type": "Stop",
+      "name": "ZpiIW8KJ4VmAa",
+      "latitude": 41.71684017252208,
+      "longitude": 36.37403741102878,
+      "road_distances": {
+        "KgT": 520782,
+        "rugGahsegjBLbfmyXn": 725198
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7ytoNEwFiXtry jML",
+      "latitude": 46.35044912796909,
+      "longitude": 34.76337365233336,
+      "road_distances": {
+        "5c11GcP0mgE": 809136,
+        "4q0": 149797,
+        "v": 304161
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "bbZMFzV6g80iwcJ0T",
+      "latitude": 45.466202688582555,
+      "longitude": 39.47667064806309,
+      "road_distances": { "J9NbMaVxZq": 9503 }
+    },
+    {
+      "type": "Stop",
+      "name": "B6Ii0PZsfsmiMvaxj",
+      "latitude": 44.79064207392106,
+      "longitude": 35.236171360238124,
+      "road_distances": {
+        "xuwT7B6PDlR7oT3yc": 610516,
+        "abHHLtCa1GwIwJdCI": 858430,
+        "EFSNQg8F19mBEuS": 887426,
+        "fkdDcT9 Gl3B2IujW": 479890
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "CZgo6HLz58RJyfbKTNawMaRnT",
+      "latitude": 45.244881013274004,
+      "longitude": 36.830719657451546,
+      "road_distances": {
+        "7vOV 0RcEGkmG2": 255138,
+        "TPsMhHODt5aOjT": 496288
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "o4sUlKdGCQkBJ",
+      "latitude": 40.91362840643275,
+      "longitude": 35.66411166101846,
+      "road_distances": {
+        "VAKuA7yCeqZ": 821648,
+        "5OfxynCww5": 309215,
+        "51mSl6lCc0hS7ASqymamrFx": 429314,
+        "SMLm91xYLEUQ7Da6E6nJ0": 314100
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "md33 GJuke",
+      "latitude": 45.20680285469567,
+      "longitude": 37.571562424589956,
+      "road_distances": {
+        "N2elTZobTU2XcYyCESw": 666922,
+        "nwBMcE2gWc09": 710365,
+        "6NDcualTnojNnhsW2meAUQ": 928509
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Js1B7VeI3JMB",
+      "latitude": 40.42470685447205,
+      "longitude": 34.85029076057573,
+      "road_distances": { "P2vD2qaWg lGnidtkjx0tPX": 936958 }
+    },
+    {
+      "type": "Stop",
+      "name": "wzO8lj",
+      "latitude": 46.672658602446916,
+      "longitude": 38.276459982918,
+      "road_distances": { "urE1mamD3qMjwo": 235124 }
+    },
+    {
+      "type": "Stop",
+      "name": "vIERsMRXcEssG",
+      "latitude": 39.25987907928263,
+      "longitude": 34.78846629016121,
+      "road_distances": { "i94r 6t3qcX2jV": 866949 }
+    },
+    {
+      "type": "Stop",
+      "name": "mxn",
+      "latitude": 41.81836494042083,
+      "longitude": 38.04452582469442,
+      "road_distances": {
+        "7Qx3VP": 894554,
+        "6BP9u4N": 748118
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "I2qFVLTRqHJyn9NaHMdu",
+      "latitude": 44.88025950703234,
+      "longitude": 39.271906087722996,
+      "road_distances": {
+        "87Nep jbIUg": 463890,
+        "l": 631165,
+        "niduHb0o8": 170085
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "KdOcVomS4tiI XPTLn7",
+      "latitude": 44.10795819669271,
+      "longitude": 35.39070023200385,
+      "road_distances": {
+        "wcwPaWqKYFD3c": 770751,
+        "9KP": 363576,
+        "tLTF": 400215
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7nnIN",
+      "latitude": 45.650740451498066,
+      "longitude": 36.35641105362909,
+      "road_distances": {
+        "HmXj": 938052,
+        "VtjspZorRFD": 709199,
+        "ZXTSu9fDLBGYVV": 673192
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "LEm6Lks4h L279DwQ uMGQ",
+      "latitude": 44.44970367483613,
+      "longitude": 38.25777783727382,
+      "road_distances": {
+        "L5f3SMzgx9sVs1U": 919662,
+        "VlcjolEoGY": 828175,
+        "SxQ1iMzVaNqIrO6f722D": 329927
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "GuC0gJbA6p47p7w",
+      "latitude": 38.744107440292346,
+      "longitude": 37.82067544761697,
+      "road_distances": { "5OfxynCww5": 23154 }
+    },
+    {
+      "type": "Stop",
+      "name": "8IoaJKLSQzSgiX2G7Rfv7h",
+      "latitude": 41.578022354794655,
+      "longitude": 39.01591871817606,
+      "road_distances": {
+        "5UNzln4CTF58KhQDEyVlY08n6": 504774,
+        "u": 472394
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "hP27kWw146Bw5ky67bDv4",
+      "latitude": 39.6977290763564,
+      "longitude": 35.02251632653022,
+      "road_distances": {
+        "plTe": 412066,
+        "wtHA28ZWk5LmKMGbXRBMYbeuT": 184438
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "VWVzIMV",
+      "latitude": 45.501095220992305,
+      "longitude": 35.17487203172783,
+      "road_distances": {
+        "ZpiIW8KJ4VmAa": 865780,
+        "QcP8 33gzDFKLyRHA9": 685673
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "lg",
+      "latitude": 45.362178865882264,
+      "longitude": 35.435140434381815,
+      "road_distances": {
+        "pBu2hxYaZEctmqR17u8 0e": 353280,
+        "LhFjH": 519457
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "xuwT7B6PDlR7oT3yc",
+      "latitude": 41.33549927641334,
+      "longitude": 38.6307331411218,
+      "road_distances": {
+        "Y": 323939,
+        "7alx38v5FZK": 823804,
+        "GoKUIkohXmcRhzLwmVdH9Zv5": 156226
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "P2vD2qaWg lGnidtkjx0tPX",
+      "latitude": 40.00614650328134,
+      "longitude": 37.3031579832808,
+      "road_distances": {
+        "qimd": 877697,
+        "4m": 901341
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "XuJyDwmcwyY189 iyUDnKXA",
+      "latitude": 43.83826785402362,
+      "longitude": 36.78403580222874,
+      "road_distances": {
+        "G7JjRt": 429845,
+        "RcqbdxjiBKAPVUBuMu": 976188,
+        "4XbfxhDYu1Pzbt": 174691
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "5SEA5XmqFQ4ri",
+      "latitude": 42.48371548520437,
+      "longitude": 39.21191219981801,
+      "road_distances": {
+        "tlToC": 391436,
+        "zmYb9aqQj2QbbGEN": 583629,
+        "uzU SJ5ob6XWSMw0": 846179
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "e2q16cYcmg",
+      "latitude": 43.09666474904002,
+      "longitude": 38.152673903326274,
+      "road_distances": {
+        "Mv3qtsfcpkhpJ": 763899,
+        "GLDs1R6P": 344678
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "urE1mamD3qMjwo",
+      "latitude": 45.72642707167971,
+      "longitude": 38.73869248220968,
+      "road_distances": { "8I5B1p38jgjIyoffJhN": 149613 }
+    },
+    {
+      "type": "Stop",
+      "name": "IaGBDkUXTJKYeEuiK",
+      "latitude": 38.993639383313145,
+      "longitude": 35.19567035702425,
+      "road_distances": { "eXxhN3GV0VM8T4FPQ9ngP78Rl": 297205 }
+    },
+    {
+      "type": "Stop",
+      "name": "8I5B1p38jgjIyoffJhN",
+      "latitude": 42.45423984254714,
+      "longitude": 36.596426302602644,
+      "road_distances": {
+        "2lHcIAPEK": 852515,
+        "0alN91GUfZHgkl3R1S": 784233,
+        "g2zZqs3pkSCpTk": 849979
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "7Qx3VP",
+      "latitude": 45.85678069343637,
+      "longitude": 35.71437871911005,
+      "road_distances": {
+        "2sC29LGX9qZxptP": 997621,
+        "e2q16cYcmg": 924065,
+        "JAUZs8KAedtRCAtAgBwizG": 272891
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "wuwI",
+      "latitude": 39.32768350184012,
+      "longitude": 36.61674782086698,
+      "road_distances": { "51mSl6lCc0hS7ASqymamrFx": 439079 }
+    },
+    {
+      "type": "Stop",
+      "name": "Sx9olsn1IYSdjI0SY",
+      "latitude": 46.23959548606872,
+      "longitude": 38.82850737353229,
+      "road_distances": { "8w5xeUHBtls7": 659244 }
+    },
+    {
+      "type": "Stop",
+      "name": "wNNKn8NO KeAe3MngbbR6V5U",
+      "latitude": 39.22252055862588,
+      "longitude": 38.11518085055741,
+      "road_distances": { "sRjudxUauC4Lv8p38C0vgJJ": 960713 }
+    },
+    {
+      "type": "Stop",
+      "name": "VlcjolEoGY",
+      "latitude": 46.31100342170976,
+      "longitude": 37.00575332178691,
+      "road_distances": {
+        "o306d": 907500,
+        "5": 66001
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "88Z1",
+      "latitude": 38.56453318431522,
+      "longitude": 36.650089033805614,
+      "road_distances": { "Yr2iCsyIlsIpxzMF2a2Npgnev": 775931 }
+    },
+    {
+      "type": "Stop",
+      "name": "BF6rd",
+      "latitude": 38.88188850698584,
+      "longitude": 35.73680560825972,
+      "road_distances": {
+        "m4XN6CfJfUSMydyi9i": 790124,
+        "8IoaJKLSQzSgiX2G7Rfv7h": 904551,
+        "HmXj": 803162,
+        "Mjel2SwfV753sfQQQX": 156655
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "XG1AEk4idf",
+      "latitude": 43.694631449638976,
+      "longitude": 35.323301818001376,
+      "road_distances": { "r3A kDj G91LkPa": 517506 }
+    },
+    {
+      "type": "Stop",
+      "name": "rqNp6Yf",
+      "latitude": 43.55169293985503,
+      "longitude": 36.03949839979544,
+      "road_distances": {
+        "RB": 613993,
+        "ATigTSkgzqCjHenGFw": 921360,
+        "Mv3qtsfcpkhpJ": 111926
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Xem w",
+      "latitude": 39.67527817034105,
+      "longitude": 36.984465811230606,
+      "road_distances": {
+        "nk": 184632,
+        "z60Hf3EIpQYPJQAGsMedyl14": 622216
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "gFWBcjspD6vFD3fz1",
+      "latitude": 40.164464872908766,
+      "longitude": 38.30324101220448,
+      "road_distances": { "nwBMcE2gWc09": 819300 }
+    },
+    {
+      "type": "Stop",
+      "name": "AxsCSJh0mNY",
+      "latitude": 39.95331627634432,
+      "longitude": 35.03746854981327,
+      "road_distances": { "qKwbxH4q": 128225 }
+    },
+    {
+      "type": "Stop",
+      "name": "Zk SKfr3LBy",
+      "latitude": 39.46963093575704,
+      "longitude": 39.9781034753008,
+      "road_distances": {
+        "i94r 6t3qcX2jV": 594387,
+        "eIcF tU": 470082,
+        "es5gEBiRvgQKjH7 Zr": 765648
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "HmXj",
+      "latitude": 45.795270287288254,
+      "longitude": 37.82413437847279,
+      "road_distances": {
+        "VIgVbEgk": 839696,
+        "9BbQ6zUCFk": 884772,
+        "B5puSb F5hZ": 819174,
+        "DtkElx": 343894
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "FM1s0JRtw5D",
+      "latitude": 45.97681665207546,
+      "longitude": 34.68886382971728,
+      "road_distances": { "9ZApOu7": 542747 }
+    },
+    {
+      "type": "Stop",
+      "name": "ydaOiY",
+      "latitude": 44.581425249897414,
+      "longitude": 37.439008038416354,
+      "road_distances": {
+        "6rmv90OJyutCkFLNyqITKCF": 653058,
+        "m4XN6CfJfUSMydyi9i": 597833
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tlToC",
+      "latitude": 44.44825122371891,
+      "longitude": 39.80454023707044,
+      "road_distances": {
+        "fkdDcT9 Gl3B2IujW": 442109,
+        "9jfRrR1Kh4ryehKQJO4qMic": 654138,
+        "4cu0ZaBI0QdntRGClM": 205070,
+        "0pvTOFW": 799684
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "3zL",
+      "latitude": 41.16740144929254,
+      "longitude": 35.27638148549437,
+      "road_distances": { "MwAwawl xGnT5yIoINY7": 883743 }
+    },
+    {
+      "type": "Stop",
+      "name": "lSt5Qpd",
+      "latitude": 43.01014074765053,
+      "longitude": 36.1786227265398,
+      "road_distances": {
+        "BO7QyJQjuSuBCsTXsEPxv": 487973,
+        "3sei": 862829,
+        "0p": 520228
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "yaQixyudQyM82CXAE8P64 IYT",
+      "latitude": 39.52089535753581,
+      "longitude": 39.71015456348184,
+      "road_distances": {
+        "es5gEBiRvgQKjH7 Zr": 822217,
+        "mPm8l7LDmldlrerO": 567478
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tCv5RKRIBm",
+      "latitude": 44.70841049547464,
+      "longitude": 37.436964272584596,
+      "road_distances": { "AgNuuxGmwH": 540676 }
+    },
+    {
+      "type": "Stop",
+      "name": "rMB xrHQyN4W",
+      "latitude": 40.14943184836612,
+      "longitude": 36.85576867172814,
+      "road_distances": {
+        "y44O8xYuP": 826088,
+        "r3A kDj G91LkPa": 225665
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4fLwlrM",
+      "latitude": 44.17605374662015,
+      "longitude": 37.07410827389768,
+      "road_distances": {
+        "N2elTZobTU2XcYyCESw": 282324,
+        "gqn6b86CKv": 250243
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "V4ARhBsvm6guucOIBPkPRSU3f",
+      "latitude": 43.08878289284497,
+      "longitude": 35.17934055288972,
+      "road_distances": { "DZ 7nOe5GrbQ8ZLNrmQ94": 489543 }
+    },
+    {
+      "type": "Stop",
+      "name": "h1vdO",
+      "latitude": 44.85627826880072,
+      "longitude": 37.55287428177677,
+      "road_distances": {
+        "QioJn4IYuxNvSy4oCwB7": 928295,
+        "txyI04Ge2": 214570
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "r3A kDj G91LkPa",
+      "latitude": 45.91293267894149,
+      "longitude": 37.54373014501184,
+      "road_distances": { "i94r 6t3qcX2jV": 803443 }
+    },
+    {
+      "type": "Stop",
+      "name": "bbms07vU3dOWSGAreRQA",
+      "latitude": 46.024552997839905,
+      "longitude": 37.847021681812386,
+      "road_distances": { "hHIybMWGs": 459194 }
+    },
+    {
+      "type": "Stop",
+      "name": "Nhj",
+      "latitude": 39.64742518499651,
+      "longitude": 36.62246766879182,
+      "road_distances": {
+        "CaoNo6dm5OypY": 881655,
+        "MwAwawl xGnT5yIoINY7": 763598,
+        "aPkm5T1F6cZw E d9Ew4 y": 826558,
+        "nF74AUIm5mdBQABl6OMZs": 805992
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "DY5XgFg7hMcR",
+      "latitude": 42.02253701929681,
+      "longitude": 36.35937087422408,
+      "road_distances": {
+        "5Rky": 922042,
+        "J9NbMaVxZq": 444534,
+        "Uw0": 603972,
+        "DtkElx": 257222
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Lrh",
+      "latitude": 43.2990184026615,
+      "longitude": 36.52173488284466,
+      "road_distances": {
+        "sVagNm": 433518,
+        "EFSNQg8F19mBEuS": 963571,
+        "Bavt": 852088,
+        "v": 422618
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "cpTAHOmTsVpxNUPyGnw6eA",
+      "latitude": 46.29195507901985,
+      "longitude": 39.86388522855077,
+      "road_distances": {
+        "owETtHQY": 956410,
+        "51mSl6lCc0hS7ASqymamrFx": 998639,
+        "oBnF": 654170,
+        "Bavt": 572213
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "iRwvlGWgXNp",
+      "latitude": 39.104218062324435,
+      "longitude": 39.539471153172585,
+      "road_distances": {
+        "vuMphq": 768556,
+        "ATigTSkgzqCjHenGFw": 756416
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "u",
+      "latitude": 45.0798120762592,
+      "longitude": 36.0150890531409,
+      "road_distances": {
+        "uJvf": 963960,
+        "cQiOcm7eyr": 423018
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "hY dGGniDmC",
+      "latitude": 42.22523402739857,
+      "longitude": 37.21948673307161,
+      "road_distances": {
+        "7nnIN": 412814,
+        "ej6lZ5fnKEknDLvkHt38": 475551
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "zrQLquXtEP",
+      "latitude": 40.8105142300087,
+      "longitude": 36.82037375328889,
+      "road_distances": {
+        "9KP": 970565,
+        "bMiupBjStgeWw": 950403,
+        "TPsMhHODt5aOjT": 920844
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "4BjzGi9yZaIBgU2yHhyj5JRy",
+      "latitude": 45.17981729599407,
+      "longitude": 34.67895134060182,
+      "road_distances": {
+        "PICxJMYKaMdNf05dMuGQYTWmh": 359044,
+        "sVagNm": 968240
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "CWPC7X3r84SDNuD9RT5sz6",
+      "latitude": 39.48211227179544,
+      "longitude": 35.720427215358264,
+      "road_distances": {
+        "VhSWclPfT6": 574062,
+        "KmT QGCiRbgPwBXBjo0MvMSI": 789413
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "9fhtOpf1pj8GZvg",
+      "stops": [ "BzT5wZS2fQtQ6HUECcjWQKWh", "h1vdO", "QioJn4IYuxNvSy4oCwB7", "zrQLquXtEP", "9KP", "g2zZqs3pkSCpTk", "rlmDO", "1qMaMTZSFYwiUFv", "VAKuA7yCeqZ", "umzVLtd", "A", "xG FC61Sl2", "9gzdmWcI", "eOxyhZ8Wg6", "vFE1k1oT9vT7Bc", "xKobSHmAGJe5fO0ITA", "Cma0ZwmwB60EXifCn0Hb", "5SEA5XmqFQ4ri", "tlToC", "9jfRrR1Kh4ryehKQJO4qMic", "Lrh", "sVagNm", "8w5xeUHBtls7", "I5VrTJ2Kp s", "uStAQGY9I", "hc4Gqqppweb60pJ0jKGXTlE", "BzT5wZS2fQtQ6HUECcjWQKWh" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "eUR76t",
+      "latitude": 46.72649603538538,
+      "longitude": 35.83757219001083,
+      "road_distances": { "fUZ": 212891 }
+    },
+    {
+      "type": "Stop",
+      "name": "5OfxynCww5",
+      "latitude": 41.614700670239685,
+      "longitude": 37.143122902674676,
+      "road_distances": {
+        "D": 294957,
+        "B5puSb F5hZ": 327494
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "B4lpu7Cgq2JDmgTcHXgJyI",
+      "latitude": 45.29199525756944,
+      "longitude": 38.253724510315806,
+      "road_distances": {
+        "niduHb0o8": 788798,
+        "wzO8lj": 433422
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "sxusPlqeL3Qrtk",
+      "latitude": 40.134336733593855,
+      "longitude": 39.84170427358645,
+      "road_distances": {
+        "A": 445813,
+        "txyI04Ge2": 999462,
+        "wz2smMVe8isF0u7yP5Yjf": 391970
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "i94r 6t3qcX2jV",
+      "latitude": 39.87473883248794,
+      "longitude": 35.40447421110531,
+      "road_distances": {
+        "uzU SJ5ob6XWSMw0": 451165,
+        "uE": 539929
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "NDSf5icxFG",
+      "latitude": 44.88247991018938,
+      "longitude": 36.00814129898941,
+      "road_distances": {
+        "Jw7ZzFl1C": 189387,
+        "I5VrTJ2Kp s": 946767
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "JJohY",
+      "latitude": 44.07239490739448,
+      "longitude": 37.542216536855534,
+      "road_distances": {
+        "rpyH": 518370,
+        "pUSLWyWgGYV3JN7Nm": 779781,
+        "nF74AUIm5mdBQABl6OMZs": 720140,
+        "PICxJMYKaMdNf05dMuGQYTWmh": 554774
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "qzv1Y7VPcP",
+      "latitude": 43.545805124697026,
+      "longitude": 36.6745635233468,
+      "road_distances": {
+        "Mhq92BcHJr0vMMRcLQ": 828023,
+        "mxn": 484349,
+        "l": 350538,
+        "i94r 6t3qcX2jV": 258673
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "WJohpUqsVkPI 4fTn",
+      "latitude": 43.33944991231781,
+      "longitude": 37.997668353267244,
+      "road_distances": { "Eue9Yz6JsAECUwwFOn": 81649 }
+    },
+    {
+      "type": "Stop",
+      "name": "EFSNQg8F19mBEuS",
+      "latitude": 39.18246877590347,
+      "longitude": 39.65411870379378,
+      "road_distances": {
+        "NLtewwi3Xt9 X": 631404,
+        "BzT5wZS2fQtQ6HUECcjWQKWh": 660340,
+        "yikjjtRNYjldkJ29": 561594
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "OhsdE3KtQxtXfd5zdR",
+      "latitude": 45.91038911824037,
+      "longitude": 38.64102222876212,
+      "road_distances": {
+        "HzpNfhov8sblSBCm6SjFhC3Q": 892765,
+        "DtkElx": 675222
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "MwAwawl xGnT5yIoINY7",
+      "latitude": 46.04803202734181,
+      "longitude": 38.174521012435584,
+      "road_distances": {
+        "M9qkIYf": 256655,
+        "fUZ": 991190,
+        "Mv3qtsfcpkhpJ": 393661
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "GoKUIkohXmcRhzLwmVdH9Zv5",
+      "latitude": 42.3137194558241,
+      "longitude": 37.98099768962089,
+      "road_distances": { "pxPtlAFaOGJ2CWGY7f": 890009 }
+    },
+    {
+      "type": "Stop",
+      "name": "oItROJAAPMK NeZN j",
+      "latitude": 40.59263271858964,
+      "longitude": 39.12444488071611,
+      "road_distances": { "gzW2yjqcyAwD": 302495 }
+    },
+    {
+      "type": "Stop",
+      "name": "euG54dKO71bmCwC",
+      "latitude": 39.59136283125645,
+      "longitude": 36.685648923954496,
+      "road_distances": {
+        "ri0jd": 903591,
+        "NO9UpT": 650280
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "3",
+      "latitude": 44.14347652337311,
+      "longitude": 35.899500662845114,
+      "road_distances": { "86nrk9K90l8r": 233743 }
+    },
+    {
+      "type": "Stop",
+      "name": "fUZ",
+      "latitude": 43.19019873949425,
+      "longitude": 38.40920429752958,
+      "road_distances": {
+        "Q2JXBHwjBgn": 608013,
+        "89r6SHT84kSv6s": 384285
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "6gWGimtfok",
+      "latitude": 39.97480305310188,
+      "longitude": 34.860707452882856,
+      "road_distances": { "68P675etBb25JaPw": 595121 }
+    },
+    {
+      "type": "Stop",
+      "name": "bcAjvfoIg",
+      "latitude": 43.33479814381587,
+      "longitude": 36.72825018342561,
+      "road_distances": { "YXhW AeAxD6or UgVmC": 675397 }
+    },
+    {
+      "type": "Stop",
+      "name": "0alN91GUfZHgkl3R1S",
+      "latitude": 38.67574563579539,
+      "longitude": 34.91576575652435,
+      "road_distances": {
+        "47KPy4t": 555031,
+        "oPwXtIK zTFhgMt": 390668,
+        "UMg8hZx5as0RBPkjt": 919230
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "txyI04Ge2",
+      "latitude": 44.76554917034158,
+      "longitude": 36.857903287916734,
+      "road_distances": {
+        "wcwPaWqKYFD3c": 803899,
+        "9jfRrR1Kh4ryehKQJO4qMic": 816191
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "cTdNpr",
+      "latitude": 42.97866814681321,
+      "longitude": 35.08070196579303,
+      "road_distances": {
+        "sRjudxUauC4Lv8p38C0vgJJ": 738713,
+        "2AoMeFbiw3LVGEo": 823250
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "UH5SdMbEYWGvHkksuiq2K",
+      "latitude": 45.907074677604655,
+      "longitude": 36.845704264758695,
+      "road_distances": {
+        "I2qFVLTRqHJyn9NaHMdu": 765273,
+        "YXhW AeAxD6or UgVmC": 780374
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Eue9Yz6JsAECUwwFOn",
+      "latitude": 42.61804214410508,
+      "longitude": 39.05870830999992,
+      "road_distances": { "uzU SJ5ob6XWSMw0": 915286 }
+    },
+    {
+      "type": "Stop",
+      "name": "TSeS52tDOblx1Gc c",
+      "latitude": 43.21749777852825,
+      "longitude": 38.37003820180797,
+      "road_distances": {
+        "LEm6Lks4h L279DwQ uMGQ": 454436,
+        "qKwbxH4q": 990591
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "WkEQktpVh",
+      "latitude": 40.87716903541298,
+      "longitude": 36.27513606730097,
+      "road_distances": {
+        "wtHA28ZWk5LmKMGbXRBMYbeuT": 961121,
+        "4uKFRmnWVfx7PwApS1iq1": 768126,
+        "vrYE1KZS91Pe": 505787
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Y9PqplBRcZiXOZNf4kfEdmNTj",
+      "latitude": 40.211615990221304,
+      "longitude": 39.33822027794958,
+      "road_distances": {
+        "Ptmiar": 584187,
+        "prrB": 876897
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tGDY6jiJQdaRh",
+      "latitude": 43.88027998487792,
+      "longitude": 35.870854254860376,
+      "road_distances": { "gzW2yjqcyAwD": 576361 }
+    },
+    {
+      "type": "Stop",
+      "name": "wcwPaWqKYFD3c",
+      "latitude": 39.81789721594218,
+      "longitude": 36.21487635851997,
+      "road_distances": {
+        "7vOV 0RcEGkmG2": 910525,
+        "ydaOiY": 816208,
+        "4m": 519290,
+        "HyC9kI3": 830280,
+        "euG54dKO71bmCwC": 992971
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "YBS",
+      "latitude": 46.033600194731996,
+      "longitude": 34.65972864966396,
+      "road_distances": {
+        "HmXj": 349977,
+        "7alx38v5FZK": 286049
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "6NDcualTnojNnhsW2meAUQ",
+      "latitude": 38.973818428709386,
+      "longitude": 39.57100204744436,
+      "road_distances": { "mX83IoZT2ESbImd2n9LJCs": 790877 }
+    },
+    {
+      "type": "Stop",
+      "name": "gqn6b86CKv",
+      "latitude": 44.77592008230461,
+      "longitude": 35.42399048411309,
+      "road_distances": { "udYu EjRjDONYOvnhb65": 935080 }
+    },
+    {
+      "type": "Stop",
+      "name": "0p",
+      "latitude": 43.02539395232839,
+      "longitude": 35.38513282910588,
+      "road_distances": {
+        "Jw7ZzFl1C": 980507,
+        "e2q16cYcmg": 132747
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9jfRrR1Kh4ryehKQJO4qMic",
+      "latitude": 38.703753643310776,
+      "longitude": 38.343461034345474,
+      "road_distances": {
+        "Lrh": 957146,
+        "BS4Tm0c8aXftoy8JhX5zwKTn": 825935,
+        "Sx9olsn1IYSdjI0SY": 894591
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "LhFjH",
+      "latitude": 40.20866953358198,
+      "longitude": 37.12162178522175,
+      "road_distances": { "NDSf5icxFG": 533859 }
+    },
+    {
+      "type": "Stop",
+      "name": "lwScscvm9vbi4ZbMm",
+      "latitude": 45.17319321562816,
+      "longitude": 38.63369343412417,
+      "road_distances": {
+        "tatqpmtC71q9LAoEhunPvQ5": 902509,
+        "h2AbT2rz5ODGx": 842462
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "jS8IvZxD4t1v",
+      "latitude": 46.246368957696134,
+      "longitude": 37.70266871606965,
+      "road_distances": { "tCv5RKRIBm": 355836 }
+    },
+    {
+      "type": "Bus",
+      "name": "3HAsNkqUqp",
+      "stops": [ "2", "tLTF", "hWc5qNf", "tmq0L5", "KdOcVomS4tiI XPTLn7", "wcwPaWqKYFD3c", "7vOV 0RcEGkmG2", "RcqbdxjiBKAPVUBuMu", "PzwfxvUHVhWPZq", "bbXyP6MRYblocK6OonT5", "m4XN6CfJfUSMydyi9i", "CWPC7X3r84SDNuD9RT5sz6", "VhSWclPfT6", "Nhj", "CaoNo6dm5OypY", "PzwfxvUHVhWPZq", "rugGahsegjBLbfmyXn", "WxnaS", "m80zs6J5XE", "wz2smMVe8isF0u7yP5Yjf", "4m", "51mSl6lCc0hS7ASqymamrFx", "Xem w", "nk", "Rz7anphHg", "2AoMeFbiw3LVGEo", "7tOBboXxWccY3", "Vxo22kXPfNVcP12j", "R72ty5Ar", "hHIybMWGs", "DY5XgFg7hMcR", "5Rky", "TSeS52tDOblx1Gc c", "LEm6Lks4h L279DwQ uMGQ", "L5f3SMzgx9sVs1U", "Zm", "ZJjOGrZ4", "Ukho0", "I2qFVLTRqHJyn9NaHMdu", "87Nep jbIUg", "7ytoNEwFiXtry jML", "5c11GcP0mgE", "pCOSXpiYVKrepuorXJALeDTSA", "g2zZqs3pkSCpTk", "3MdMuFA17gfY6l7", "GLDs1R6P", "m4XN6CfJfUSMydyi9i", "GLDs1R6P", "7Qx3VP", "2sC29LGX9qZxptP", "9AvJ", "P2vD2qaWg lGnidtkjx0tPX", "qimd", "gRk3", "JJohY", "rpyH", "tmq0L5", "KmT QGCiRbgPwBXBjo0MvMSI", "OhNfjMREoeIqExavaMt3T", "zXJn", "tlToC", "fkdDcT9 Gl3B2IujW", "7AZGfE4 tjo9nqV2WJTNL Lfd", "dw6AQs48H7JfplHF9sgNuv", "hY dGGniDmC", "7nnIN", "HmXj", "VIgVbEgk", "lg", "pBu2hxYaZEctmqR17u8 0e", "ej6lZ5fnKEknDLvkHt38", "2sC29LGX9qZxptP", "RB", "2" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "hWc5qNf",
+      "latitude": 44.65821045034183,
+      "longitude": 34.92755738009896,
+      "road_distances": {
+        "tmq0L5": 658687,
+        "koLwW": 237589
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "M9qkIYf",
+      "latitude": 46.62494284078211,
+      "longitude": 37.61256259865524,
+      "road_distances": {
+        "dAc5B3jdzldvnp1": 907047,
+        "J9NbMaVxZq": 484511
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "o306d",
+      "latitude": 45.91065736814224,
+      "longitude": 35.382590127211685,
+      "road_distances": {
+        "LO9": 288171,
+        "uStAQGY9I": 428916,
+        "zXJn": 463977
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "hNQl0bnnDP",
+      "latitude": 45.453099795001755,
+      "longitude": 39.22524753380198,
+      "road_distances": {
+        "9vRsOIIdFMCVA": 815728,
+        "XG1AEk4idf": 587966
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "qzzw",
+      "latitude": 39.55570192338471,
+      "longitude": 36.501411346545446,
+      "road_distances": { "sVagNm": 592403 }
+    },
+    {
+      "type": "Stop",
+      "name": "eXxhN3GV0VM8T4FPQ9ngP78Rl",
+      "latitude": 46.35842495251103,
+      "longitude": 37.27542215226751,
+      "road_distances": {
+        "sxusPlqeL3Qrtk": 838935,
+        "o306d": 753001
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "tatqpmtC71q9LAoEhunPvQ5",
+      "latitude": 39.50584850619332,
+      "longitude": 39.00145186115402,
+      "road_distances": {
+        "0p": 995597,
+        "M9qkIYf": 289115
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Rz7anphHg",
+      "latitude": 41.01400586750611,
+      "longitude": 38.88259162232078,
+      "road_distances": {
+        "2AoMeFbiw3LVGEo": 927686,
+        "KgT": 784449
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "CaoNo6dm5OypY",
+      "latitude": 43.833607006685064,
+      "longitude": 34.78755267432543,
+      "road_distances": {
+        "PzwfxvUHVhWPZq": 605990,
+        "4q0": 312565,
+        "51mSl6lCc0hS7ASqymamrFx": 763306,
+        "niduHb0o8": 238507
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "wr9BhzUdEtgXmFLM",
+      "stops": [ "M2hoOVq", "pBu2hxYaZEctmqR17u8 0e", "OhNfjMREoeIqExavaMt3T", "QLFp2JAudwk5YUPnlrlxgnfGn", "BF6rd", "HmXj", "B5puSb F5hZ", "Mv3qtsfcpkhpJ", "DY5XgFg7hMcR", "Uw0", "K0K lnuljOLKnYp66Qn", "iLZXYnuq4x", "Q2JXBHwjBgn", "Ko9Be", "bbXyP6MRYblocK6OonT5", "Mv3qtsfcpkhpJ", "E4NbH", "Fm3gtJ1Jzvf", "wz2smMVe8isF0u7yP5Yjf", "Ra1", "pUSLWyWgGYV3JN7Nm", "SdalH44ChbsNm9qxrysMPIV", "azhym", "l7 bVI4X4ndOLPVzc", "KWnI3A0tEMbhPElVWyEFN", "Lrh", "Bavt", "9", "Zk SKfr3LBy", "eIcF tU", "CaoNo6dm5OypY", "51mSl6lCc0hS7ASqymamrFx", "WkEQktpVh", "4uKFRmnWVfx7PwApS1iq1", "xG FC61Sl2", "xI0", "8I5B1p38jgjIyoffJhN", "0alN91GUfZHgkl3R1S", "oPwXtIK zTFhgMt", "euG54dKO71bmCwC", "ri0jd", "vplIZoO4m", "uE", "TPsMhHODt5aOjT", "KzhM", "L6p2LaRJthyGEX", "D", "pDRF8moQstx", "uzU SJ5ob6XWSMw0", "a3Y3vWilSTRnn", "M2hoOVq", "41WZ", "MNKI", "OT", "md33 GJuke", "nwBMcE2gWc09", "VD", "7AZGfE4 tjo9nqV2WJTNL Lfd", "fokhgveK2", "hs4kMehO5oSWuTMUDT6eXUHT", "OhNfjMREoeIqExavaMt3T", "YG", "MwAwawl xGnT5yIoINY7", "fUZ", "Q2JXBHwjBgn", "M2hoOVq" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "3HI",
+      "latitude": 45.83416885854476,
+      "longitude": 34.93427128412858,
+      "road_distances": { "dy5Ue2Swg9zGQbZpyMxjlybg": 929052 }
+    },
+    {
+      "type": "Stop",
+      "name": "rpyH",
+      "latitude": 40.67520844832923,
+      "longitude": 34.69320421901568,
+      "road_distances": {
+        "tmq0L5": 292023,
+        "2AoMeFbiw3LVGEo": 853319,
+        "Mhq92BcHJr0vMMRcLQ": 180612
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "d526HReqpCPNaQ4",
+      "latitude": 44.366583365173895,
+      "longitude": 38.137635422181575,
+      "road_distances": { "vIERsMRXcEssG": 677009 }
+    },
+    {
+      "type": "Stop",
+      "name": "xBiqTw5T3i7k1nE8TCCCP",
+      "latitude": 43.10573447319471,
+      "longitude": 38.19158011644523,
+      "road_distances": { "nVoVsn0vg30MNwjl kzR93qkH": 60531 }
+    },
+    {
+      "type": "Stop",
+      "name": "SxQ1iMzVaNqIrO6f722D",
+      "latitude": 40.064694598154965,
+      "longitude": 37.38485194235511,
+      "road_distances": {
+        "ej6lZ5fnKEknDLvkHt38": 649692,
+        "Mhq92BcHJr0vMMRcLQ": 532153
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "NO9UpT",
+      "latitude": 40.807735226591305,
+      "longitude": 39.23374430473254,
+      "road_distances": { "tCyDmp1i1RYAPF": 226611 }
+    },
+    {
+      "type": "Stop",
+      "name": "0UlXMo UT0A1",
+      "latitude": 46.277223544531914,
+      "longitude": 36.37638390335028,
+      "road_distances": {
+        "TABBgJMTRd": 507568,
+        "lwScscvm9vbi4ZbMm": 280343,
+        "iLZXYnuq4x": 586905,
+        "es5gEBiRvgQKjH7 Zr": 675150
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ZXTSu9fDLBGYVV",
+      "latitude": 41.24517758770639,
+      "longitude": 34.93881484455663,
+      "road_distances": { "urE1mamD3qMjwo": 390222 }
+    },
+    {
+      "type": "Stop",
+      "name": "Uw0",
+      "latitude": 42.66906772584803,
+      "longitude": 38.92901475319943,
+      "road_distances": {
+        "K0K lnuljOLKnYp66Qn": 870398,
+        "md33 GJuke": 502785
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "zXJn",
+      "latitude": 39.53922870031034,
+      "longitude": 39.4727309865393,
+      "road_distances": {
+        "tlToC": 917379,
+        "Cma0ZwmwB60EXifCn0Hb": 583073
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "UFO01ykkkHdFSBR",
+      "latitude": 46.18785897591977,
+      "longitude": 34.851162194060805,
+      "road_distances": {
+        "WcWW4": 924154,
+        "O76X8ajHPMlkyjqMlcX": 216371
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "iP6t7gxHZl",
+      "latitude": 39.4972081153789,
+      "longitude": 39.726043713137315,
+      "road_distances": { "2lHcIAPEK": 703144 }
+    },
+    {
+      "type": "Stop",
+      "name": "fkdDcT9 Gl3B2IujW",
+      "latitude": 45.237436035872044,
+      "longitude": 35.26261768459861,
+      "road_distances": {
+        "7AZGfE4 tjo9nqV2WJTNL Lfd": 378150,
+        "qimd": 706678
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "z",
+      "latitude": 39.972663524289416,
+      "longitude": 36.15267095561293,
+      "road_distances": {
+        "eXxhN3GV0VM8T4FPQ9ngP78Rl": 967603,
+        "gzW2yjqcyAwD": 646419
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "2lHcIAPEK",
+      "latitude": 46.245778730587645,
+      "longitude": 39.91918838591202,
+      "road_distances": {
+        "pRdgYPBJHRy5zIU9AyRgyMG7": 749878,
+        "1q1C": 192127
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "2Q",
+      "latitude": 42.09920669002137,
+      "longitude": 38.62313112865928,
+      "road_distances": { "LEm6Lks4h L279DwQ uMGQ": 118040 }
+    },
+    {
+      "type": "Stop",
+      "name": "cAR24f8o",
+      "latitude": 40.58975265396202,
+      "longitude": 36.689916702703044,
+      "road_distances": { "MlrgKzMZkPzWrrMmvh02y t": 564851 }
+    },
+    {
+      "type": "Stop",
+      "name": "SMLm91xYLEUQ7Da6E6nJ0",
+      "latitude": 46.05382467062735,
+      "longitude": 39.09542388303615,
+      "road_distances": {
+        "D": 479970,
+        "CaoNo6dm5OypY": 878018
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "64x9ye7Em6ibfsAVog6w9",
+      "latitude": 46.055102321216054,
+      "longitude": 39.87366739837686,
+      "road_distances": {
+        "xG FC61Sl2": 941108,
+        "I4ASWnREBOusE2KD4msd": 400826
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "vrHJ4NRsFVCX5 AD8 Is",
+      "latitude": 44.79098963150838,
+      "longitude": 38.74358421882018,
+      "road_distances": { "sRjudxUauC4Lv8p38C0vgJJ": 976238 }
+    },
+    {
+      "type": "Stop",
+      "name": "hs4kMehO5oSWuTMUDT6eXUHT",
+      "latitude": 43.7576863357868,
+      "longitude": 35.91170574767254,
+      "road_distances": {
+        "OhNfjMREoeIqExavaMt3T": 445783,
+        "B5puSb F5hZ": 821633
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "BzT5wZS2fQtQ6HUECcjWQKWh",
+      "latitude": 42.3009438050808,
+      "longitude": 36.838301853017526,
+      "road_distances": {
+        "h1vdO": 643723,
+        "wcwPaWqKYFD3c": 745068,
+        "15rJ3iztgHZsM9iFAfbBuUJE": 914730
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "H02dsMxm5",
+      "latitude": 41.86499781580968,
+      "longitude": 38.33360019037279,
+      "road_distances": { "w2": 270679 }
+    },
+    {
+      "type": "Stop",
+      "name": "L5f3SMzgx9sVs1U",
+      "latitude": 38.65622474641048,
+      "longitude": 35.24251579640621,
+      "road_distances": {
+        "Zm": 465426,
+        "plTe": 756311,
+        "x": 746327
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "RB",
+      "latitude": 40.13634234687547,
+      "longitude": 34.96784589679074,
+      "road_distances": {
+        "2": 670202,
+        "5UNzln4CTF58KhQDEyVlY08n6": 780405,
+        "dw6AQs48H7JfplHF9sgNuv": 789643,
+        "x": 442868
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Mjel2SwfV753sfQQQX",
+      "latitude": 39.341462367211506,
+      "longitude": 36.77108672876017,
+      "road_distances": { "KmT QGCiRbgPwBXBjo0MvMSI": 67497 }
+    },
+    {
+      "type": "Stop",
+      "name": "VD",
+      "latitude": 41.48059879318886,
+      "longitude": 36.00804262488707,
+      "road_distances": {
+        "7AZGfE4 tjo9nqV2WJTNL Lfd": 750007,
+        "oBnF": 419873
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "eIcF tU",
+      "latitude": 41.60527390856198,
+      "longitude": 36.44502724886958,
+      "road_distances": {
+        "CaoNo6dm5OypY": 883517,
+        "NDSf5icxFG": 259046
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "dy5Ue2Swg9zGQbZpyMxjlybg",
+      "latitude": 44.960797282717884,
+      "longitude": 39.20466487134247,
+      "road_distances": { "soXQOwNsGx41450OO8EoyxV0": 461587 }
+    },
+    {
+      "type": "Stop",
+      "name": "q2TtQs2UNgmWupFmHytOQZK",
+      "latitude": 39.43868953875491,
+      "longitude": 36.286761560773584,
+      "road_distances": { "VIgVbEgk": 83743 }
+    },
+    {
+      "type": "Bus",
+      "name": "HrIy2 X",
+      "stops": [ "AF7Ss1uQ3tDak", "AYqf8dMko367d0JQbb", "B6Ii0PZsfsmiMvaxj", "EFSNQg8F19mBEuS", "BzT5wZS2fQtQ6HUECcjWQKWh", "wcwPaWqKYFD3c", "4m", "B4lpu7Cgq2JDmgTcHXgJyI", "niduHb0o8", "lSt5Qpd", "3sei", "wp3bXE3659HHh 8JlJ sPYg", "wcwPaWqKYFD3c", "HyC9kI3", "M2hoOVq", "tlToC", "4cu0ZaBI0QdntRGClM", "JAUZs8KAedtRCAtAgBwizG", "qzv1Y7VPcP", "l", "PPSMfjWXp", "SMLm91xYLEUQ7Da6E6nJ0", "D", "l7 bVI4X4ndOLPVzc", "5c11GcP0mgE", "1bd9dQQxYQSjtHZ" ],
+      "is_roundtrip": false
+    },
+    {
+      "type": "Stop",
+      "name": "MM",
+      "latitude": 44.881767126682746,
+      "longitude": 35.151967441716515,
+      "road_distances": { "WexwM9t3uQuu52IUQw8FR9": 820441 }
+    },
+    {
+      "type": "Stop",
+      "name": "JXxbMVWD7cgY4",
+      "latitude": 43.896264466691214,
+      "longitude": 36.38944353042898,
+      "road_distances": {
+        "51mSl6lCc0hS7ASqymamrFx": 743921,
+        "iRwvlGWgXNp": 290419
+      }
+    },
+    {
+      "type": "Bus",
+      "name": "5VW5rWziXhuXZZitp19B",
+      "stops": [ "9vRsOIIdFMCVA", "mPm8l7LDmldlrerO", "hNQl0bnnDP", "9vRsOIIdFMCVA" ],
+      "is_roundtrip": true
+    },
+    {
+      "type": "Stop",
+      "name": "5c11GcP0mgE",
+      "latitude": 42.42135348117246,
+      "longitude": 36.81931628471313,
+      "road_distances": {
+        "pCOSXpiYVKrepuorXJALeDTSA": 542136,
+        "1bd9dQQxYQSjtHZ": 739909,
+        "4uKFRmnWVfx7PwApS1iq1": 887024
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "btpedAOgrBSpx fjEE",
+      "latitude": 43.609630022902216,
+      "longitude": 39.92873464877509,
+      "road_distances": {
+        "0UlXMo UT0A1": 745651,
+        "OikOTB9AIPGK6P0KvkBnB": 853143,
+        "v": 37409
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "O76X8ajHPMlkyjqMlcX",
+      "latitude": 41.42550864955606,
+      "longitude": 37.77548934407485,
+      "road_distances": { "4q0": 512436 }
+    },
+    {
+      "type": "Stop",
+      "name": "m4XN6CfJfUSMydyi9i",
+      "latitude": 42.70100819802918,
+      "longitude": 39.79609012992207,
+      "road_distances": {
+        "CWPC7X3r84SDNuD9RT5sz6": 819699,
+        "GLDs1R6P": 712629,
+        "WexwM9t3uQuu52IUQw8FR9": 469924,
+        "eOxyhZ8Wg6": 768782
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Ov9yGnMh1lnnbTy",
+      "latitude": 41.47440255192544,
+      "longitude": 38.409206681214044,
+      "road_distances": {
+        "cTdNpr": 532077,
+        "9jfRrR1Kh4ryehKQJO4qMic": 499022
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Sz5qQ2KtLqGgWjLC",
+      "latitude": 42.87784485014005,
+      "longitude": 37.03864542156957,
+      "road_distances": {
+        "Nhj": 831025,
+        "dw6AQs48H7JfplHF9sgNuv": 398488,
+        "MlrgKzMZkPzWrrMmvh02y t": 908703
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "gzW2yjqcyAwD",
+      "latitude": 43.550459780116704,
+      "longitude": 37.841931298664505,
+      "road_distances": {
+        "OT": 574770,
+        "pCOSXpiYVKrepuorXJALeDTSA": 942714
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Vxo22kXPfNVcP12j",
+      "latitude": 41.64716884023511,
+      "longitude": 38.74146756760649,
+      "road_distances": {
+        "R72ty5Ar": 910760,
+        "Dq": 740871,
+        "0UlXMo UT0A1": 433650
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "nVoVsn0vg30MNwjl kzR93qkH",
+      "latitude": 43.25685408943294,
+      "longitude": 34.85378729294934,
+      "road_distances": {
+        "JUXnV6YhGEA": 906289,
+        "7 LZ4ijpmAOVS3SWW": 937822
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "XV5mLqI",
+      "latitude": 39.130522633943045,
+      "longitude": 36.84568932266669,
+      "road_distances": { "V": 466133 }
+    },
+    {
+      "type": "Stop",
+      "name": "tCyDmp1i1RYAPF",
+      "latitude": 41.86812388136134,
+      "longitude": 36.695100958146824,
+      "road_distances": { "FyBxlNVGp8ZOKXazdRbj2 Dyr": 719190 }
+    },
+    {
+      "type": "Stop",
+      "name": "mAxBlxyVWTBTVRY upFnw4uj",
+      "latitude": 41.723159843271084,
+      "longitude": 36.52657995716054,
+      "road_distances": { "CZgo6HLz58RJyfbKTNawMaRnT": 880352 }
+    },
+    {
+      "type": "Stop",
+      "name": "sRjudxUauC4Lv8p38C0vgJJ",
+      "latitude": 46.26036407347625,
+      "longitude": 38.79906505799499,
+      "road_distances": {
+        "03qz7y54scTVX3t2XapUkgrRw": 904901,
+        "0hSCTEXBHcP": 859593
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "udYu EjRjDONYOvnhb65",
+      "latitude": 44.8440263717261,
+      "longitude": 39.15065085771985,
+      "road_distances": {
+        "9KP": 273486,
+        "MlrgKzMZkPzWrrMmvh02y t": 428902
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "1q1C",
+      "latitude": 42.252678443044694,
+      "longitude": 37.109179074020496,
+      "road_distances": {
+        "aicoZgJvpInP": 914447,
+        "51mSl6lCc0hS7ASqymamrFx": 944234
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "I5VrTJ2Kp s",
+      "latitude": 39.41532818063631,
+      "longitude": 35.314538175007,
+      "road_distances": {
+        "uStAQGY9I": 758301,
+        "7Qx3VP": 345871
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "gRk3",
+      "latitude": 40.93086390035765,
+      "longitude": 36.981158937148095,
+      "road_distances": {
+        "JJohY": 454252,
+        "LEm6Lks4h L279DwQ uMGQ": 486745
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Mv3qtsfcpkhpJ",
+      "latitude": 42.32468123591264,
+      "longitude": 39.00477390483502,
+      "road_distances": {
+        "Sz5qQ2KtLqGgWjLC": 926700,
+        "DY5XgFg7hMcR": 897054,
+        "E4NbH": 658016,
+        "81tTYG8RU6": 382875
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "5Rky",
+      "latitude": 45.61403963116806,
+      "longitude": 38.54352727003818,
+      "road_distances": {
+        "TSeS52tDOblx1Gc c": 416185,
+        "spQTphz7jMfM": 535054
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "BvKf0sz8",
+      "latitude": 40.816985527320504,
+      "longitude": 36.51672162575421,
+      "road_distances": { "gFWBcjspD6vFD3fz1": 312104 }
+    },
+    {
+      "type": "Stop",
+      "name": "ANAQKb9YmSsjKebjWdNwndmk",
+      "latitude": 42.741470706136354,
+      "longitude": 38.73144361189387,
+      "road_distances": { "fohfUckqMSQz1DuvVGX": 842560 }
+    },
+    {
+      "type": "Stop",
+      "name": "WYKGowvSDZhwAnLvL7",
+      "latitude": 45.043102910578824,
+      "longitude": 39.268771667149394,
+      "road_distances": { "2sC29LGX9qZxptP": 58271 }
+    },
+    {
+      "type": "Stop",
+      "name": "nHYcYJzkp",
+      "latitude": 40.9979079218839,
+      "longitude": 39.467531777210795,
+      "road_distances": { "bM6k9ptc": 805116 }
+    },
+    {
+      "type": "Stop",
+      "name": "7kjwsaSiETWLR",
+      "latitude": 42.5929014408702,
+      "longitude": 39.159236231232306,
+      "road_distances": { "AxsCSJh0mNY": 207361 }
+    },
+    {
+      "type": "Stop",
+      "name": "41WZ",
+      "latitude": 46.19070149499525,
+      "longitude": 36.5941088370794,
+      "road_distances": {
+        "MNKI": 765560,
+        "V": 252177
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "dAc5B3jdzldvnp1",
+      "latitude": 45.1768025874702,
+      "longitude": 34.940288212814494,
+      "road_distances": {
+        "WkEQktpVh": 910097,
+        "3": 206408
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "L6p2LaRJthyGEX",
+      "latitude": 45.891930363207926,
+      "longitude": 37.63482136643066,
+      "road_distances": {
+        "D": 490832,
+        "4w44c1RLfMCw": 283496
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "pBu2hxYaZEctmqR17u8 0e",
+      "latitude": 45.050924092413844,
+      "longitude": 37.85033365368699,
+      "road_distances": {
+        "ej6lZ5fnKEknDLvkHt38": 983959,
+        "OhNfjMREoeIqExavaMt3T": 783678,
+        "8I5B1p38jgjIyoffJhN": 376177
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "xI0",
+      "latitude": 45.84013990867427,
+      "longitude": 39.12822565201344,
+      "road_distances": {
+        "4uKFRmnWVfx7PwApS1iq1": 553898,
+        "8I5B1p38jgjIyoffJhN": 989577,
+        "90TEJ32nCAMJ9yi v3dZ5": 521163
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "P2Kugq",
+      "latitude": 46.31122620740843,
+      "longitude": 36.113810180598804,
+      "road_distances": { "7 LZ4ijpmAOVS3SWW": 348324 }
+    },
+    {
+      "type": "Stop",
+      "name": "K0K lnuljOLKnYp66Qn",
+      "latitude": 45.65667325302582,
+      "longitude": 37.73853318276919,
+      "road_distances": {
+        "iLZXYnuq4x": 73168,
+        "w2": 146086
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "bM6k9ptc",
+      "latitude": 45.81899130406443,
+      "longitude": 36.29559946500347,
+      "road_distances": { "3d3OUQzKJJQB9 wWi8NEnO": 719801 }
+    },
+    {
+      "type": "Stop",
+      "name": "bMiupBjStgeWw",
+      "latitude": 39.59792632603665,
+      "longitude": 37.08819454881388,
+      "road_distances": {
+        "x": 439855,
+        "5UNzln4CTF58KhQDEyVlY08n6": 747515
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Ko9Be",
+      "latitude": 42.18676543779891,
+      "longitude": 39.79552808739463,
+      "road_distances": {
+        "bbXyP6MRYblocK6OonT5": 252096,
+        "gqn6b86CKv": 512771
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "5",
+      "latitude": 40.73121138688864,
+      "longitude": 36.50260582152937,
+      "road_distances": {
+        "x": 962810,
+        "dfhJQzqV9y9GvTVc": 316835
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "NLTbWRY90OXCeWhD3SXNGT",
+      "latitude": 42.617030303828656,
+      "longitude": 36.54939224542195,
+      "road_distances": { "9WKnD": 656725 }
+    },
+    {
+      "type": "Stop",
+      "name": "9gE",
+      "latitude": 44.94163460380527,
+      "longitude": 39.33043988700204,
+      "road_distances": {
+        "JAUZs8KAedtRCAtAgBwizG": 484084,
+        "M2hoOVq": 463310
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "mMfXofleSNipPklI8ntWON0oP",
+      "latitude": 44.45885672470987,
+      "longitude": 36.91528516297883,
+      "road_distances": { "L5f3SMzgx9sVs1U": 393756 }
+    },
+    {
+      "type": "Stop",
+      "name": "vvBLmIGHel V4xL08G",
+      "latitude": 43.99639286004067,
+      "longitude": 39.95573761444118,
+      "road_distances": { "iP6t7gxHZl": 97934 }
+    },
+    {
+      "type": "Stop",
+      "name": "HzpNfhov8sblSBCm6SjFhC3Q",
+      "latitude": 40.759460116239666,
+      "longitude": 35.806889884817785,
+      "road_distances": {
+        "vrYE1KZS91Pe": 878617,
+        "UFO01ykkkHdFSBR": 455828
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "cGoYRDB7mQ2udc DfhpTcM",
+      "latitude": 41.58570996646702,
+      "longitude": 35.22291304246418,
+      "road_distances": { "vIERsMRXcEssG": 178674 }
+    },
+    {
+      "type": "Stop",
+      "name": "3sei",
+      "latitude": 39.63043327024188,
+      "longitude": 39.11732153740362,
+      "road_distances": {
+        "wp3bXE3659HHh 8JlJ sPYg": 852844,
+        "eVsundDxqpIEUTsnJCJb": 424896
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "qimd",
+      "latitude": 46.0947527102272,
+      "longitude": 39.42679424634575,
+      "road_distances": {
+        "gRk3": 877698,
+        "5fYDOP": 215196
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "aPkm5T1F6cZw E d9Ew4 y",
+      "latitude": 44.94329874411882,
+      "longitude": 35.20803477871519,
+      "road_distances": {
+        "z": 595391,
+        "NDSf5icxFG": 517223,
+        "8IoaJKLSQzSgiX2G7Rfv7h": 956404
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "5bIloVUyl58rj6n8uQeU",
+      "latitude": 40.45312259557392,
+      "longitude": 38.9548600908114,
+      "road_distances": {
+        "l7 bVI4X4ndOLPVzc": 855909,
+        "lg": 489425
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "B6Ec8WfmBwDe3",
+      "latitude": 38.4557413494132,
+      "longitude": 37.64628640062993,
+      "road_distances": { "AxsCSJh0mNY": 487174 }
+    },
+    {
+      "type": "Stop",
+      "name": "2",
+      "latitude": 42.458763865625784,
+      "longitude": 39.131500030984306,
+      "road_distances": {
+        "tLTF": 376025,
+        "IaGBDkUXTJKYeEuiK": 161273
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "6BP9u4N",
+      "latitude": 43.58791923368634,
+      "longitude": 35.99910569560097,
+      "road_distances": { "m80zs6J5XE": 535600 }
+    },
+    {
+      "type": "Stop",
+      "name": "eOxyhZ8Wg6",
+      "latitude": 38.39525159780918,
+      "longitude": 39.754613551465695,
+      "road_distances": {
+        "vFE1k1oT9vT7Bc": 796950,
+        "i94r 6t3qcX2jV": 198370
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "WxnaS",
+      "latitude": 43.73836067725988,
+      "longitude": 37.542053433027476,
+      "road_distances": {
+        "m80zs6J5XE": 867784,
+        "Sz5qQ2KtLqGgWjLC": 915360
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Hc1q Z1ztVb",
+      "latitude": 45.502847932708974,
+      "longitude": 38.401012702181916,
+      "road_distances": {
+        "47KPy4t": 793702,
+        "81tTYG8RU6": 610656
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "AYOZrxww47 MQ0",
+      "latitude": 39.14571828400592,
+      "longitude": 37.091542006215086,
+      "road_distances": {
+        "UH5SdMbEYWGvHkksuiq2K": 757568,
+        "v": 541939
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "9vRsOIIdFMCVA",
+      "latitude": 39.00182554327391,
+      "longitude": 36.88466090052655,
+      "road_distances": {
+        "mPm8l7LDmldlrerO": 870277,
+        "PICxJMYKaMdNf05dMuGQYTWmh": 216872
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "AF7Ss1uQ3tDak",
+      "latitude": 46.375667952785406,
+      "longitude": 36.01374036999687,
+      "road_distances": {
+        "AYqf8dMko367d0JQbb": 746672,
+        "ydaOiY": 308701
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "UMg8hZx5as0RBPkjt",
+      "latitude": 44.73546285830141,
+      "longitude": 35.475527279014806,
+      "road_distances": { "ZzVPILJ": 54560 }
+    },
+    {
+      "type": "Stop",
+      "name": "E4NbH",
+      "latitude": 44.1621517230293,
+      "longitude": 37.02959212485556,
+      "road_distances": {
+        "Q2JXBHwjBgn": 686459,
+        "Fm3gtJ1Jzvf": 811632,
+        "gzW2yjqcyAwD": 661904
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "Zm",
+      "latitude": 41.8676661848896,
+      "longitude": 34.81147213286127,
+      "road_distances": {
+        "ZJjOGrZ4": 717835,
+        "5jUq7fLxjM3": 463134
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "gLgxidt9PZ",
+      "latitude": 39.4619433602251,
+      "longitude": 35.507576586867295,
+      "road_distances": { "dy5Ue2Swg9zGQbZpyMxjlybg": 976194 }
+    },
+    {
+      "type": "Stop",
+      "name": "wYALNWbGYO7qBQFSYZZ8h8",
+      "latitude": 45.40154700313602,
+      "longitude": 39.35698945148067,
+      "road_distances": { "AYqf8dMko367d0JQbb": 392924 }
+    },
+    {
+      "type": "Stop",
+      "name": "Mhq92BcHJr0vMMRcLQ",
+      "latitude": 45.61334079675589,
+      "longitude": 39.801097751653124,
+      "road_distances": {
+        "Ov9yGnMh1lnnbTy": 736317,
+        "O76X8ajHPMlkyjqMlcX": 799101
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "0pvTOFW",
+      "latitude": 42.161430865462115,
+      "longitude": 36.61877851143324,
+      "road_distances": {
+        "9gE": 387791,
+        "dw6AQs48H7JfplHF9sgNuv": 212440
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "oPwXtIK zTFhgMt",
+      "latitude": 38.587421913730964,
+      "longitude": 37.286705593271435,
+      "road_distances": {
+        "euG54dKO71bmCwC": 155352,
+        "LhFjH": 132877
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "vFE1k1oT9vT7Bc",
+      "latitude": 42.73064274358201,
+      "longitude": 38.06869404200501,
+      "road_distances": {
+        "xKobSHmAGJe5fO0ITA": 734762,
+        "rMB xrHQyN4W": 578901,
+        "nk": 383267
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "ATigTSkgzqCjHenGFw",
+      "latitude": 45.48159365191418,
+      "longitude": 37.00374012166529,
+      "road_distances": {
+        "BO7QyJQjuSuBCsTXsEPxv": 973765,
+        "J9NbMaVxZq": 36739
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "mX83IoZT2ESbImd2n9LJCs",
+      "latitude": 41.56203155967119,
+      "longitude": 36.738290824748894,
+      "road_distances": { "Yr2iCsyIlsIpxzMF2a2Npgnev": 856982 }
+    },
+    {
+      "type": "Stop",
+      "name": "iLZXYnuq4x",
+      "latitude": 45.32643893734507,
+      "longitude": 38.359868133998994,
+      "road_distances": {
+        "5bIloVUyl58rj6n8uQeU": 872733,
+        "Q2JXBHwjBgn": 889831,
+        "1ue2": 826955
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "89r6SHT84kSv6s",
+      "latitude": 41.15328273358899,
+      "longitude": 37.52787601338081,
+      "road_distances": { "fUZ": 326914 }
+    },
+    {
+      "type": "Stop",
+      "name": "PzwfxvUHVhWPZq",
+      "latitude": 45.79247422619935,
+      "longitude": 39.39509493420832,
+      "road_distances": {
+        "bbXyP6MRYblocK6OonT5": 869013,
+        "rugGahsegjBLbfmyXn": 998761,
+        "BF6rd": 329744
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "PICxJMYKaMdNf05dMuGQYTWmh",
+      "latitude": 43.053812059511856,
+      "longitude": 35.4424551186637,
+      "road_distances": {
+        "15rJ3iztgHZsM9iFAfbBuUJE": 488169,
+        "uStAQGY9I": 570351
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "dw6AQs48H7JfplHF9sgNuv",
+      "latitude": 43.02777931370744,
+      "longitude": 38.50443169618859,
+      "road_distances": {
+        "hY dGGniDmC": 901062,
+        "7nnIN": 577368,
+        "rpyH": 708655,
+        "qAInwiH72Yegg": 887215
+      }
+    },
+    {
+      "type": "Stop",
+      "name": "abHHLtCa1GwIwJdCI",
+      "latitude": 46.25772808665622,
+      "longitude": 35.26978915023096,
+      "road_distances": {
+        "pDRF8moQstx": 692112,
+        "TPsMhHODt5aOjT": 554233
+      }
+    }
+  ]
+}
