@@ -29,7 +29,7 @@ namespace domain {
 		double curvature_{ 0.0 };
 	};
 
-	struct RoutingSettings {
+	struct RouteSettings {
 		double bus_velocity_{ 0.0 };
 		double bus_wait_time_{ 0.0 };
 	};

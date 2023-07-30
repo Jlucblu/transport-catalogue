@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package serializator;
+
+message Coordinates {
+    double latitude = 1;
+    double longitude = 2;
+}
+
+message BusStop {
+    string name = 1;
+    Coordinates coordinates = 2;
+}
+
+message BusRoute {
+    string number = 1;
+    repeated BusStop stops = 2;
+    bool circle = 3;
+}
+
+message RouteStats {
+    int32 stops = 1;
+    int32 unique_stops = 2;
+    double distance = 3;
+    double curvature = 4;
+}
+
+message RouteSettings {
+    double bus_velocity = 1;
+    double bus_wait_time = 2;
+}
+
+message RouteItem {
+    string bus_name = 1;
+    string from_stop = 2;
+    string to_stop = 3;
+    double route_time = 4;
+    double wait_time = 5;
+    int32 span_count = 6;
+}
+
+message RouteResponse {
+    double total_time = 1;
+    repeated RouteItem items = 2;
+}
+
+message StopDistance {
+  string from_stop = 1;
+  string to_stop = 2;
+  double distance = 3;
+}
+
+message Base {
+  repeated BusRoute buses = 1;
+  repeated BusStop stops = 2;
+  repeated StopDistance stop_distance_map = 3;
+}

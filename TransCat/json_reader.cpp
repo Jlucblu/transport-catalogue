@@ -3,11 +3,15 @@
 
 namespace json_reader {
 
-	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, mr::MapRenderer& mr, tr::TransportRouter& tr, std::istream& input, std::ostream& output)
+	JSONReader::JSONReader(tc::TransportCatalogue& tc, rh::RequestHandler& rh, 
+		mr::MapRenderer& mr, tr::TransportRouter& tr, sr::Serialization& ser, 
+		sr::Deserialization deser, std::istream& input, std::ostream& output)
 		: tc_(tc)
 		, request_(rh)
 		, render_(mr)
 		, router_(tr)
+		, ser_(ser)
+		, deser_(deser)
 		, doc_(json::Load(input))
 		, output_(output)
 	{}
@@ -15,21 +19,21 @@ namespace json_reader {
 
 	// ------------------------ Parsing ------------------------ //
 	
-	// Парсинг входящего запроса
-	void JSONReader::ParseBaseRequest() const {
+	// Парсинг входящего запроса - заполнение базы / сериализация
+	void JSONReader::MakeBase() const {
 		const auto& load = doc_.GetRoot().AsDict();
 
-		if (load.count("base_requests")){
-			const auto& base = load.at("base_requests").AsArray();
+		if (load.count("base_requests"s)) {
+			const auto& base = load.at("base_requests"s).AsArray();
 
 			for (const auto& request : base) {
-				const auto& type = request.AsDict().at("type").AsString();
+				const auto& type = request.AsDict().at("type"s).AsString();
 
-				if (type == "Bus") {
+				if (type == "Bus"s) {
 					tc_.UpdateRoute(ParseBus(request.AsDict()));
 				}
 
-				if (type == "Stop") {
+				if (type == "Stop"s) {
 					const auto& stopInfo = ParseStop(request.AsDict());
 					tc_.UpdateStop(stopInfo.first);
 					if (!stopInfo.second.empty()) {
@@ -39,45 +43,62 @@ namespace json_reader {
 			}
 		}
 
-		if (load.count("render_settings")) {
-			const auto& render = load.at("render_settings").AsDict();
+		if (load.count("render_settings"s)) {
+			const auto& render = load.at("render_settings"s).AsDict();
 			render_.SetSettings(ParseMapSettings(render));
 		}
 
 		if (load.count("routing_settings")) {
-			const auto& routing = load.at("routing_settings").AsDict();
+			const auto& routing = load.at("routing_settings"s).AsDict();
 
-			RoutingSettings settings = {};
-			settings.bus_velocity_ = routing.at("bus_velocity").AsDouble();
-			settings.bus_wait_time_ = routing.at("bus_wait_time").AsDouble();
+			domain::RouteSettings settings = {};
+			settings.bus_velocity_ = routing.at("bus_velocity"s).AsDouble();
+			settings.bus_wait_time_ = routing.at("bus_wait_time"s).AsDouble();
 			router_.SetSettings(settings);
 		}
 
-		if (load.count("stat_requests")) {
-			const auto& stat = load.at("stat_requests").AsArray();
+		if (load.count("serialization_settings"s)) {
+			const auto& ser = load.at("serialization_settings"s).AsDict();
+			ser_.SetPath(ser.at("file"s).AsString());
+			ser_.SerializeTransportCatalogue();
+		}
+	}
+
+	// Парсинг входящего запроса - ответ из базы / десериализация
+	void JSONReader::ProcessRequests() const {
+		const auto& load = doc_.GetRoot().AsDict();
+
+		if (load.count("serialization_settings"s)) {
+			const auto& deser = load.at("serialization_settings"s).AsDict();
+			deser_.SetPath(deser.at("file"s).AsString());
+			deser_.DeserializeTransportCatalogue();
+		}
+
+		if (load.count("stat_requests"s)) {
+			const auto& stat = load.at("stat_requests"s).AsArray();
 			router_.BuildGraph();
 			json::Array answer = {};
 			json::Builder builder {};
 
 			for (const auto& request : stat) {
-				const auto& type = request.AsDict().at("type").AsString();
+				const auto& type = request.AsDict().at("type"s).AsString();
 
-				if (type == "Bus") {
+				if (type == "Bus"s) {
 					const auto& busAnswer = GetBusAnswer(request.AsDict());
 					answer.emplace_back(busAnswer);
 				}
 
-				if (type == "Stop") {
+				if (type == "Stop"s) {
 					const auto& stopAnswer = GetStopAnswer(request.AsDict());
 					answer.emplace_back(stopAnswer);
 				}
-				
-				if (type == "Map") {
+
+				if (type == "Map"s) {
 					const auto& mapAnswer = GetMapAnswer(request.AsDict());
 					answer.emplace_back(mapAnswer);
 				}
 
-				if (type == "Route") {
+				if (type == "Route"s) {
 					const auto& routeAnswer = GetRouteAnswer(request.AsDict());
 					answer.emplace_back(routeAnswer);
 				}
@@ -89,12 +110,13 @@ namespace json_reader {
 		}
 	}
 
+
 	// Парсинг маршрута автобуса
-	BusRoute JSONReader::ParseBus(const json::Dict& businfo) const {
-		BusRoute route = {};
-		route.number_ = businfo.at("name").AsString();
-		route.circle = businfo.at("is_roundtrip").AsBool();
-		const auto& stops = businfo.at("stops").AsArray();
+	domain::BusRoute JSONReader::ParseBus(const json::Dict& businfo) const {
+		domain::BusRoute route = {};
+		route.number_ = businfo.at("name"s).AsString();
+		route.circle = businfo.at("is_roundtrip"s).AsBool();
+		const auto& stops = businfo.at("stops"s).AsArray();
 		for (auto& stop : stops) {
 			BusStop* found = tc_.FindStop(stop.AsString());
 			if (found == nullptr) {
@@ -113,14 +135,14 @@ namespace json_reader {
 	}
 
 	// Парсинг остановок на маршруте
-	std::pair<BusStop, DistancePair> JSONReader::ParseStop(const json::Dict& stopinfo) const {
-		BusStop stop = {};
+	std::pair<domain::BusStop, DistancePair> JSONReader::ParseStop(const json::Dict& stopinfo) const {
+		domain::BusStop stop = {};
 		DistancePair distance = {};
-		stop.name_ = stopinfo.at("name").AsString();
-		stop.coordinates_.lat = stopinfo.at("latitude").AsDouble();
-		stop.coordinates_.lng = stopinfo.at("longitude").AsDouble();
+		stop.name_ = stopinfo.at("name"s).AsString();
+		stop.coordinates_.lat = stopinfo.at("latitude"s).AsDouble();
+		stop.coordinates_.lng = stopinfo.at("longitude"s).AsDouble();
 		
-		for (const auto& [name, interval] : stopinfo.at("road_distances").AsDict()) {
+		for (const auto& [name, interval] : stopinfo.at("road_distances"s).AsDict()) {
 			distance.insert({ name, interval.AsInt() });
 		}
 
@@ -188,7 +210,7 @@ namespace json_reader {
 		std::ostringstream oss;
 		RendererMap(oss);
 
-		builder.Key("map").Value(oss.str());
+		builder.Key("map"s).Value(oss.str());
 		return builder.EndDict().Build();
 	}
 
@@ -240,9 +262,9 @@ namespace json_reader {
 		settings.stop_label_font_size = request.at("stop_label_font_size"s).AsInt();
 		settings.stop_label_offset = { request.at("stop_label_offset"s).AsArray()[0].AsDouble(), 
 			request.at("stop_label_offset"s).AsArray()[1].AsDouble() };
-		settings.underlayer_color = GetColor(request.at("underlayer_color"));
+		settings.underlayer_color = GetColor(request.at("underlayer_color"s));
 		settings.underlayer_width = request.at("underlayer_width"s).AsDouble();
-		for (const auto& palette : request.at("color_palette").AsArray()) {
+		for (const auto& palette : request.at("color_palette"s).AsArray()) {
 			settings.color_palette.push_back(GetColor(palette));
 		}
 

@@ -168,4 +168,8 @@ namespace transport_catalogue {
 		return buses_;
 	}
 
+	const std::unordered_map<std::pair<BusStop*, BusStop*>, double, Hasher>& TransportCatalogue::GetDistanceList() const {
+		return stop_distance_map_;
+	}
+
 } // namespace transport_catalogue

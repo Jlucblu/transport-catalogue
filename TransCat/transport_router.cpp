@@ -3,11 +3,11 @@
 
 namespace transport_router {
 
-	void TransportRouter::SetSettings(const domain::RoutingSettings settings) {
+	void TransportRouter::SetSettings(const domain::RouteSettings settings) {
 		settings_ = settings;
 	}
 
-	RoutingSettings TransportRouter::GetSettings() {
+	RouteSettings TransportRouter::GetSettings() {
 		return settings_;
 	}
 

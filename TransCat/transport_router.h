@@ -30,8 +30,8 @@ namespace transport_router {
 			: tc_(tc)
 		{}
 
-		void SetSettings(const domain::RoutingSettings settings);
-		RoutingSettings GetSettings();
+		void SetSettings(const domain::RouteSettings settings);
+		RouteSettings GetSettings();
 		void BuildGraph();
 
 		template <typename Iter>
@@ -41,7 +41,7 @@ namespace transport_router {
 
 	private:
 		tc::TransportCatalogue& tc_;
-		RoutingSettings settings_;
+		RouteSettings settings_;
 		DirectedWeightedGraph<RouteItem> graph_;
 		std::optional<graph::Router<RouteItem>> router_;
 		std::unordered_map<std::string_view, VertexId> stop_id_;

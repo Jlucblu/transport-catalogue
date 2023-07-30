@@ -42,6 +42,7 @@ namespace transport_catalogue {
 		std::vector<BusRoute*> GetAllRoutes() const;
 		const std::deque<BusStop>& GetStopList() const;
 		const std::deque<BusRoute>& GetBusList() const;
+		const std::unordered_map<std::pair<BusStop*, BusStop*>, double, Hasher>& GetDistanceList() const;
 
 	private:
 		std::deque<BusRoute> buses_;
