@@ -6,9 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(Protobuf REQUIRED)
 find_package(Threads REQUIRED)
 
-set(FILES_PROTO transport_catalogue.proto 
+set(FILES_PROTO 
+ transport_catalogue.proto 
  svg.proto 
- map_renderer.proto)
+ map_renderer.proto
+ graph.proto
+ transport_router.proto)
 
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${FILES_PROTO})
 

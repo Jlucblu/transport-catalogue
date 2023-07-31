@@ -31,6 +31,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "map_renderer.pb.h"
+#include "graph.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_transport_5fcatalogue_2eproto
@@ -58,18 +59,6 @@ extern BusStopDefaultTypeInternal _BusStop_default_instance_;
 class Coordinates;
 struct CoordinatesDefaultTypeInternal;
 extern CoordinatesDefaultTypeInternal _Coordinates_default_instance_;
-class RouteItem;
-struct RouteItemDefaultTypeInternal;
-extern RouteItemDefaultTypeInternal _RouteItem_default_instance_;
-class RouteResponse;
-struct RouteResponseDefaultTypeInternal;
-extern RouteResponseDefaultTypeInternal _RouteResponse_default_instance_;
-class RouteSettings;
-struct RouteSettingsDefaultTypeInternal;
-extern RouteSettingsDefaultTypeInternal _RouteSettings_default_instance_;
-class RouteStats;
-struct RouteStatsDefaultTypeInternal;
-extern RouteStatsDefaultTypeInternal _RouteStats_default_instance_;
 class StopDistance;
 struct StopDistanceDefaultTypeInternal;
 extern StopDistanceDefaultTypeInternal _StopDistance_default_instance_;
@@ -79,10 +68,6 @@ template<> ::serializator::Base* Arena::CreateMaybeMessage<::serializator::Base>
 template<> ::serializator::BusRoute* Arena::CreateMaybeMessage<::serializator::BusRoute>(Arena*);
 template<> ::serializator::BusStop* Arena::CreateMaybeMessage<::serializator::BusStop>(Arena*);
 template<> ::serializator::Coordinates* Arena::CreateMaybeMessage<::serializator::Coordinates>(Arena*);
-template<> ::serializator::RouteItem* Arena::CreateMaybeMessage<::serializator::RouteItem>(Arena*);
-template<> ::serializator::RouteResponse* Arena::CreateMaybeMessage<::serializator::RouteResponse>(Arena*);
-template<> ::serializator::RouteSettings* Arena::CreateMaybeMessage<::serializator::RouteSettings>(Arena*);
-template<> ::serializator::RouteStats* Arena::CreateMaybeMessage<::serializator::RouteStats>(Arena*);
 template<> ::serializator::StopDistance* Arena::CreateMaybeMessage<::serializator::StopDistance>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace serializator {
@@ -605,732 +590,6 @@ class BusRoute final :
 };
 // -------------------------------------------------------------------
 
-class RouteStats final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:serializator.RouteStats) */ {
- public:
-  inline RouteStats() : RouteStats(nullptr) {}
-  ~RouteStats() override;
-  explicit PROTOBUF_CONSTEXPR RouteStats(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  RouteStats(const RouteStats& from);
-  RouteStats(RouteStats&& from) noexcept
-    : RouteStats() {
-    *this = ::std::move(from);
-  }
-
-  inline RouteStats& operator=(const RouteStats& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RouteStats& operator=(RouteStats&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RouteStats& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RouteStats* internal_default_instance() {
-    return reinterpret_cast<const RouteStats*>(
-               &_RouteStats_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    3;
-
-  friend void swap(RouteStats& a, RouteStats& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RouteStats* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RouteStats* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RouteStats* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RouteStats>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RouteStats& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RouteStats& from) {
-    RouteStats::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RouteStats* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "serializator.RouteStats";
-  }
-  protected:
-  explicit RouteStats(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kStopsFieldNumber = 1,
-    kUniqueStopsFieldNumber = 2,
-    kDistanceFieldNumber = 3,
-    kCurvatureFieldNumber = 4,
-  };
-  // int32 stops = 1;
-  void clear_stops();
-  int32_t stops() const;
-  void set_stops(int32_t value);
-  private:
-  int32_t _internal_stops() const;
-  void _internal_set_stops(int32_t value);
-  public:
-
-  // int32 unique_stops = 2;
-  void clear_unique_stops();
-  int32_t unique_stops() const;
-  void set_unique_stops(int32_t value);
-  private:
-  int32_t _internal_unique_stops() const;
-  void _internal_set_unique_stops(int32_t value);
-  public:
-
-  // double distance = 3;
-  void clear_distance();
-  double distance() const;
-  void set_distance(double value);
-  private:
-  double _internal_distance() const;
-  void _internal_set_distance(double value);
-  public:
-
-  // double curvature = 4;
-  void clear_curvature();
-  double curvature() const;
-  void set_curvature(double value);
-  private:
-  double _internal_curvature() const;
-  void _internal_set_curvature(double value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:serializator.RouteStats)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    int32_t stops_;
-    int32_t unique_stops_;
-    double distance_;
-    double curvature_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_transport_5fcatalogue_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RouteSettings final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:serializator.RouteSettings) */ {
- public:
-  inline RouteSettings() : RouteSettings(nullptr) {}
-  ~RouteSettings() override;
-  explicit PROTOBUF_CONSTEXPR RouteSettings(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  RouteSettings(const RouteSettings& from);
-  RouteSettings(RouteSettings&& from) noexcept
-    : RouteSettings() {
-    *this = ::std::move(from);
-  }
-
-  inline RouteSettings& operator=(const RouteSettings& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RouteSettings& operator=(RouteSettings&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RouteSettings& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RouteSettings* internal_default_instance() {
-    return reinterpret_cast<const RouteSettings*>(
-               &_RouteSettings_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  friend void swap(RouteSettings& a, RouteSettings& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RouteSettings* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RouteSettings* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RouteSettings* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RouteSettings>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RouteSettings& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RouteSettings& from) {
-    RouteSettings::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RouteSettings* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "serializator.RouteSettings";
-  }
-  protected:
-  explicit RouteSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kBusVelocityFieldNumber = 1,
-    kBusWaitTimeFieldNumber = 2,
-  };
-  // double bus_velocity = 1;
-  void clear_bus_velocity();
-  double bus_velocity() const;
-  void set_bus_velocity(double value);
-  private:
-  double _internal_bus_velocity() const;
-  void _internal_set_bus_velocity(double value);
-  public:
-
-  // double bus_wait_time = 2;
-  void clear_bus_wait_time();
-  double bus_wait_time() const;
-  void set_bus_wait_time(double value);
-  private:
-  double _internal_bus_wait_time() const;
-  void _internal_set_bus_wait_time(double value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:serializator.RouteSettings)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    double bus_velocity_;
-    double bus_wait_time_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_transport_5fcatalogue_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RouteItem final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:serializator.RouteItem) */ {
- public:
-  inline RouteItem() : RouteItem(nullptr) {}
-  ~RouteItem() override;
-  explicit PROTOBUF_CONSTEXPR RouteItem(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  RouteItem(const RouteItem& from);
-  RouteItem(RouteItem&& from) noexcept
-    : RouteItem() {
-    *this = ::std::move(from);
-  }
-
-  inline RouteItem& operator=(const RouteItem& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RouteItem& operator=(RouteItem&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RouteItem& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RouteItem* internal_default_instance() {
-    return reinterpret_cast<const RouteItem*>(
-               &_RouteItem_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    5;
-
-  friend void swap(RouteItem& a, RouteItem& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RouteItem* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RouteItem* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RouteItem* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RouteItem>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RouteItem& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RouteItem& from) {
-    RouteItem::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RouteItem* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "serializator.RouteItem";
-  }
-  protected:
-  explicit RouteItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kBusNameFieldNumber = 1,
-    kFromStopFieldNumber = 2,
-    kToStopFieldNumber = 3,
-    kRouteTimeFieldNumber = 4,
-    kWaitTimeFieldNumber = 5,
-    kSpanCountFieldNumber = 6,
-  };
-  // string bus_name = 1;
-  void clear_bus_name();
-  const std::string& bus_name() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_bus_name(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_bus_name();
-  PROTOBUF_NODISCARD std::string* release_bus_name();
-  void set_allocated_bus_name(std::string* bus_name);
-  private:
-  const std::string& _internal_bus_name() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_bus_name(const std::string& value);
-  std::string* _internal_mutable_bus_name();
-  public:
-
-  // string from_stop = 2;
-  void clear_from_stop();
-  const std::string& from_stop() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_from_stop(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_from_stop();
-  PROTOBUF_NODISCARD std::string* release_from_stop();
-  void set_allocated_from_stop(std::string* from_stop);
-  private:
-  const std::string& _internal_from_stop() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_from_stop(const std::string& value);
-  std::string* _internal_mutable_from_stop();
-  public:
-
-  // string to_stop = 3;
-  void clear_to_stop();
-  const std::string& to_stop() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_to_stop(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_to_stop();
-  PROTOBUF_NODISCARD std::string* release_to_stop();
-  void set_allocated_to_stop(std::string* to_stop);
-  private:
-  const std::string& _internal_to_stop() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_to_stop(const std::string& value);
-  std::string* _internal_mutable_to_stop();
-  public:
-
-  // double route_time = 4;
-  void clear_route_time();
-  double route_time() const;
-  void set_route_time(double value);
-  private:
-  double _internal_route_time() const;
-  void _internal_set_route_time(double value);
-  public:
-
-  // double wait_time = 5;
-  void clear_wait_time();
-  double wait_time() const;
-  void set_wait_time(double value);
-  private:
-  double _internal_wait_time() const;
-  void _internal_set_wait_time(double value);
-  public:
-
-  // int32 span_count = 6;
-  void clear_span_count();
-  int32_t span_count() const;
-  void set_span_count(int32_t value);
-  private:
-  int32_t _internal_span_count() const;
-  void _internal_set_span_count(int32_t value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:serializator.RouteItem)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr bus_name_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr from_stop_;
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr to_stop_;
-    double route_time_;
-    double wait_time_;
-    int32_t span_count_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_transport_5fcatalogue_2eproto;
-};
-// -------------------------------------------------------------------
-
-class RouteResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:serializator.RouteResponse) */ {
- public:
-  inline RouteResponse() : RouteResponse(nullptr) {}
-  ~RouteResponse() override;
-  explicit PROTOBUF_CONSTEXPR RouteResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  RouteResponse(const RouteResponse& from);
-  RouteResponse(RouteResponse&& from) noexcept
-    : RouteResponse() {
-    *this = ::std::move(from);
-  }
-
-  inline RouteResponse& operator=(const RouteResponse& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline RouteResponse& operator=(RouteResponse&& from) noexcept {
-    if (this == &from) return *this;
-    if (GetOwningArena() == from.GetOwningArena()
-  #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
-        && GetOwningArena() != nullptr
-  #endif  // !PROTOBUF_FORCE_COPY_IN_MOVE
-    ) {
-      InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return default_instance().GetMetadata().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return default_instance().GetMetadata().reflection;
-  }
-  static const RouteResponse& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const RouteResponse* internal_default_instance() {
-    return reinterpret_cast<const RouteResponse*>(
-               &_RouteResponse_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    6;
-
-  friend void swap(RouteResponse& a, RouteResponse& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(RouteResponse* other) {
-    if (other == this) return;
-  #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() != nullptr &&
-        GetOwningArena() == other->GetOwningArena()) {
-   #else  // PROTOBUF_FORCE_COPY_IN_SWAP
-    if (GetOwningArena() == other->GetOwningArena()) {
-  #endif  // !PROTOBUF_FORCE_COPY_IN_SWAP
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(RouteResponse* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  RouteResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<RouteResponse>(arena);
-  }
-  using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const RouteResponse& from);
-  using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const RouteResponse& from) {
-    RouteResponse::MergeImpl(*this, from);
-  }
-  private:
-  static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
-  public:
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  uint8_t* _InternalSerialize(
-      uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _impl_._cached_size_.Get(); }
-
-  private:
-  void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
-  void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(RouteResponse* other);
-
-  private:
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "serializator.RouteResponse";
-  }
-  protected:
-  explicit RouteResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                       bool is_message_owned = false);
-  public:
-
-  static const ClassData _class_data_;
-  const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetClassData() const final;
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kItemsFieldNumber = 2,
-    kTotalTimeFieldNumber = 1,
-  };
-  // repeated .serializator.RouteItem items = 2;
-  int items_size() const;
-  private:
-  int _internal_items_size() const;
-  public:
-  void clear_items();
-  ::serializator::RouteItem* mutable_items(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::RouteItem >*
-      mutable_items();
-  private:
-  const ::serializator::RouteItem& _internal_items(int index) const;
-  ::serializator::RouteItem* _internal_add_items();
-  public:
-  const ::serializator::RouteItem& items(int index) const;
-  ::serializator::RouteItem* add_items();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::RouteItem >&
-      items() const;
-
-  // double total_time = 1;
-  void clear_total_time();
-  double total_time() const;
-  void set_total_time(double value);
-  private:
-  double _internal_total_time() const;
-  void _internal_set_total_time(double value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:serializator.RouteResponse)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::RouteItem > items_;
-    double total_time_;
-    mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  };
-  union { Impl_ _impl_; };
-  friend struct ::TableStruct_transport_5fcatalogue_2eproto;
-};
-// -------------------------------------------------------------------
-
 class StopDistance final :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:serializator.StopDistance) */ {
  public:
@@ -1379,7 +638,7 @@ class StopDistance final :
                &_StopDistance_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    7;
+    3;
 
   friend void swap(StopDistance& a, StopDistance& b) {
     a.Swap(&b);
@@ -1559,7 +818,7 @@ class Base final :
                &_Base_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    4;
 
   friend void swap(Base& a, Base& b) {
     a.Swap(&b);
@@ -1636,6 +895,7 @@ class Base final :
     kStopsFieldNumber = 2,
     kStopDistanceMapFieldNumber = 3,
     kMapSettingsFieldNumber = 4,
+    kRouteSettingsFieldNumber = 5,
   };
   // repeated .serializator.BusRoute buses = 1;
   int buses_size() const;
@@ -1709,6 +969,24 @@ class Base final :
       ::serializator::RenderSettings* map_settings);
   ::serializator::RenderSettings* unsafe_arena_release_map_settings();
 
+  // .serializator.RouteSettings route_settings = 5;
+  bool has_route_settings() const;
+  private:
+  bool _internal_has_route_settings() const;
+  public:
+  void clear_route_settings();
+  const ::serializator::RouteSettings& route_settings() const;
+  PROTOBUF_NODISCARD ::serializator::RouteSettings* release_route_settings();
+  ::serializator::RouteSettings* mutable_route_settings();
+  void set_allocated_route_settings(::serializator::RouteSettings* route_settings);
+  private:
+  const ::serializator::RouteSettings& _internal_route_settings() const;
+  ::serializator::RouteSettings* _internal_mutable_route_settings();
+  public:
+  void unsafe_arena_set_allocated_route_settings(
+      ::serializator::RouteSettings* route_settings);
+  ::serializator::RouteSettings* unsafe_arena_release_route_settings();
+
   // @@protoc_insertion_point(class_scope:serializator.Base)
  private:
   class _Internal;
@@ -1721,6 +999,7 @@ class Base final :
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::BusStop > stops_;
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::StopDistance > stop_distance_map_;
     ::serializator::RenderSettings* map_settings_;
+    ::serializator::RouteSettings* route_settings_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2033,412 +1312,6 @@ inline void BusRoute::_internal_set_circle(bool value) {
 inline void BusRoute::set_circle(bool value) {
   _internal_set_circle(value);
   // @@protoc_insertion_point(field_set:serializator.BusRoute.circle)
-}
-
-// -------------------------------------------------------------------
-
-// RouteStats
-
-// int32 stops = 1;
-inline void RouteStats::clear_stops() {
-  _impl_.stops_ = 0;
-}
-inline int32_t RouteStats::_internal_stops() const {
-  return _impl_.stops_;
-}
-inline int32_t RouteStats::stops() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteStats.stops)
-  return _internal_stops();
-}
-inline void RouteStats::_internal_set_stops(int32_t value) {
-  
-  _impl_.stops_ = value;
-}
-inline void RouteStats::set_stops(int32_t value) {
-  _internal_set_stops(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteStats.stops)
-}
-
-// int32 unique_stops = 2;
-inline void RouteStats::clear_unique_stops() {
-  _impl_.unique_stops_ = 0;
-}
-inline int32_t RouteStats::_internal_unique_stops() const {
-  return _impl_.unique_stops_;
-}
-inline int32_t RouteStats::unique_stops() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteStats.unique_stops)
-  return _internal_unique_stops();
-}
-inline void RouteStats::_internal_set_unique_stops(int32_t value) {
-  
-  _impl_.unique_stops_ = value;
-}
-inline void RouteStats::set_unique_stops(int32_t value) {
-  _internal_set_unique_stops(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteStats.unique_stops)
-}
-
-// double distance = 3;
-inline void RouteStats::clear_distance() {
-  _impl_.distance_ = 0;
-}
-inline double RouteStats::_internal_distance() const {
-  return _impl_.distance_;
-}
-inline double RouteStats::distance() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteStats.distance)
-  return _internal_distance();
-}
-inline void RouteStats::_internal_set_distance(double value) {
-  
-  _impl_.distance_ = value;
-}
-inline void RouteStats::set_distance(double value) {
-  _internal_set_distance(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteStats.distance)
-}
-
-// double curvature = 4;
-inline void RouteStats::clear_curvature() {
-  _impl_.curvature_ = 0;
-}
-inline double RouteStats::_internal_curvature() const {
-  return _impl_.curvature_;
-}
-inline double RouteStats::curvature() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteStats.curvature)
-  return _internal_curvature();
-}
-inline void RouteStats::_internal_set_curvature(double value) {
-  
-  _impl_.curvature_ = value;
-}
-inline void RouteStats::set_curvature(double value) {
-  _internal_set_curvature(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteStats.curvature)
-}
-
-// -------------------------------------------------------------------
-
-// RouteSettings
-
-// double bus_velocity = 1;
-inline void RouteSettings::clear_bus_velocity() {
-  _impl_.bus_velocity_ = 0;
-}
-inline double RouteSettings::_internal_bus_velocity() const {
-  return _impl_.bus_velocity_;
-}
-inline double RouteSettings::bus_velocity() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteSettings.bus_velocity)
-  return _internal_bus_velocity();
-}
-inline void RouteSettings::_internal_set_bus_velocity(double value) {
-  
-  _impl_.bus_velocity_ = value;
-}
-inline void RouteSettings::set_bus_velocity(double value) {
-  _internal_set_bus_velocity(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteSettings.bus_velocity)
-}
-
-// double bus_wait_time = 2;
-inline void RouteSettings::clear_bus_wait_time() {
-  _impl_.bus_wait_time_ = 0;
-}
-inline double RouteSettings::_internal_bus_wait_time() const {
-  return _impl_.bus_wait_time_;
-}
-inline double RouteSettings::bus_wait_time() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteSettings.bus_wait_time)
-  return _internal_bus_wait_time();
-}
-inline void RouteSettings::_internal_set_bus_wait_time(double value) {
-  
-  _impl_.bus_wait_time_ = value;
-}
-inline void RouteSettings::set_bus_wait_time(double value) {
-  _internal_set_bus_wait_time(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteSettings.bus_wait_time)
-}
-
-// -------------------------------------------------------------------
-
-// RouteItem
-
-// string bus_name = 1;
-inline void RouteItem::clear_bus_name() {
-  _impl_.bus_name_.ClearToEmpty();
-}
-inline const std::string& RouteItem::bus_name() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.bus_name)
-  return _internal_bus_name();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void RouteItem::set_bus_name(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.bus_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.bus_name)
-}
-inline std::string* RouteItem::mutable_bus_name() {
-  std::string* _s = _internal_mutable_bus_name();
-  // @@protoc_insertion_point(field_mutable:serializator.RouteItem.bus_name)
-  return _s;
-}
-inline const std::string& RouteItem::_internal_bus_name() const {
-  return _impl_.bus_name_.Get();
-}
-inline void RouteItem::_internal_set_bus_name(const std::string& value) {
-  
-  _impl_.bus_name_.Set(value, GetArenaForAllocation());
-}
-inline std::string* RouteItem::_internal_mutable_bus_name() {
-  
-  return _impl_.bus_name_.Mutable(GetArenaForAllocation());
-}
-inline std::string* RouteItem::release_bus_name() {
-  // @@protoc_insertion_point(field_release:serializator.RouteItem.bus_name)
-  return _impl_.bus_name_.Release();
-}
-inline void RouteItem::set_allocated_bus_name(std::string* bus_name) {
-  if (bus_name != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.bus_name_.SetAllocated(bus_name, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.bus_name_.IsDefault()) {
-    _impl_.bus_name_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:serializator.RouteItem.bus_name)
-}
-
-// string from_stop = 2;
-inline void RouteItem::clear_from_stop() {
-  _impl_.from_stop_.ClearToEmpty();
-}
-inline const std::string& RouteItem::from_stop() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.from_stop)
-  return _internal_from_stop();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void RouteItem::set_from_stop(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.from_stop_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.from_stop)
-}
-inline std::string* RouteItem::mutable_from_stop() {
-  std::string* _s = _internal_mutable_from_stop();
-  // @@protoc_insertion_point(field_mutable:serializator.RouteItem.from_stop)
-  return _s;
-}
-inline const std::string& RouteItem::_internal_from_stop() const {
-  return _impl_.from_stop_.Get();
-}
-inline void RouteItem::_internal_set_from_stop(const std::string& value) {
-  
-  _impl_.from_stop_.Set(value, GetArenaForAllocation());
-}
-inline std::string* RouteItem::_internal_mutable_from_stop() {
-  
-  return _impl_.from_stop_.Mutable(GetArenaForAllocation());
-}
-inline std::string* RouteItem::release_from_stop() {
-  // @@protoc_insertion_point(field_release:serializator.RouteItem.from_stop)
-  return _impl_.from_stop_.Release();
-}
-inline void RouteItem::set_allocated_from_stop(std::string* from_stop) {
-  if (from_stop != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.from_stop_.SetAllocated(from_stop, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.from_stop_.IsDefault()) {
-    _impl_.from_stop_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:serializator.RouteItem.from_stop)
-}
-
-// string to_stop = 3;
-inline void RouteItem::clear_to_stop() {
-  _impl_.to_stop_.ClearToEmpty();
-}
-inline const std::string& RouteItem::to_stop() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.to_stop)
-  return _internal_to_stop();
-}
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void RouteItem::set_to_stop(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.to_stop_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.to_stop)
-}
-inline std::string* RouteItem::mutable_to_stop() {
-  std::string* _s = _internal_mutable_to_stop();
-  // @@protoc_insertion_point(field_mutable:serializator.RouteItem.to_stop)
-  return _s;
-}
-inline const std::string& RouteItem::_internal_to_stop() const {
-  return _impl_.to_stop_.Get();
-}
-inline void RouteItem::_internal_set_to_stop(const std::string& value) {
-  
-  _impl_.to_stop_.Set(value, GetArenaForAllocation());
-}
-inline std::string* RouteItem::_internal_mutable_to_stop() {
-  
-  return _impl_.to_stop_.Mutable(GetArenaForAllocation());
-}
-inline std::string* RouteItem::release_to_stop() {
-  // @@protoc_insertion_point(field_release:serializator.RouteItem.to_stop)
-  return _impl_.to_stop_.Release();
-}
-inline void RouteItem::set_allocated_to_stop(std::string* to_stop) {
-  if (to_stop != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.to_stop_.SetAllocated(to_stop, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.to_stop_.IsDefault()) {
-    _impl_.to_stop_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:serializator.RouteItem.to_stop)
-}
-
-// double route_time = 4;
-inline void RouteItem::clear_route_time() {
-  _impl_.route_time_ = 0;
-}
-inline double RouteItem::_internal_route_time() const {
-  return _impl_.route_time_;
-}
-inline double RouteItem::route_time() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.route_time)
-  return _internal_route_time();
-}
-inline void RouteItem::_internal_set_route_time(double value) {
-  
-  _impl_.route_time_ = value;
-}
-inline void RouteItem::set_route_time(double value) {
-  _internal_set_route_time(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.route_time)
-}
-
-// double wait_time = 5;
-inline void RouteItem::clear_wait_time() {
-  _impl_.wait_time_ = 0;
-}
-inline double RouteItem::_internal_wait_time() const {
-  return _impl_.wait_time_;
-}
-inline double RouteItem::wait_time() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.wait_time)
-  return _internal_wait_time();
-}
-inline void RouteItem::_internal_set_wait_time(double value) {
-  
-  _impl_.wait_time_ = value;
-}
-inline void RouteItem::set_wait_time(double value) {
-  _internal_set_wait_time(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.wait_time)
-}
-
-// int32 span_count = 6;
-inline void RouteItem::clear_span_count() {
-  _impl_.span_count_ = 0;
-}
-inline int32_t RouteItem::_internal_span_count() const {
-  return _impl_.span_count_;
-}
-inline int32_t RouteItem::span_count() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteItem.span_count)
-  return _internal_span_count();
-}
-inline void RouteItem::_internal_set_span_count(int32_t value) {
-  
-  _impl_.span_count_ = value;
-}
-inline void RouteItem::set_span_count(int32_t value) {
-  _internal_set_span_count(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteItem.span_count)
-}
-
-// -------------------------------------------------------------------
-
-// RouteResponse
-
-// double total_time = 1;
-inline void RouteResponse::clear_total_time() {
-  _impl_.total_time_ = 0;
-}
-inline double RouteResponse::_internal_total_time() const {
-  return _impl_.total_time_;
-}
-inline double RouteResponse::total_time() const {
-  // @@protoc_insertion_point(field_get:serializator.RouteResponse.total_time)
-  return _internal_total_time();
-}
-inline void RouteResponse::_internal_set_total_time(double value) {
-  
-  _impl_.total_time_ = value;
-}
-inline void RouteResponse::set_total_time(double value) {
-  _internal_set_total_time(value);
-  // @@protoc_insertion_point(field_set:serializator.RouteResponse.total_time)
-}
-
-// repeated .serializator.RouteItem items = 2;
-inline int RouteResponse::_internal_items_size() const {
-  return _impl_.items_.size();
-}
-inline int RouteResponse::items_size() const {
-  return _internal_items_size();
-}
-inline void RouteResponse::clear_items() {
-  _impl_.items_.Clear();
-}
-inline ::serializator::RouteItem* RouteResponse::mutable_items(int index) {
-  // @@protoc_insertion_point(field_mutable:serializator.RouteResponse.items)
-  return _impl_.items_.Mutable(index);
-}
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::RouteItem >*
-RouteResponse::mutable_items() {
-  // @@protoc_insertion_point(field_mutable_list:serializator.RouteResponse.items)
-  return &_impl_.items_;
-}
-inline const ::serializator::RouteItem& RouteResponse::_internal_items(int index) const {
-  return _impl_.items_.Get(index);
-}
-inline const ::serializator::RouteItem& RouteResponse::items(int index) const {
-  // @@protoc_insertion_point(field_get:serializator.RouteResponse.items)
-  return _internal_items(index);
-}
-inline ::serializator::RouteItem* RouteResponse::_internal_add_items() {
-  return _impl_.items_.Add();
-}
-inline ::serializator::RouteItem* RouteResponse::add_items() {
-  ::serializator::RouteItem* _add = _internal_add_items();
-  // @@protoc_insertion_point(field_add:serializator.RouteResponse.items)
-  return _add;
-}
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::serializator::RouteItem >&
-RouteResponse::items() const {
-  // @@protoc_insertion_point(field_list:serializator.RouteResponse.items)
-  return _impl_.items_;
 }
 
 // -------------------------------------------------------------------
@@ -2774,17 +1647,94 @@ inline void Base::set_allocated_map_settings(::serializator::RenderSettings* map
   // @@protoc_insertion_point(field_set_allocated:serializator.Base.map_settings)
 }
 
+// .serializator.RouteSettings route_settings = 5;
+inline bool Base::_internal_has_route_settings() const {
+  return this != internal_default_instance() && _impl_.route_settings_ != nullptr;
+}
+inline bool Base::has_route_settings() const {
+  return _internal_has_route_settings();
+}
+inline const ::serializator::RouteSettings& Base::_internal_route_settings() const {
+  const ::serializator::RouteSettings* p = _impl_.route_settings_;
+  return p != nullptr ? *p : reinterpret_cast<const ::serializator::RouteSettings&>(
+      ::serializator::_RouteSettings_default_instance_);
+}
+inline const ::serializator::RouteSettings& Base::route_settings() const {
+  // @@protoc_insertion_point(field_get:serializator.Base.route_settings)
+  return _internal_route_settings();
+}
+inline void Base::unsafe_arena_set_allocated_route_settings(
+    ::serializator::RouteSettings* route_settings) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.route_settings_);
+  }
+  _impl_.route_settings_ = route_settings;
+  if (route_settings) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:serializator.Base.route_settings)
+}
+inline ::serializator::RouteSettings* Base::release_route_settings() {
+  
+  ::serializator::RouteSettings* temp = _impl_.route_settings_;
+  _impl_.route_settings_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::serializator::RouteSettings* Base::unsafe_arena_release_route_settings() {
+  // @@protoc_insertion_point(field_release:serializator.Base.route_settings)
+  
+  ::serializator::RouteSettings* temp = _impl_.route_settings_;
+  _impl_.route_settings_ = nullptr;
+  return temp;
+}
+inline ::serializator::RouteSettings* Base::_internal_mutable_route_settings() {
+  
+  if (_impl_.route_settings_ == nullptr) {
+    auto* p = CreateMaybeMessage<::serializator::RouteSettings>(GetArenaForAllocation());
+    _impl_.route_settings_ = p;
+  }
+  return _impl_.route_settings_;
+}
+inline ::serializator::RouteSettings* Base::mutable_route_settings() {
+  ::serializator::RouteSettings* _msg = _internal_mutable_route_settings();
+  // @@protoc_insertion_point(field_mutable:serializator.Base.route_settings)
+  return _msg;
+}
+inline void Base::set_allocated_route_settings(::serializator::RouteSettings* route_settings) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.route_settings_);
+  }
+  if (route_settings) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(route_settings));
+    if (message_arena != submessage_arena) {
+      route_settings = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, route_settings, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.route_settings_ = route_settings;
+  // @@protoc_insertion_point(field_set_allocated:serializator.Base.route_settings)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

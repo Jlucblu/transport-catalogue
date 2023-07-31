@@ -109,7 +109,6 @@ namespace json_reader {
 		}
 	}
 
-
 	// Парсинг маршрута автобуса
 	domain::BusRoute JSONReader::ParseBus(const json::Dict& businfo) const {
 		domain::BusRoute route = {};
@@ -117,7 +116,7 @@ namespace json_reader {
 		route.circle = businfo.at("is_roundtrip"s).AsBool();
 		const auto& stops = businfo.at("stops"s).AsArray();
 		for (auto& stop : stops) {
-			BusStop* found = tc_.FindStop(stop.AsString());
+			domain::BusStop* found = tc_.FindStop(stop.AsString());
 			if (found == nullptr) {
 				tc_.UpdateStop({ stop.AsString(), {0.0, 0.0} });
 			}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package serializator;
+
+import "transport_router.proto";
+
+message RouteSettings {
+    double bus_velocity = 1;
+    double bus_wait_time = 2;
+}

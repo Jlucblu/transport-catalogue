@@ -120,7 +120,7 @@ void Test8() {
 
 void Test9in() {
 	std::ifstream file;
-	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_2\\s14_2_opentest_3_make_base.json");
+	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_3\\s14_3_opentest_3_make_base.json");
 
 	tc::TransportCatalogue tc;
 	rh::RequestHandler rh(tc);
@@ -145,9 +145,9 @@ void Test10out() {
 	std::ofstream result;
 	std::ifstream compareresult;
 
-	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_2\\s14_2_opentest_3_process_requests.json");
-	result.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_2\\s14_2_opentest_3_result.json");
-	compareresult.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_2\\s14_2_opentest_3_answer.json");
+	file.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_3\\s14_3_opentest_3_process_requests.json");
+	result.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_3\\s14_3_opentest_3_result.json");
+	compareresult.open("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_3\\s14_3_opentest_3_answer.json");
 
 	if (!file) {
 		std::cout << "No File!\n"s;
@@ -167,7 +167,7 @@ void Test10out() {
 	file.close();
 	result.close();
 
-	std::ifstream myresultread("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_2\\s14_2_opentest_3_result.json");
+	std::ifstream myresultread("C:\\Users\\Legion\\Desktop\\C++\\transport-catalogue\\CMakeBuild\\Tests\\Part_3\\s14_3_opentest_3_result.json");
 	if (!myresultread) {
 		std::cout << "No File!\n"s;
 		system("pause");
